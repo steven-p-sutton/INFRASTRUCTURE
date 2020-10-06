@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30523.141
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PATTERN-FooBar", "PATTERN-FooBar\PATTERN-FooBar.csproj", "{6CE0A414-2684-468E-BEB5-A2F414218BA1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PATTERN-FactoryPattern", "PATTERN-FactoryPattern\PATTERN-FactoryPattern.csproj", "{54A2A0DE-0960-4816-858E-D8FF1CF100FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{54A2A0DE-0960-4816-858E-D8FF1CF100FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6CE0A414-2684-468E-BEB5-A2F414218BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CE0A414-2684-468E-BEB5-A2F414218BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CE0A414-2684-468E-BEB5-A2F414218BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CE0A414-2684-468E-BEB5-A2F414218BA1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54A2A0DE-0960-4816-858E-D8FF1CF100FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54A2A0DE-0960-4816-858E-D8FF1CF100FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54A2A0DE-0960-4816-858E-D8FF1CF100FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -26,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DC708EAC-6CFA-4194-83D9-A5779F3947BC}
+		SolutionGuid = {E8261A95-2AF4-48F7-B41F-04BB1E6DE8D9}
 	EndGlobalSection
 EndGlobal
