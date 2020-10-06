@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>ConsoleApp_04</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Widget.-Object">
+      <HintPath>..\WIDGET-Object\bin\Debug\netstandard2.0\Widget.-Object.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
