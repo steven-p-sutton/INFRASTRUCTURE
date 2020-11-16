@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WIDGET-Object\WIDGET-Object.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Widget.-Object">
       <HintPath>..\WIDGET-Object\bin\Debug\netstandard2.0\Widget.-Object.dll</HintPath>
     </Reference>
