@@ -35,27 +35,27 @@ namespace Conductus.EntityFramework.ConsoleApp
 
             using (var db = new Context())
             {
-                // Create
-                Console.WriteLine("Inserting a new message");
-                db.Add(new HelloWorld { Text = "Hello World !" });
+                // Create and save a new Blog
+                Console.Write("Enter a name for a new Blog: ");
+                var name = Console.ReadLine();
+
+                var blog = new Blog { Name = name };
+                db.Blogs.Add(blog);
                 db.SaveChanges();
 
-                // Read
-                Console.WriteLine("Querying for a message");
-                var helloWorld = db.HelloWorlds
-                    .OrderBy(h => h.HelloWorldId)
-                    .First();
-                Console.WriteLine(helloWorld.Text);
+                // Display all Blogs from the database
+                var query = from b in db.Blogs
+                            orderby b.Name
+                            select b;
 
-                // Update
-                Console.WriteLine("Updating the blog and adding a post");
-                helloWorld.Text = "Hello Again World !";
-                db.SaveChanges();
+                Console.WriteLine("All blogs in the database:");
+                foreach (var item in query)
+                {
+                    Console.WriteLine(item.Name);
+                }
 
-                // Delete
-                Console.WriteLine("Delete the blog");
-                db.Remove(helloWorld);
-                db.SaveChanges();
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey();
             }
         }
     }
