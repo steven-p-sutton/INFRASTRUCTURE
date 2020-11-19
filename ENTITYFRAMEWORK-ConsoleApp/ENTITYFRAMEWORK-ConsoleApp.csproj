@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>HELLOWWORLD_EFCore</RootNamespace>
+    <RootNamespace>Conductus.EntityFramework.ConsoleApp</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

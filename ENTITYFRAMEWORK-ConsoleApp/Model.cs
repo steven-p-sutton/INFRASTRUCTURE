@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace HELLOWWORLD_EFCore
+namespace Conductus.EntityFramework.ConsoleApp
 {
     public class HelloWorld
     {

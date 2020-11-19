@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace HELLOWWORLD_EFCore
+namespace Conductus.EntityFramework.ConsoleApp
 {
     public class Context : DbContext
     {

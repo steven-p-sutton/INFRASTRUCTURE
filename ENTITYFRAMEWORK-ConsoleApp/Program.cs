@@ -25,7 +25,7 @@ using System.Linq;
 //   C# (CSharp) DbContextOptionsBuilder.UseSqlite Examples
 //      https://csharp.hotexamples.com/examples/-/DbContextOptionsBuilder/UseSqlite/php-dbcontextoptionsbuilder-usesqlite-method-examples.html
 
-namespace HELLOWWORLD_EFCore
+namespace Conductus.EntityFramework.ConsoleApp
 {
     class Program
     {
