@@ -25,11 +25,6 @@ using System.Linq;
 https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.sqlitedbcontextoptionsbuilderextensions.usesqlite?view=efcore-5.0
 //   C# (CSharp) DbContextOptionsBuilder.UseSqlite Examples
 //      https://csharp.hotexamples.com/examples/-/DbContextOptionsBuilder/UseSqlite/php-dbcontextoptionsbuilder-usesqlite-method-examples.html
-//   Configuring a DbContext
-//      https://docs.microsoft.com/en-us/ef/core/dbcontext-configuration/
-//   Entity Framework Core using SQL Server
-//      https://entityframeworkcore.com/providers-sql-server
-//   NUGet install Microsoft.EntityFrameworkCore.SqlServer
 
 namespace Conductus.EntityFramework.ConsoleApp
 {
