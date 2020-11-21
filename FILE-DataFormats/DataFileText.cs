@@ -23,39 +23,17 @@ using Conductus.Widget.Object;
 
 namespace Conductus.FILE
 {
-    public class StreamDateFile
+    public class DateFileText
     {
         public void Create(string fName)
         {
-            // Delete the file if it exists.
-            if (File.Exists(fName))
-            {
-                File.Delete(fName);
-            }
-
-            using (FileStream fs = File.Create(fName))
-            {
-            }
         }
         public void Write(string fName, WidgetObject widget)
         {
-            using (FileStream fs = File.OpenWrite(fName))
-            {
-                // Write Widget raw bytes to stream file, no formatting etc
-                AddText(fs, widget.Date.ToString());
-                AddText(fs, widget.TemperatureC.ToString());
-                AddText(fs, widget.Summary);
-            }
         }
         public WidgetObject Read(string fName)
         {
-            WidgetObject widget = new WidgetObject();
-            return widget;
-        }
-        void AddText(FileStream fs, string value)
-        {
-            byte[] info = new UTF8Encoding(true).GetBytes(value);
-            fs.Write(info, 0, info.Length);
+            return new WidgetObject();
         }
     }
 }

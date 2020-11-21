@@ -41,7 +41,8 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("--------------------------------------------------------------------");
 
             string streamFileName = "Stream.txt";
-            StreamDateFile f = new StreamDateFile();
+            DataFileStream f = new DataFileStream();
+
             f.Create(root + streamFileName);
             f.Write(root + streamFileName, m_widget1);
             m_widget2 = f.Read(root + streamFileName);
@@ -51,6 +52,7 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("--------------------------------------------------------------------");
 
             string textFileName = "Text.txt";
+
 
             fText_Create(root + textFileName);
             fText_Write(root + textFileName);
