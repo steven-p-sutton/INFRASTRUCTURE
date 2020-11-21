@@ -1,4 +1,15 @@
-﻿using System;
+﻿
+//=================================================================================================
+// STREAM
+//=================================================================================================
+// https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream?view=netcore-3.1
+// Streams = processing bytes for file
+// StringStream = processing character in a string
+// Textstream = processing string data in a file
+// OpenWrite
+// Create
+
+using System;
 using System.IO;
 using System.Text;
 using System.Data;

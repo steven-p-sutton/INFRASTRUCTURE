@@ -16,7 +16,6 @@ using System.Xml.Serialization;
 using Conductus.Widget.Object; // Object used for all examples
 using Conductus.FILE;
 
-
 namespace Conductus.FILE.ConsoleApp
 {
     class Program
@@ -42,10 +41,14 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("--------------------------------------------------------------------");
 
             string streamFileName = "Stream.txt";
+            StreamDateFile f = new StreamDateFile();
+            f.Create(root + streamFileName);
+            f.Write(root + streamFileName, m_widget1);
+            f.Read(root + streamFileName);
 
-            fStream_Create(root + streamFileName);
-            fStream_Write(root + streamFileName);
-            fStream_Read(root + streamFileName);
+            //fStream_Create(root + streamFileName);
+            //fStream_Write(root + streamFileName);
+            //fStream_Read(root + streamFileName);
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");
@@ -92,15 +95,6 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("-------------------------------------------------------------------");
         }
 
-        //=================================================================================================
-        // STREAM
-        //=================================================================================================
-        // https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream?view=netcore-3.1
-        // Streams = processing bytes for file
-        // StringStream = processing character in a string
-        // Textstream = processing string data in a file
-        // OpenWrite
-        // Create
 
         static void fStream_Create(string fName)
         {
