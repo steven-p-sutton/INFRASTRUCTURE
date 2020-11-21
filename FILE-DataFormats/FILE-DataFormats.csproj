@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,12 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WIDGET-Object\WIDGET-Object.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Widget.-Object">
-      <HintPath>..\WIDGET-Object\bin\Debug\netstandard2.0\Widget.-Object.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

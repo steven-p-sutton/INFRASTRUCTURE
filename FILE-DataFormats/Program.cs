@@ -1,4 +1,8 @@
-﻿using System;
+﻿//  Files
+//      https://www.guru99.com/c-sharp-stream.html
+//      https://csharp.hotexamples.com/examples/-/TextStream/-/php-textstream-class-examples.html
+
+using System;
 using System.IO;
 using System.Text;
 using System.Data;
@@ -7,8 +11,11 @@ using Microsoft.VisualBasic.FileIO; // VB !!!!
 using System.Text.Json; // JSON handling
 // JsonSerializer.Serialize
 // JsonSerializer.Deserialize
-using Conductus.Widget.Object; // Object used for all examples
 using System.Xml.Serialization;
+
+using Conductus.Widget.Object; // Object used for all examples
+using Conductus.FILE;
+
 
 namespace Conductus.FILE.ConsoleApp
 {
