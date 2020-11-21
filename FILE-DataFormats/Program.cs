@@ -84,11 +84,12 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("4. XML Files");
             Console.WriteLine("-------------------------------------------------------------------");
 
-            string XmlFileName = "XML.xml";
+            string xmlFileName = "XML.xml";
+            DataFileXml fx = new DataFileXml();
 
-            fXml_Create(root + XmlFileName);
-            fXml_Write(root + XmlFileName);
-            fXml_Read(root + XmlFileName);
+            fx.Create(root + xmlFileName);
+            fx.Write(root + xmlFileName, m_widget1);
+            m_widget2 = fx.Read(root + xmlFileName);
 
             Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("99. ALL DONE");

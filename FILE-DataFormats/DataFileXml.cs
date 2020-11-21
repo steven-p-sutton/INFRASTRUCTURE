@@ -19,7 +19,7 @@ using Conductus.Widget.Object;
 
 namespace Conductus.FILE
 {
-    public class DataFileJson : DataFile
+    public class DataFileXml : DataFile
     {
         public override void Create(string fName)
         {
@@ -44,9 +44,9 @@ namespace Conductus.FILE
         }
         public override WidgetObject Read(string fName)
         {
-            WidgetObject widget;
+            WidgetObject widget = new WidgetObject();
 
-            XmlSerializer xmlSerializer = new XmlSerializer(m_widget2.GetType());
+            XmlSerializer xmlSerializer = new XmlSerializer(widget.GetType());
             using (Stream sr = new FileStream(fName, FileMode.Open))
             {
                 widget = (WidgetObject)xmlSerializer.Deserialize(sr);

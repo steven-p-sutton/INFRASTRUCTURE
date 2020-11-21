@@ -38,7 +38,6 @@ namespace Conductus.FILE
         {
             string jsonWidgetString1 = JsonSerializer.Serialize(widget);
             File.WriteAllText(fName, jsonWidgetString1);
-
         }
         public override WidgetObject Read(string fName)
         {

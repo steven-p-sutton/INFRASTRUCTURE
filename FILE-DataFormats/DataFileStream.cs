@@ -50,6 +50,7 @@ namespace Conductus.FILE
         public override WidgetObject Read(string fName)
         {
             WidgetObject widget = new WidgetObject();
+
             return widget;
         }
         void AddText(FileStream fs, string value)

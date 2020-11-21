@@ -31,9 +31,10 @@ namespace Conductus.FILE
         }
         public override WidgetObject Read(string fName)
         {
-            return new WidgetObject();
             DataTable csvData = ReadCSVFile(fName);
             DisplayDataTable(csvData);
+
+            return new WidgetObject();
         }
         private DataTable ReadCSVFile(string csv_file_path)
         {

@@ -40,9 +40,7 @@ namespace Conductus.FILE
             }
         }
         public override WidgetObject Read(string fName)
-        {
-            return new WidgetObject();
-            /*
+        {   
             using (StreamReader sr = File.OpenText(fName))
             {
                 string s = String.Empty;
@@ -52,7 +50,8 @@ namespace Conductus.FILE
                     Console.WriteLine(s);
                 }
             }
-            */
+            
+            return new WidgetObject();
         }
     }
 }
