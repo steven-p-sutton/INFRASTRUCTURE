@@ -43,9 +43,9 @@ namespace Conductus.FILE.ConsoleApp
             string streamFileName = "Stream.txt";
             DataFileStream fs = new DataFileStream();
 
-            //fs.Create(root + streamFileName);
-            //fs.Write(root + streamFileName, m_widget1);
-            //m_widget2 = fs.Read(root + streamFileName);
+            fs.Create(root + streamFileName);
+            fs.Write(root + streamFileName, m_widget1);
+            m_widget2 = fs.Read(root + streamFileName);
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");
@@ -54,9 +54,9 @@ namespace Conductus.FILE.ConsoleApp
             string textFileName = "Text.txt";
             DataFileText ft = new DataFileText();
 
-            //ft.Create(root + textFileName);
-            //ft.Write(root + textFileName, m_widget1);
-            //m_widget2 = ft.Read(root + textFileName);
+            ft.Create(root + textFileName);
+            ft.Write(root + textFileName, m_widget1);
+            m_widget2 = ft.Read(root + textFileName);
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("3. CSV Files");
@@ -74,10 +74,11 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("-------------------------------------------------------------------");
 
             string jsonFileName = "Json.json";
+            DataFileJson fj = new DataFileJson();
 
-            fJson_Create(root + jsonFileName);
-            fJson_Write(root + jsonFileName);
-            fJson_Read(root + jsonFileName);
+            fj.Create(root + jsonFileName);
+            fj.Write(root + jsonFileName, m_widget1);
+            m_widget2 = fj.Read(root + jsonFileName);
 
             Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("4. XML Files");
@@ -94,95 +95,6 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("-------------------------------------------------------------------");
         }
        
-        //=================================================================================================
-        // JSON
-        //=================================================================================================
-        //using System.Text.Json; // JSON handling
-        //    JsonSerializer.Serialize
-        //    JsonSerializer.Deserialize
-        // https://dotnetcoretutorials.com/2019/09/11/how-to-parse-json-in-net-core/
-        // https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-how-to
-
-        static void fJson_Create(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fJson_Create_START");
-            //-----------------------------------------------------------------------------
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("1. Delete the file if it exists");
-            //-----------------------------------------------------------------------------
-            if (File.Exists(fName))
-            {
-                File.Delete(fName);
-            }
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("2. Create a file to write to");
-            //-----------------------------------------------------------------------------
-            using (StreamWriter sw = File.CreateText(fName))
-            {
-            }
-
-            //-----------------------------------------------------------------------------
-            //Console.WriteLine("2. Serialize widget1 to JsonWidgetString1 & output on screen ->");
-            //-----------------------------------------------------------------------------
-            //string jsonWidgetString1 = JsonSerializer.Serialize(m_widget1);
-            //Console.WriteLine(jsonWidgetString1);
-            //Console.WriteLine(string.Empty);
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fJson_Create_END");
-            //-----------------------------------------------------------------------------
-        }
-        static void fJson_Write(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fJson_Write_START");
-            //-----------------------------------------------------------------------------
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("1. Setup widget1 to serialize");
-            //-----------------------------------------------------------------------------
-            // Declared & initiazed at top of program
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("2. Write JsonWidgetString1 to a file {0}", fName);
-            //-----------------------------------------------------------------------------
-            string jsonWidgetString1 = JsonSerializer.Serialize(m_widget1);
-            File.WriteAllText(fName, jsonWidgetString1);
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fJson_Write_END");
-            //-----------------------------------------------------------------------------
-        }
-        static void fJson_Read(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fJson_Read_START");
-            //-----------------------------------------------------------------------------
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("4. Read JsonWidgetString2 from file {0}->", fName);
-            //-----------------------------------------------------------------------------
-            string jsonWidgetString2 = File.ReadAllText(fName);
-            Console.WriteLine(jsonWidgetString2);
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("5. Deserialize JsonWidgetString2 into widget2");
-            //-----------------------------------------------------------------------------
-            m_widget2 = JsonSerializer.Deserialize<WidgetObject>(jsonWidgetString2);
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("6. Output widget2 to screen -> ");
-            //-----------------------------------------------------------------------------
-            string s = JsonSerializer.Serialize(m_widget2);
-            Console.WriteLine("{0}", s);
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fJson_Read_END");
-            //-----------------------------------------------------------------------------
-        }
 
         //=================================================================================================
         // XML
