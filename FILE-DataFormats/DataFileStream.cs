@@ -51,12 +51,25 @@ namespace Conductus.FILE
         {
             WidgetObject widget = new WidgetObject();
 
+            using (FileStream fs = File.OpenRead(fName))
+            {
+                widget.Date = Convert.ToDateTime(GetText(fs));
+                widget.TemperatureC = int.Parse(GetText(fs));
+                widget.Summary = GetText(fs);
+            }
+
             return widget;
         }
         void AddText(FileStream fs, string value)
         {
             byte[] info = new UTF8Encoding(true).GetBytes(value);
             fs.Write(info, 0, info.Length);
+        }
+
+        string GetText(FileStream fs)
+        {
+            // TBD - Find a real way to do this
+            return "sssss";
         }
     }
 }

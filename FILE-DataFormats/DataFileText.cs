@@ -40,15 +40,17 @@ namespace Conductus.FILE
             }
         }
         public override WidgetObject Read(string fName)
-        {   
-            using (StreamReader sr = File.OpenText(fName))
-            {
-                string s = String.Empty;
+        {
+            WidgetObject widget = new WidgetObject();
 
-                while ((s = sr.ReadLine()) != null)
-                {
-                    Console.WriteLine(s);
-                }
+            using (StreamReader sr = File.OpenText(fName))
+            {   // Get each line in loop
+                //string s = String.Empty;
+                //while ((s = sr.ReadLine()) != null) {Console.WriteLine(s);}
+
+                widget.Date = Convert.ToDateTime(sr.ReadLine());
+                widget.TemperatureC = int.Parse(sr.ReadLine());
+                widget.Summary = sr.ReadLine();
             }
             
             return new WidgetObject();

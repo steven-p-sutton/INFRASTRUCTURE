@@ -31,6 +31,8 @@ namespace Conductus.FILE
         }
         public override WidgetObject Read(string fName)
         {
+            WidgetObject widget = new WidgetObject();
+
             DataTable csvData = ReadCSVFile(fName);
             DisplayDataTable(csvData);
 
@@ -106,6 +108,37 @@ namespace Conductus.FILE
                 }
             }
             Console.WriteLine();
+        }
+
+        private string DataTableField(DataTable myData, string name)
+        {
+            int i = 0;
+
+            // Column Headings
+            for (int x = 0; x < myData.Columns.Count; x++)
+            {
+                //Console.Write(myData.Columns[x].Caption + " ");
+                if (String.Equals(myData.Columns[x].Caption, name))
+                {
+                    i = x;
+                }
+            }
+
+            string s = String.Empty;
+
+            // Row Data
+            foreach (DataRow row in myData.Rows)
+            {
+                //    Console.WriteLine();
+                //    for (int x = 0; x < myData.Columns.Count; x++)
+                //    {
+                //        //Console.Write(row[x].ToString() + " ");
+                //    }
+                s = row[i].ToString();
+            }
+            //Console.WriteLine();
+
+            return s;
         }
     }
 }
