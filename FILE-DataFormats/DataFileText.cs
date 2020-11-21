@@ -1,13 +1,8 @@
-﻿
+﻿//=================================================================================================
+// TEXT
 //=================================================================================================
-// STREAM
-//=================================================================================================
-// https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream?view=netcore-3.1
-// Streams = processing bytes for file
-// StringStream = processing character in a string
-// Textstream = processing string data in a file
-// OpenWrite
-// Create
+// https://docs.microsoft.com/en-us/dotnet/api/system.io.textreader?view=netcore-3.1
+// https://www.pluralsight.com/guides/declaring-and-initializing-variables-in-c
 
 using System;
 using System.IO;
@@ -23,17 +18,41 @@ using Conductus.Widget.Object;
 
 namespace Conductus.FILE
 {
-    public class DateFileText
+    public class DataFileText : DataFile
     {
-        public void Create(string fName)
+        public override void Create(string fName)
         {
+            if (File.Exists(fName))
+            {
+                File.Delete(fName);
+            }
+            using (StreamWriter sw = File.CreateText(fName))
+            {
+            }
         }
-        public void Write(string fName, WidgetObject widget)
+        public override void Write(string fName, WidgetObject widget)
         {
+            using (StreamWriter sw = File.AppendText(fName))
+            {
+                sw.WriteLine(widget.Date.ToString());
+                sw.WriteLine(widget.TemperatureC.ToString());
+                sw.WriteLine(widget.Summary.ToString());
+            }
         }
-        public WidgetObject Read(string fName)
+        public override WidgetObject Read(string fName)
         {
             return new WidgetObject();
+            /*
+            using (StreamReader sr = File.OpenText(fName))
+            {
+                string s = String.Empty;
+
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            */
         }
     }
 }

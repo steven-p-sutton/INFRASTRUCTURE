@@ -41,22 +41,22 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("--------------------------------------------------------------------");
 
             string streamFileName = "Stream.txt";
-            DataFileStream f = new DataFileStream();
+            DataFileStream fs = new DataFileStream();
 
-            f.Create(root + streamFileName);
-            f.Write(root + streamFileName, m_widget1);
-            m_widget2 = f.Read(root + streamFileName);
+            fs.Create(root + streamFileName);
+            fs.Write(root + streamFileName, m_widget1);
+            m_widget2 = fs.Read(root + streamFileName);
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");
             Console.WriteLine("--------------------------------------------------------------------");
 
             string textFileName = "Text.txt";
+            DataFileText ft = new DataFileText();
 
-
-            fText_Create(root + textFileName);
-            fText_Write(root + textFileName);
-            fText_Read(root + textFileName);
+            ft.Create(root + textFileName);
+            ft.Write(root + textFileName, m_widget1);
+            m_widget2 = ft.Read(root + textFileName);
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("3. CSV Files");
@@ -92,152 +92,7 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("99. ALL DONE");
             Console.WriteLine("-------------------------------------------------------------------");
         }
-
-
-        static void fStream_Create(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fStream_Create-START");
-            //-----------------------------------------------------------------------------
-            // Delete the file if it exists.
-            if (File.Exists(fName))
-            {
-                File.Delete(fName);
-            }
- 
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("Create the file - could use OpenWrite");
-            //-----------------------------------------------------------------------------
-            using (FileStream fs = File.Create(fName))
-            {
-            }
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fStream_Create-END");
-            //-----------------------------------------------------------------------------
-        }
-        static void fStream_Write(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fStream_Write-START");
-            //-----------------------------------------------------------------------------
-            using (FileStream fs = File.OpenWrite(fName))
-            {
-                // Write Widget raw bytes to stream file, no formatting etc
-                AddText(fs, m_widget1.Date.ToString());
-                AddText(fs, m_widget1.TemperatureC.ToString());
-                AddText(fs, m_widget1.Summary);
-            }
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fStream_Write-END");
-            //-----------------------------------------------------------------------------
-        }
-        static void fStream_Read(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fStream_Read-START");
-            //-----------------------------------------------------------------------------
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("1. Open the stream and read it back");
-            //-----------------------------------------------------------------------------
-            using (FileStream fs = File.OpenRead(fName))
-            {
-                //-------------------------------------------------------------------------
-                Console.WriteLine("2. Write the text lines to the screen");
-                //-------------------------------------------------------------------------
-                byte[] b = new byte[1024];
-                UTF8Encoding temp = new UTF8Encoding(true);
-                while (fs.Read(b, 0, b.Length) > 0)
-                {
-                    Console.WriteLine(temp.GetString(b));
-                }
-            }
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fStream_Read-END");
-            //-----------------------------------------------------------------------------
-        }
-        static void AddText(FileStream fs, string value)
-        {
-            byte[] info = new UTF8Encoding(true).GetBytes(value);
-            fs.Write(info, 0, info.Length);
-        }
-        
-        //=================================================================================================
-        // TEXT
-        //=================================================================================================
-        // https://docs.microsoft.com/en-us/dotnet/api/system.io.textreader?view=netcore-3.1
-        // https://www.pluralsight.com/guides/declaring-and-initializing-variables-in-c
-
-        static void fText_Create(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fText_Create-START");
-            //-----------------------------------------------------------------------------
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("1. Delete the file if it exists");
-            //-----------------------------------------------------------------------------
-            if (File.Exists(fName))
-            {
-                File.Delete(fName);
-            }
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("2. Create a file to write to");
-            //-----------------------------------------------------------------------------
-            using (StreamWriter sw = File.CreateText(fName))
-            {
-            }
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fText_Create-END");
-            //-----------------------------------------------------------------------------
-        }
-        static void fText_Write(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fText_Write-START");
-            //-----------------------------------------------------------------------------
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("1. Write the object to the new text stream");
-            //-----------------------------------------------------------------------------
-            using (StreamWriter sw = File.AppendText(fName))
-            {
-                sw.WriteLine(m_widget1.Date.ToString());
-                sw.WriteLine(m_widget1.TemperatureC.ToString());
-                sw.WriteLine(m_widget1.Summary.ToString());
-            }
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fText_Write-END");
-            //-----------------------------------------------------------------------------
-        }
-        static void fText_Read(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fText_Read_START");
-            //-----------------------------------------------------------------------------
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("1. Read the text lines from the text stream");
-            //-----------------------------------------------------------------------------
-            using (StreamReader sr = File.OpenText(fName))
-            {
-                //-------------------------------------------------------------------------
-                Console.WriteLine("2. Write the bytes to the screen");
-                //-------------------------------------------------------------------------
-                string s = String.Empty;
-
-                while ((s = sr.ReadLine()) != null)
-                {
-                    Console.WriteLine(s);
-                }
-            }
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fText_Read_END");
-            //-----------------------------------------------------------------------------
-        }
-
+       
         //=================================================================================================
         // CSV
         //=================================================================================================
