@@ -43,9 +43,9 @@ namespace Conductus.FILE.ConsoleApp
             string streamFileName = "Stream.txt";
             DataFileStream fs = new DataFileStream();
 
-            fs.Create(root + streamFileName);
-            fs.Write(root + streamFileName, m_widget1);
-            m_widget2 = fs.Read(root + streamFileName);
+            //fs.Create(root + streamFileName);
+            //fs.Write(root + streamFileName, m_widget1);
+            //m_widget2 = fs.Read(root + streamFileName);
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");
@@ -54,19 +54,20 @@ namespace Conductus.FILE.ConsoleApp
             string textFileName = "Text.txt";
             DataFileText ft = new DataFileText();
 
-            ft.Create(root + textFileName);
-            ft.Write(root + textFileName, m_widget1);
-            m_widget2 = ft.Read(root + textFileName);
+            //ft.Create(root + textFileName);
+            //ft.Write(root + textFileName, m_widget1);
+            //m_widget2 = ft.Read(root + textFileName);
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("3. CSV Files");
             Console.WriteLine("--------------------------------------------------------------------");
 
             string csvFileName = "Csv.csv";
+            DataFileCsv fc = new DataFileCsv();
 
-            fCsv_Create(root + csvFileName);
-            fCsv_Write(root + csvFileName);
-            fCsv_Read(root + csvFileName);
+            fc.Create(root + csvFileName);
+            ft.Write(root + csvFileName, m_widget1);
+            m_widget2 = fc.Read(root + csvFileName);
 
             Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("4. JSON Files");
@@ -93,124 +94,6 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("-------------------------------------------------------------------");
         }
        
-        //=================================================================================================
-        // CSV
-        //=================================================================================================
-        // using Microsoft.VisualBasic.FileIO; // VB !!!! 
-        //     TextFieldParser
-        // https://thecodebuzz.com/read-csv-file-in-net-core/
-        // https://thecodebuzz.com/read-csv-file-in-net-core-textfieldparser/
-        // https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-how-to
-
-        static void fCsv_Create(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fCsv_Create_START");
-            //-----------------------------------------------------------------------------
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fCsv_Create_END");
-            //-----------------------------------------------------------------------------
-        }
-        static void fCsv_Write(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fCsv_Write_START");
-            //-----------------------------------------------------------------------------
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fCsv_Write_END");
-            //-----------------------------------------------------------------------------
-        }
-        static void fCsv_Read(string fName)
-        {
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fCsv_Read_START");
-            //-----------------------------------------------------------------------------
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("1. Read csv file into DataTable");
-            //-----------------------------------------------------------------------------
-            DataTable csvData = ReadCSVFile(fName);
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("2. Display DataTable to screen");
-            //-----------------------------------------------------------------------------
-            DisplayDataTable(csvData);
-
-            //-----------------------------------------------------------------------------
-            Console.WriteLine("fCsv_Read_END");
-            //-----------------------------------------------------------------------------
-        }
-        private static DataTable ReadCSVFile(string csv_file_path)
-        {
-            DataTable csvData = new DataTable();
-
-            try
-            {
-                using (TextFieldParser csvReader = new TextFieldParser(csv_file_path))
-                {
-                    csvReader.SetDelimiters(new string[] { "," });
-                    csvReader.HasFieldsEnclosedInQuotes = true;
-                    string[] colFields;
-
-                    bool tableCreated = false;
-                    //Console.WriteLine("Columns");
-
-                    while (tableCreated == false)
-                    {
-                        colFields = csvReader.ReadFields();
-
-                        foreach (string column in colFields)
-                        {
-                            //Console.Write(column + " ");
-
-                            DataColumn datecolumn = new DataColumn(column);
-                            datecolumn.AllowDBNull = true;
-                            csvData.Columns.Add(datecolumn);
-                        }
-                        //Console.WriteLine();
-
-                        tableCreated = true;
-                    }
-                    while (!csvReader.EndOfData)
-                    {
-                        string[] colData = csvReader.ReadFields();
-                        /*
-                        foreach (string value in colData)
-                        {
-                            Console.Write(value + " ");
-                        }
-                        Console.WriteLine();
-                        */
-                        csvData.Rows.Add(colData);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            return csvData;
-        }
-        private static void DisplayDataTable(DataTable myData)
-        {
-            // Column Headings
-            for (int x = 0; x < myData.Columns.Count; x++)
-            {
-                Console.Write(myData.Columns[x].Caption + " ");
-            }
-            // Row Data
-            foreach (DataRow row in myData.Rows)
-            {
-                Console.WriteLine();
-                for (int x = 0; x < myData.Columns.Count; x++)
-                {
-                    Console.Write(row[x].ToString() + " ");
-                }
-            }
-            Console.WriteLine();
-        }
-
         //=================================================================================================
         // JSON
         //=================================================================================================
