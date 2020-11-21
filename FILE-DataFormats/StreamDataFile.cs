@@ -47,8 +47,10 @@ namespace Conductus.FILE
                 AddText(fs, widget.Summary);
             }
         }
-        public void Read(string fName)
-        { 
+        public WidgetObject Read(string fName)
+        {
+            WidgetObject widget = new WidgetObject();
+            return widget;
         }
         void AddText(FileStream fs, string value)
         {

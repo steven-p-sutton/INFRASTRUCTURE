@@ -34,7 +34,7 @@ namespace Conductus.FILE.ConsoleApp
         static void Main(string[] args)
         {
             // Directory.GetCurrentDirectory()
-            string root = "C:\\Users\\steve\\Documents\\Visual Studio Work\\FILE-DataFormats\\";
+            string root = "C:\\Users\\steve\\Documents\\Visual Studio Work\\INFRASTRUCTURE\\FILE-DataFormats\\";
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("1. STREAM Files");
@@ -44,11 +44,7 @@ namespace Conductus.FILE.ConsoleApp
             StreamDateFile f = new StreamDateFile();
             f.Create(root + streamFileName);
             f.Write(root + streamFileName, m_widget1);
-            f.Read(root + streamFileName);
-
-            //fStream_Create(root + streamFileName);
-            //fStream_Write(root + streamFileName);
-            //fStream_Read(root + streamFileName);
+            m_widget2 = f.Read(root + streamFileName);
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");

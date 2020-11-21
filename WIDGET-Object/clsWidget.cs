@@ -46,6 +46,7 @@ namespace Conductus.Widget.Object
             Date = date;
             TemperatureC = temperatureC;
             Summary = summary;
+            Secret = "";
         }
         public WidgetObject(DateTimeOffset date, int temperatureC, string summary, string secret)
         {
