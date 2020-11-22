@@ -9,5 +9,6 @@ namespace Conductus.FILE
         public abstract WidgetObject Read(string fName);
         public abstract byte[] ReadBytes(string fName);
         public abstract string ReadString(string fName);
+        //throw new NotImplementedException();
     }
 }

@@ -38,10 +38,8 @@ namespace Conductus.FILE
             {
                 File.Delete(fName);
             }
-
-            using (FileStream fs = File.Create(fName))
-            {
-            }
+            // Create the new file
+            FileStream fs = File.Create(fName);
         }
         public override void Write(string fName, WidgetObject widget)
         {
@@ -56,8 +54,6 @@ namespace Conductus.FILE
         }
         public override WidgetObject Read(string fName)
         {
-            //throw new NotImplementedException();
-
             WidgetObject widget = new WidgetObject();
 
             using (FileStream fs = File.OpenRead(fName))
@@ -93,12 +89,8 @@ namespace Conductus.FILE
         }
         string GetText(StreamReader sr)
         {
-            string s = string.Empty;
-            //using (StreamReader reader = new StreamReader(fs))
-            //{
-                s = sr.ReadLine();
-            //}
-            return s;
+            //return string.Empty;
+            return sr.ReadLine();
         }
     }
 }
