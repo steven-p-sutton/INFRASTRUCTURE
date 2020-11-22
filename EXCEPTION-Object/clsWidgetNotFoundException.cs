@@ -7,12 +7,10 @@
         public WidgetNotFoundException()
         {
         }
-
         public WidgetNotFoundException(string message)
             : base(message)
         {
         }
-
         public WidgetNotFoundException(string message, System.Exception inner)
             : base(message, inner)
         {

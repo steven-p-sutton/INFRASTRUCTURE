@@ -1,20 +1,6 @@
-﻿//  Files
-//      https://www.guru99.com/c-sharp-stream.html
-//      https://csharp.hotexamples.com/examples/-/TextStream/-/php-textstream-class-examples.html
-
-using System;
-using System.IO;
-using System.Text;
-using System.Data;
-using Microsoft.VisualBasic.FileIO; // VB !!!! 
-// TextFieldParser
-using System.Text.Json; // JSON handling
-// JsonSerializer.Serialize
-// JsonSerializer.Deserialize
-using System.Xml.Serialization;
-
-using Conductus.Widget.Object; // Object used for all examples
-using Conductus.FILE;
+﻿using System;
+using Conductus.Widget.Object;      // Widget object
+using Conductus.Widget.Exceptions;  // Widget exceptions
 
 namespace Conductus.FILE.ConsoleApp
 {
@@ -98,9 +84,10 @@ namespace Conductus.FILE.ConsoleApp
                 // Read back saved widget as string
                 string s = ft.ReadString(root + textFileName);
             }
-            catch (NotImplementedException e)
+            catch (WidgetNotImplentedException e)
             {
                 // do nothing & continue
+                string err = e.Display();
             }
 
             Console.WriteLine("--------------------------------------------------------------------");

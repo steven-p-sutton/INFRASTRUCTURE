@@ -3,10 +3,13 @@
 //=================================================================================================
 // https://docs.microsoft.com/en-us/dotnet/api/system.io.textreader?view=netcore-3.1
 // https://www.pluralsight.com/guides/declaring-and-initializing-variables-in-c
+// https://www.guru99.com/c-sharp-stream.html
+// https://csharp.hotexamples.com/examples/-/TextStream/-/php-textstream-class-examples.html
 
 using System;
 using System.IO;
-using Conductus.Widget.Object;
+using Conductus.Widget.Object;      // Widget object
+using Conductus.Widget.Exceptions;  // Widget exceptions
 
 namespace Conductus.FILE
 {
@@ -44,13 +47,15 @@ namespace Conductus.FILE
         }
         public override byte[] ReadBytes(string fName)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
             //return new byte[0];
+            throw new WidgetNotImplentedException("Text Streams are not byte streams.");
         }
         public override string ReadString(string fName)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
             //return string.Empty;
+            throw new WidgetNotImplentedException("Text Streams are not byte streams.");
         }
     }
 }
