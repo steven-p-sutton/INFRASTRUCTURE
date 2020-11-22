@@ -11,7 +11,9 @@
 //
 // NewLines 
 // https://social.msdn.microsoft.com/forums/vstudio/en-US/9582ab67-7039-4472-a1d2-b6912ddf5fa4/streamreaderreadline-breaks-at-single-carriage-return
-
+//
+// FileStreams & StreamReader/StreamWriter
+// http://zetcode.com/csharp/filestream/
 
 using System;
 using System.IO;
@@ -64,9 +66,13 @@ namespace Conductus.FILE
             }
             return widget;
         }
+        public override byte[] ReadBytes(string fName)
+        {
+            return new byte[0];
+        }
         void AddText(FileStream fs, string value)
         {
-            string s = value + Environment.NewLine; 
+            string s = value + Environment.NewLine;
             byte[] info = new UTF8Encoding(true).GetBytes(s);
             fs.Write(info, 0, info.Length);
         }

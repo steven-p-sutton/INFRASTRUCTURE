@@ -38,6 +38,10 @@ namespace Conductus.FILE
 
             return new WidgetObject();
         }
+        public override byte[] ReadBytes(string fName)
+        {
+            return new byte[0];
+        }
         private DataTable ReadCSVFile(string csv_file_path)
         {
             DataTable csvData = new DataTable();
@@ -90,7 +94,6 @@ namespace Conductus.FILE
 
             return csvData;
         }
-
         private void DisplayDataTable(DataTable myData)
         {
             // Column Headings
@@ -109,7 +112,6 @@ namespace Conductus.FILE
             }
             Console.WriteLine();
         }
-
         private string DataTableField(DataTable myData, string name)
         {
             int i = 0;

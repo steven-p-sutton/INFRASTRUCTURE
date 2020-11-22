@@ -7,5 +7,6 @@ namespace Conductus.FILE
         public abstract void Create(string fName);
         public abstract void Write(string fName, WidgetObject widget);
         public abstract WidgetObject Read(string fName);
+        public abstract byte[] ReadBytes(string fName);
     }
 }

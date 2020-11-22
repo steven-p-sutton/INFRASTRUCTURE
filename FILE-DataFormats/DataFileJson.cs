@@ -52,5 +52,9 @@ namespace Conductus.FILE
 
             return widget;
         }
+        public override byte[] ReadBytes(string fName)
+        {
+            return new byte[0];
+        }
     }
 }
