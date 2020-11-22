@@ -6,14 +6,6 @@
 
 using System;
 using System.IO;
-using System.Text;
-using System.Data;
-using Microsoft.VisualBasic.FileIO; // VB !!!! 
-// TextFieldParser
-using System.Text.Json; // JSON handling
-// JsonSerializer.Serialize
-// JsonSerializer.Deserialize
-using System.Xml.Serialization;
 using Conductus.Widget.Object;
 
 namespace Conductus.FILE
@@ -42,26 +34,23 @@ namespace Conductus.FILE
         public override WidgetObject Read(string fName)
         {
             WidgetObject widget = new WidgetObject();
-
             using (StreamReader sr = File.OpenText(fName))
-            {   // Get each line in loop
-                //string s = String.Empty;
-                //while ((s = sr.ReadLine()) != null) {Console.WriteLine(s);}
-
+            {   
                 widget.Date = Convert.ToDateTime(sr.ReadLine());
                 widget.TemperatureC = int.Parse(sr.ReadLine());
                 widget.Summary = sr.ReadLine();
             }
-            
-            return new WidgetObject();
+            return widget;
         }
         public override byte[] ReadBytes(string fName)
         {
-            return new byte[0];
+            throw new NotImplementedException();
+            //return new byte[0];
         }
         public override string ReadString(string fName)
         {
-            return string.Empty;
+            throw new NotImplementedException();
+            //return string.Empty;
         }
     }
 }

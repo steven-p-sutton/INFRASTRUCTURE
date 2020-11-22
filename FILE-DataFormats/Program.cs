@@ -69,6 +69,9 @@ namespace Conductus.FILE.ConsoleApp
                 ft.Create(root + textFileName);
                 ft.Write(root + textFileName, m_widget1);
                 m_widget2 = ft.Read(root + textFileName);
+                byte[] buf = new byte[1024];
+                buf = ft.ReadBytes(root + textFileName);
+                string s = ft.ReadString(root + textFileName);
             }
             catch (NotImplementedException e)
             {
