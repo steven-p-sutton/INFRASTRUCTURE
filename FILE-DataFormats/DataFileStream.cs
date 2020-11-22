@@ -8,6 +8,10 @@
 // Textstream = processing string data in a file
 // OpenWrite
 // Create
+//
+// NewLines 
+// https://social.msdn.microsoft.com/forums/vstudio/en-US/9582ab67-7039-4472-a1d2-b6912ddf5fa4/streamreaderreadline-breaks-at-single-carriage-return
+
 
 using System;
 using System.IO;
@@ -41,7 +45,8 @@ namespace Conductus.FILE
         {
             using (FileStream fs = File.OpenWrite(fName))
             {
-                // Write Widget raw bytes to stream file, no formatting etc
+                // Write Widget raw bytes to stream file lines, no formatting
+                // apart from Newline between fields
                 AddText(fs, widget.Date.ToString());
                 AddText(fs, widget.TemperatureC.ToString());
                 AddText(fs, widget.Summary);
@@ -57,19 +62,23 @@ namespace Conductus.FILE
                 widget.TemperatureC = int.Parse(GetText(fs));
                 widget.Summary = GetText(fs);
             }
-
             return widget;
         }
         void AddText(FileStream fs, string value)
         {
-            byte[] info = new UTF8Encoding(true).GetBytes(value);
+            string s = value + Environment.NewLine; 
+            byte[] info = new UTF8Encoding(true).GetBytes(s);
             fs.Write(info, 0, info.Length);
         }
 
         string GetText(FileStream fs)
         {
-            // TBD - Find a real way to do this
-            return "sssss";
+            string s = string.Empty;
+            using (StreamReader reader = new StreamReader(fs))
+            {
+                s = reader.ReadLine();
+            }
+            return s;
         }
     }
 }
