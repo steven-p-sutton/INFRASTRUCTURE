@@ -39,7 +39,7 @@ namespace Conductus.FILE.ConsoleApp
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("1. STREAM Files");
             Console.WriteLine("--------------------------------------------------------------------");
-
+            /*
             try
             {
                 string streamFileName = "Stream.txt";
@@ -56,7 +56,7 @@ namespace Conductus.FILE.ConsoleApp
             {
                 // do nothing & continue
             }
-
+            */
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");
             Console.WriteLine("--------------------------------------------------------------------");
@@ -66,9 +66,9 @@ namespace Conductus.FILE.ConsoleApp
                 string textFileName = "Text.txt";
                 DataFileText ft = new DataFileText();
 
-                //ft.Create(root + textFileName);
-                //ft.Write(root + textFileName, m_widget1);
-                //m_widget2 = ft.Read(root + textFileName);
+                ft.Create(root + textFileName);
+                ft.Write(root + textFileName, m_widget1);
+                m_widget2 = ft.Read(root + textFileName);
             }
             catch (NotImplementedException e)
             {
