@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Conductus.Widget.Exceptions
 {
-    static class ExceptionUtility
+    public class ExceptionUtility
     {
-        static string Display(System.Exception e)
+        public string Display(System.Exception e, string Name)
         {
-            return "Message: " + e.Message;
+            return "Name:" + Name + " Message:" + e.Message;
         }
     }
 }

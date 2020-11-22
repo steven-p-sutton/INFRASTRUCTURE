@@ -17,7 +17,9 @@
         }
         public string Display()
         {
-            return this.Message;
+            ExceptionUtility eu = new ExceptionUtility();
+            string s = eu.Display(this, "WidgetNotImplentedException");
+            return s;
         }
     }
 }
