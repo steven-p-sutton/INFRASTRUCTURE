@@ -68,7 +68,11 @@ namespace Conductus.FILE
         }
         public override byte[] ReadBytes(string fName)
         {
-            return new byte[0];
+            FileStream fs = File.OpenRead(fName);
+            byte[] buf = new byte[1024];
+            int c = fs.Read(buf, 0, buf.Length);
+            // return Encoding.UTF8.GetString(buf, 0, c);
+            return buf;
         }
         void AddText(FileStream fs, string value)
         {
