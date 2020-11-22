@@ -56,6 +56,8 @@ namespace Conductus.FILE
         }
         public override WidgetObject Read(string fName)
         {
+            throw new NotImplementedException();
+
             WidgetObject widget = new WidgetObject();
 
             using (FileStream fs = File.OpenRead(fName))

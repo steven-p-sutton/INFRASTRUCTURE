@@ -36,19 +36,26 @@ namespace Conductus.FILE.ConsoleApp
             // Directory.GetCurrentDirectory()
             string root = "C:\\Users\\steve\\Documents\\Visual Studio Work\\INFRASTRUCTURE\\FILE-DataFormats\\";
 
-            Console.WriteLine("--------------------------------------------------------------------");
-            Console.WriteLine("1. STREAM Files");
-            Console.WriteLine("--------------------------------------------------------------------");
+            try
+            {
+                Console.WriteLine("--------------------------------------------------------------------");
+                Console.WriteLine("1. STREAM Files");
+                Console.WriteLine("--------------------------------------------------------------------");
 
-            string streamFileName = "Stream.txt";
-            DataFileStream fs = new DataFileStream();
+                string streamFileName = "Stream.txt";
+                DataFileStream fs = new DataFileStream();
 
-            fs.Create(root + streamFileName);
-            fs.Write(root + streamFileName, m_widget1);
-            //m_widget2 = fs.Read(root + streamFileName);
-            byte[] buf = new byte[1024];
-            buf = fs.ReadBytes(root + streamFileName);
-            string s = fs.ReadString(root + streamFileName);
+                fs.Create(root + streamFileName);
+                fs.Write(root + streamFileName, m_widget1);
+                m_widget2 = fs.Read(root + streamFileName);
+                byte[] buf = new byte[1024];
+                buf = fs.ReadBytes(root + streamFileName);
+                string s = fs.ReadString(root + streamFileName);
+            }
+            catch (NotImplementedException e)
+            {
+                // do nothing & continue
+            }
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");
