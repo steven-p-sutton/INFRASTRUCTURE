@@ -55,6 +55,19 @@ namespace Conductus.Widget.Object
             Summary = summary;
             Secret = secret;
         }
+        public string Display (string title)
+        {
+            string s = Environment.NewLine;
+            s = s + new String('*', 6) + " " + title + " " + new String('*', 6) + Environment.NewLine;
+            s = s + "          Id: " + this.Id.ToString() + Environment.NewLine;
+            s = s + "        Date: " + this.Date.ToString() + Environment.NewLine;
+            s = s + "TemperatureC: " + this.TemperatureC.ToString() + Environment.NewLine;
+            s = s + "TemperatureF: " + this.TemperatureF.ToString() + Environment.NewLine;
+            s = s + "     Summary: " + this.Summary.ToString() + Environment.NewLine;
+            s = s + "      Secret: " + this.Secret.ToString() + Environment.NewLine;
+            s = s + Environment.NewLine;
+            return s;
+        }
         public long Id { get; set; }
         public DateTimeOffset Date { get; set; }
         public int TemperatureC { get; set; }

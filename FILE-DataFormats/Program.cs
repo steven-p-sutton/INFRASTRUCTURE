@@ -36,27 +36,41 @@ namespace Conductus.FILE.ConsoleApp
             // Directory.GetCurrentDirectory()
             string root = "C:\\Users\\steve\\Documents\\Visual Studio Work\\INFRASTRUCTURE\\FILE-DataFormats\\";
 
+            // Display the reference widget to play with
+            Console.WriteLine(m_widget1.Display(nameof(m_widget1)));
+
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("1. STREAM Files");
             Console.WriteLine("--------------------------------------------------------------------");
-            /*
+            
             try
             {
                 string streamFileName = "Stream.txt";
                 DataFileStream fs = new DataFileStream();
 
+                // Create file to store widget
                 fs.Create(root + streamFileName);
+
+                // Write widget to file
                 fs.Write(root + streamFileName, m_widget1);
+
+                // Read the widget back from the file
                 m_widget2 = fs.Read(root + streamFileName);
+
+                Console.WriteLine(m_widget2.Display(nameof(m_widget2)));
+
+                // Read back saved widget as bytes
                 byte[] buf = new byte[1024];
                 buf = fs.ReadBytes(root + streamFileName);
+
+                // Read back saved widget as string
                 string s = fs.ReadString(root + streamFileName);
             }
             catch (NotImplementedException e)
             {
                 // do nothing & continue
             }
-            */
+            
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");
             Console.WriteLine("--------------------------------------------------------------------");
@@ -66,11 +80,22 @@ namespace Conductus.FILE.ConsoleApp
                 string textFileName = "Text.txt";
                 DataFileText ft = new DataFileText();
 
+                // Create file to store widget
                 ft.Create(root + textFileName);
+
+                // Write widget to file
                 ft.Write(root + textFileName, m_widget1);
+
+                // Read the widget back from the file
                 m_widget2 = ft.Read(root + textFileName);
+
+                Console.WriteLine(m_widget2.Display(nameof(m_widget2)));
+
+                // Read back saved widget as bytes
                 byte[] buf = new byte[1024];
                 buf = ft.ReadBytes(root + textFileName);
+
+                // Read back saved widget as string
                 string s = ft.ReadString(root + textFileName);
             }
             catch (NotImplementedException e)
