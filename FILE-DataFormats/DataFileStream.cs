@@ -56,15 +56,18 @@ namespace Conductus.FILE
         }
         public override WidgetObject Read(string fName)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
 
             WidgetObject widget = new WidgetObject();
 
             using (FileStream fs = File.OpenRead(fName))
             {
-                widget.Date = Convert.ToDateTime(GetText(fs));
-                widget.TemperatureC = int.Parse(GetText(fs));
-                widget.Summary = GetText(fs);
+                using (StreamReader sr = new StreamReader(fs))
+                {
+                    widget.Date = Convert.ToDateTime(GetText(sr));
+                    widget.TemperatureC = int.Parse(GetText(sr));
+                    widget.Summary = GetText(sr);
+                }
             }
             return widget;
         }
@@ -88,13 +91,13 @@ namespace Conductus.FILE
             byte[] info = new UTF8Encoding(true).GetBytes(s);
             fs.Write(info, 0, info.Length);
         }
-        string GetText(FileStream fs)
+        string GetText(StreamReader sr)
         {
             string s = string.Empty;
-            using (StreamReader reader = new StreamReader(fs))
-            {
-                s = reader.ReadLine();
-            }
+            //using (StreamReader reader = new StreamReader(fs))
+            //{
+                s = sr.ReadLine();
+            //}
             return s;
         }
     }
