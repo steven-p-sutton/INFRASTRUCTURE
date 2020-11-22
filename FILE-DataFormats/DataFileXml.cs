@@ -59,5 +59,9 @@ namespace Conductus.FILE
         {
             return new byte[0];
         }
+        public override string ReadString(string fName)
+        {
+            return string.Empty;
+        }
     }
 }

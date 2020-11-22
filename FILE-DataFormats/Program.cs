@@ -48,6 +48,7 @@ namespace Conductus.FILE.ConsoleApp
             //m_widget2 = fs.Read(root + streamFileName);
             byte[] buf = new byte[1024];
             buf = fs.ReadBytes(root + streamFileName);
+            string s = fs.ReadString(root + streamFileName);
 
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");

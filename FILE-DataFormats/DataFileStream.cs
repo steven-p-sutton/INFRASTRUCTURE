@@ -71,8 +71,14 @@ namespace Conductus.FILE
             FileStream fs = File.OpenRead(fName);
             byte[] buf = new byte[1024];
             int c = fs.Read(buf, 0, buf.Length);
-            // return Encoding.UTF8.GetString(buf, 0, c);
             return buf;
+        }
+        public override string ReadString(string fName)
+        {
+            FileStream fs = File.OpenRead(fName);
+            byte[] buf = new byte[1024];
+            int c = fs.Read(buf, 0, buf.Length);
+            return Encoding.UTF8.GetString(buf, 0, c);
         }
         void AddText(FileStream fs, string value)
         {
@@ -80,7 +86,6 @@ namespace Conductus.FILE
             byte[] info = new UTF8Encoding(true).GetBytes(s);
             fs.Write(info, 0, info.Length);
         }
-
         string GetText(FileStream fs)
         {
             string s = string.Empty;

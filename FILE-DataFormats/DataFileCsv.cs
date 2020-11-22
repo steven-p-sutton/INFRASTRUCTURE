@@ -42,6 +42,10 @@ namespace Conductus.FILE
         {
             return new byte[0];
         }
+        public override string ReadString(string fName)
+        {
+            return string.Empty;
+        }
         private DataTable ReadCSVFile(string csv_file_path)
         {
             DataTable csvData = new DataTable();
