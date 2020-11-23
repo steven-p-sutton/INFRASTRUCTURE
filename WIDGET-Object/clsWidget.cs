@@ -59,7 +59,7 @@ namespace Conductus.Widget.Object
         public string Display (string title)
         {
             string s = Environment.NewLine;
-            s = s + Heading.H1 + " " + title + " " + Heading.H1 + Environment.NewLine;
+            s = s + Heading.H4 + " " + title + " " + Heading.H4 + Environment.NewLine;
             s = s + "          Id: " + this.Id.ToString() + Environment.NewLine;
             s = s + "        Date: " + this.Date.ToString() + Environment.NewLine;
             s = s + "TemperatureC: " + this.TemperatureC.ToString() + Environment.NewLine;
