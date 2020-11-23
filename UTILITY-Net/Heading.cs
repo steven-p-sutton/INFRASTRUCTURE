@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Conductus.UTILITY.Heading
+namespace Conductus.UTILITY.Net.Heading
 {
     static public class Heading
     {
@@ -25,6 +25,14 @@ namespace Conductus.UTILITY.Heading
         static public string H5
         {
             get { return new String(' ', 6); }
+        }
+        static public string Pad
+        {
+            get { return new String(' ', 1); }
+        }
+        static public string Div
+        {
+            get { return new String('-', 80); }
         }
     }
 }
