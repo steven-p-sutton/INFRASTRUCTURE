@@ -47,14 +47,10 @@ namespace Conductus.FILE
         }
         public override byte[] ReadBytes(string fName)
         {
-            //throw new NotImplementedException();
-            //return new byte[0];
             throw new WidgetNotImplentedException("Text Streams are not byte streams.");
         }
         public override string ReadString(string fName)
         {
-            //throw new NotImplementedException();
-            //return string.Empty;
             throw new WidgetNotImplentedException("Text Streams are not byte streams.");
         }
     }

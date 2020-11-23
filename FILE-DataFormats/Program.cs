@@ -52,11 +52,17 @@ namespace Conductus.FILE.ConsoleApp
                 // Read back saved widget as string
                 string s = fs.ReadString(root + streamFileName);
             }
-            catch (NotImplementedException e)
+            catch (WidgetNotImplentedException e)
             {
-                // do nothing & continue
+                // Format using custom excdeptions format method
+                Console.WriteLine(e.Display());
             }
-            
+            catch (System.Exception e)
+            {
+                // Standard system execption, just format by hand
+                Console.WriteLine(e.Message);
+            }
+
             Console.WriteLine("--------------------------------------------------------------------");
             Console.WriteLine("2. TEXT Files");
             Console.WriteLine("--------------------------------------------------------------------");
@@ -86,8 +92,13 @@ namespace Conductus.FILE.ConsoleApp
             }
             catch (WidgetNotImplentedException e)
             {
-                // do nothing & continue
-                string err = e.Display();
+                // Format using custom excdeptions format method
+                Console.WriteLine(e.Display());
+            }
+            catch(System.Exception e)
+            {
+                 // Standard system execption, just format by hand
+                Console.WriteLine(e.Message);
             }
 
             Console.WriteLine("--------------------------------------------------------------------");

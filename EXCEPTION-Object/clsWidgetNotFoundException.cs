@@ -15,5 +15,9 @@
             : base(message, inner)
         {
         }
+        public string Display()
+        {
+            return ExceptionUtility.Display(this, "WidgetNotFoundException");
+        }
     }
 }

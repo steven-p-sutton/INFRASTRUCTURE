@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXCEPTION-ConsoleApp", "EXC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENTITYFRAMEWORK-ConsoleApp", "ENTITYFRAMEWORK-ConsoleApp\ENTITYFRAMEWORK-ConsoleApp.csproj", "{BF69802D-78B6-49CC-B48D-71EE6759BF33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTILITY", "UTILITY\UTILITY.csproj", "{C1D0614F-02C1-4231-9440-CA6D87659634}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{BF69802D-78B6-49CC-B48D-71EE6759BF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF69802D-78B6-49CC-B48D-71EE6759BF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF69802D-78B6-49CC-B48D-71EE6759BF33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D0614F-02C1-4231-9440-CA6D87659634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D0614F-02C1-4231-9440-CA6D87659634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D0614F-02C1-4231-9440-CA6D87659634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D0614F-02C1-4231-9440-CA6D87659634}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
