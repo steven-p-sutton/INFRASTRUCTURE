@@ -1,10 +1,11 @@
-﻿using System;
-
-// A general class that is used to hold data and strctures for examples.
+﻿// A general class that is used to hold data and strctures for examples.
 // Defines so that examples can interchange data & ideas
 // 
 // Files for CSV, XML, JSON, TEXT, ... and memory DataTables, database tables, 
 // spreadsheets etc, Web pages, API, MVC, ADO etc 
+
+using System;
+using Conductus.UTILITY.Heading;
 
 namespace Conductus.Widget.Object
 {
@@ -58,7 +59,7 @@ namespace Conductus.Widget.Object
         public string Display (string title)
         {
             string s = Environment.NewLine;
-            s = s + new String('*', 6) + " " + title + " " + new String('*', 6) + Environment.NewLine;
+            s = s + Heading.H1 + " " + title + " " + Heading.H1 + Environment.NewLine;
             s = s + "          Id: " + this.Id.ToString() + Environment.NewLine;
             s = s + "        Date: " + this.Date.ToString() + Environment.NewLine;
             s = s + "TemperatureC: " + this.TemperatureC.ToString() + Environment.NewLine;
