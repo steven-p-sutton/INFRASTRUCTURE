@@ -26,9 +26,9 @@ namespace Conductus.FILE.ConsoleApp
             // Display the reference widget to play with
             Console.WriteLine(m_widget1.Display(nameof(m_widget1)));
 
-            Console.WriteLine(Heading.H1);
+            Console.WriteLine(Heading.Div);
             Console.WriteLine("1. STREAM Files");
-            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
             
             try
             {
@@ -63,10 +63,9 @@ namespace Conductus.FILE.ConsoleApp
                 // Standard system execption, just format by hand
                 Console.WriteLine(e.Message);
             }
-
-            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
             Console.WriteLine("2. TEXT Files");
-            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
 
             try
             {
@@ -102,9 +101,9 @@ namespace Conductus.FILE.ConsoleApp
                 Console.WriteLine(e.Message);
             }
 
-            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
             Console.WriteLine("3. CSV Files");
-            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
 
             try
             {
@@ -120,10 +119,10 @@ namespace Conductus.FILE.ConsoleApp
                 // do nothing & continue
             }
 
-            Console.WriteLine("-------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
             Console.WriteLine("4. JSON Files");
-            Console.WriteLine("-------------------------------------------------------------------");
-            
+            Console.WriteLine(Heading.Div);
+
             try
             {
                 string jsonFileName = "Json.json";
@@ -139,9 +138,9 @@ namespace Conductus.FILE.ConsoleApp
                 // do nothing & continue
             }
 
-            Console.WriteLine("-------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
             Console.WriteLine("4. XML Files");
-            Console.WriteLine("-------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
 
             try
             {
@@ -157,9 +156,9 @@ namespace Conductus.FILE.ConsoleApp
                 // do nothing & continue
             }
 
-            Console.WriteLine("-------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
             Console.WriteLine("99. ALL DONE");
-            Console.WriteLine("-------------------------------------------------------------------");
+            Console.WriteLine(Heading.Div);
         }
     }
 }
