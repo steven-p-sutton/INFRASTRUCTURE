@@ -9,7 +9,12 @@
   <ItemGroup>
     <ProjectReference Include="..\EXCEPTION-Object\EXCEPTION-Object.csproj" />
     <ProjectReference Include="..\UTILITY\UTILITY.csproj" />
-    <ProjectReference Include="..\WIDGET-Object\WIDGET-Object.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WIDGET-Object">
+      <HintPath>..\..\WIDGET\WIDGET-Object\bin\Debug\netcoreapp3.1\WIDGET-Object.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
