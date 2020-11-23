@@ -1,6 +1,7 @@
 ﻿using System;
 using Conductus.Widget.Object;      // Widget object
 using Conductus.Widget.Exceptions;  // Widget exception
+using Conductus.UTILITY.Heading;    // Heading String constants
 
 namespace Conductus.FILE.ConsoleApp
 {
@@ -25,7 +26,7 @@ namespace Conductus.FILE.ConsoleApp
             // Display the reference widget to play with
             Console.WriteLine(m_widget1.Display(nameof(m_widget1)));
 
-            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine(Heading.H1);
             Console.WriteLine("1. STREAM Files");
             Console.WriteLine("--------------------------------------------------------------------");
             

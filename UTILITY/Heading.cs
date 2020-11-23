@@ -26,5 +26,13 @@ namespace Conductus.UTILITY.Heading
         {
             get { return new String(' ', 6); }
         }
+        static public string Pad
+        {
+            get { return new String(' ', 1); }
+        }
+        static public string Div
+        {
+            get { return new String('-', 80); }
+        }
     }
 }
