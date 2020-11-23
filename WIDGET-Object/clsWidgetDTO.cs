@@ -31,44 +31,39 @@ namespace Conductus.Widget.Object
 
     // https://www.w3schools.com/cs/cs_constructors.asp
 
-    public class WidgetDTO
+        public class WidgetDTO
     {
         // Default (optional) do nothing
         public WidgetDTO()
         {
         }
-        // Create a class constructor with multiple parameters
-        public WidgetDTO(DateTimeOffset date, int temperatureC, string summary)
+        // Create class constructors with multiple parameters
+        public WidgetDTO(DateTimeOffset date)
         {
             Date = date;
-            TemperatureC = temperatureC;
-            Summary = summary;
         }
         public WidgetDTO(WidgetObject widget)
         {
             Id = widget.Id;
             Date = widget.Date;
-            TemperatureC = widget.TemperatureC;
-            Summary = widget.Summary;
-            // Secret NOT present in DTO
+            Name = widget.Name;
+            Count = widget.Count;
         }
+        public WidgetDTO WidgetToDTO(WidgetObject widget) => new WidgetDTO(widget);
+        public long Id { get; set; }
+        public DateTimeOffset Date { get; set; }
+        public string Name { get; set; }
+        public int Count { get; set; }
         public string Display(string title)
         {
             string s = Environment.NewLine;
-            s = s + Heading.H1 + " " + title + " " + Heading.H1 + Environment.NewLine;
-            s = s + "          Id: " + this.Id.ToString() + Environment.NewLine;
-            s = s + "        Date: " + this.Date.ToString() + Environment.NewLine;
-            s = s + "TemperatureC: " + this.TemperatureC.ToString() + Environment.NewLine;
-            s = s + "TemperatureF: " + this.TemperatureF.ToString() + Environment.NewLine;
-            s = s + "     Summary: " + this.Summary.ToString() + Environment.NewLine;
+            s = s + Heading.H4 + " " + title + " " + Heading.H4 + Environment.NewLine;
+            s = s + "    Id: " + this.Id.ToString() + Environment.NewLine;
+            s = s + "  Date: " + this.Date.ToString() + Environment.NewLine;
+            s = s + "  Name: " + this.Name + Environment.NewLine;
+            s = s + " Count: " + this.Count.ToString() + Environment.NewLine;
             s = s + Environment.NewLine;
             return s;
         }
-        public WidgetDTO WidgetToDTO(WidgetObject widget) => new WidgetDTO (widget);
-        public long Id { get; set; }
-        public DateTimeOffset Date { get; set; }
-        public int TemperatureC { get; set; }
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556); // calculated
-        public string Summary { get; set; }
     }
 }

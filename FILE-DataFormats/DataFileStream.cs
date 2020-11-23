@@ -44,8 +44,9 @@ namespace Conductus.FILE
                 // Write Widget raw bytes to stream file lines, no formatting
                 // apart from Newline between fields
                 AddText(fs, widget.Date.ToString());
-                AddText(fs, widget.TemperatureC.ToString());
-                AddText(fs, widget.Summary);
+                AddText(fs, widget.Name.ToString());
+                AddText(fs, widget.Count.ToString());
+                AddText(fs, widget.Secret.ToString());
             }
         }
         public override WidgetObject Read(string fName)
@@ -56,8 +57,9 @@ namespace Conductus.FILE
                 using (StreamReader sr = new StreamReader(fs))
                 {
                     widget.Date = Convert.ToDateTime(GetText(sr));
-                    widget.TemperatureC = int.Parse(GetText(sr));
-                    widget.Summary = GetText(sr);
+                    widget.Name = GetText(sr);
+                    widget.Count = int.Parse(GetText(sr));
+                    widget.Secret = GetText(sr);
                 }
             }
             return widget;

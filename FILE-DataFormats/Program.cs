@@ -12,8 +12,9 @@ namespace Conductus.FILE.ConsoleApp
         static WidgetObject m_widget1 = new WidgetObject()
         {
             Date = DateTimeOffset.Now,
-            TemperatureC = 32,
-            Summary = "Test 1 summary"
+            Name = "Widget1",
+            Count = 99,
+            Secret = "Widget 1 Secret"
         };
 
         // An empty destination object

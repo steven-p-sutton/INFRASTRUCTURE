@@ -30,8 +30,9 @@ namespace Conductus.FILE
             using (StreamWriter sw = File.AppendText(fName))
             {
                 sw.WriteLine(widget.Date.ToString());
-                sw.WriteLine(widget.TemperatureC.ToString());
-                sw.WriteLine(widget.Summary.ToString());
+                sw.WriteLine(widget.Name.ToString());
+                sw.WriteLine(widget.Count.ToString());
+                sw.WriteLine(widget.Secret.ToString());
             }
         }
         public override WidgetObject Read(string fName)
@@ -40,8 +41,9 @@ namespace Conductus.FILE
             using (StreamReader sr = File.OpenText(fName))
             {   
                 widget.Date = Convert.ToDateTime(sr.ReadLine());
-                widget.TemperatureC = int.Parse(sr.ReadLine());
-                widget.Summary = sr.ReadLine();
+                widget.Name = sr.ReadLine();
+                widget.Count = int.Parse(sr.ReadLine());
+                widget.Secret = sr.ReadLine();
             }
             return widget;
         }
