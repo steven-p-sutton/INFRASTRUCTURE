@@ -17,7 +17,7 @@ using System.Text.Json; // JSON handling
 // JsonSerializer.Serialize
 // JsonSerializer.Deserialize
 using System.Xml.Serialization;
-using Conductus.Widget.Object;
+//using Conductus.Widget.Object;
 
 namespace Conductus.FILE
 {

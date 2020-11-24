@@ -14,8 +14,8 @@
     <Reference Include="UTILITY">
       <HintPath>..\UTILITY\bin\Debug\netcoreapp3.1\UTILITY.dll</HintPath>
     </Reference>
-    <Reference Include="WIDGET-Object">
-      <HintPath>..\..\WIDGET\WIDGET-Object\bin\Debug\netcoreapp3.1\WIDGET-Object.dll</HintPath>
+    <Reference Include="WIDGET-Model-Core">
+      <HintPath>..\..\WIDGET\WIDGET-Model-Core\bin\Debug\netcoreapp3.1\WIDGET-Model-Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 

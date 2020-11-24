@@ -8,7 +8,8 @@
 
 using System;
 using System.IO;
-using Conductus.Widget.Object;      // Widget object
+//using Conductus.Widget.Object;      // Widget object
+//using Conductus.WIDGET.Model.Core;
 using Conductus.Widget.Exceptions;  // Widget exceptions
 
 namespace Conductus.FILE
