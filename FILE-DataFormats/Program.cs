@@ -1,7 +1,5 @@
 ﻿using System;
-//using Conductus.Widget.Object;      // Widget object
 using Conductus.Widget.Exceptions;  // Widget exception
-//using Conductus.UTILITY.Heading;    // Heading String constants
 
 namespace Conductus.FILE.ConsoleApp
 {
