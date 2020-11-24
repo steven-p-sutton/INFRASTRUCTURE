@@ -8,10 +8,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EXCEPTION-Object\EXCEPTION-Object.csproj" />
-    <ProjectReference Include="..\UTILITY\UTILITY.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="UTILITY">
+      <HintPath>..\UTILITY\bin\Debug\netcoreapp3.1\UTILITY.dll</HintPath>
+    </Reference>
     <Reference Include="WIDGET-Object">
       <HintPath>..\..\WIDGET\WIDGET-Object\bin\Debug\netcoreapp3.1\WIDGET-Object.dll</HintPath>
     </Reference>
