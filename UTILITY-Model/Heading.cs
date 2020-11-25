@@ -1,4 +1,5 @@
-﻿#if (__HEADING__)/#else
+﻿#if (__HEADING__)
+#else
 #define __HEADING__
 
     using System;

@@ -1,6 +1,6 @@
-﻿//#if (__ExceptionUtility__)
-//#else
-//#define __ExceptionUtility__
+﻿#if (__ExceptionUtility__)
+#else
+#define __ExceptionUtility__
 
     using System;
     static public class ExceptionUtility
@@ -15,4 +15,4 @@
         }
     }
 
-//#endif
+#endif
