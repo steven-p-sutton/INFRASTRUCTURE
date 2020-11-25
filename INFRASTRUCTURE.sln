@@ -25,23 +25,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXCEPTION-ConsoleApp", "EXC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENTITYFRAMEWORK-ConsoleApp", "ENTITYFRAMEWORK-ConsoleApp\ENTITYFRAMEWORK-ConsoleApp.csproj", "{BF69802D-78B6-49CC-B48D-71EE6759BF33}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXCEPTION-Object", "EXCEPTION-Object\EXCEPTION-Object.csproj", "{95DE6F13-FEE1-4916-90F2-CA8CF4C52126}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXCEPTION-Object-Net", "EXCEPTION-Object-Net\EXCEPTION-Object-Net.csproj", "{16A1C499-F65A-4003-87FF-F6336475C42B}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UTILITY-Model", "UTILITY-Model\UTILITY-Model.shproj", "{9FCD1FD9-4F68-434E-9195-AC17387390E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTILITY-Model-Net", "UTILITY-Model-Net\UTILITY-Model-Net.csproj", "{82B43209-93B7-42DF-9894-A28C0078045C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTILITY-Model-Core", "UTILITY-Model-Core\UTILITY-Model-Core.csproj", "{650AB229-03FE-440B-ADE9-D5D5E987C0F3}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EXCEPTION-Model", "EXCEPTION-Model\EXCEPTION-Model.shproj", "{1E2462E6-EC6D-4DF4-A81D-CE2B510EB48D}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		UTILITY-Model\UTILITY-Model.projitems*{16a1c499-f65a-4003-87ff-f6336475c42b}*SharedItemsImports = 4
+		EXCEPTION-Model\EXCEPTION-Model.projitems*{1e2462e6-ec6d-4df4-a81d-ce2b510eb48d}*SharedItemsImports = 13
+		EXCEPTION-Model\EXCEPTION-Model.projitems*{4739e328-bcd4-4759-a22a-18709d25cc37}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{4739e328-bcd4-4759-a22a-18709d25cc37}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{650ab229-03fe-440b-ade9-d5d5e987c0f3}*SharedItemsImports = 5
-		UTILITY-Model\UTILITY-Model.projitems*{95de6f13-fee1-4916-90f2-ca8cf4c52126}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{9fcd1fd9-4f68-434e-9195-ac17387390e6}*SharedItemsImports = 13
+		EXCEPTION-Model\EXCEPTION-Model.projitems*{e9cd8a56-9dd8-496b-b0ae-b32bad457697}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,14 +91,6 @@ Global
 		{BF69802D-78B6-49CC-B48D-71EE6759BF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF69802D-78B6-49CC-B48D-71EE6759BF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF69802D-78B6-49CC-B48D-71EE6759BF33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95DE6F13-FEE1-4916-90F2-CA8CF4C52126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95DE6F13-FEE1-4916-90F2-CA8CF4C52126}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95DE6F13-FEE1-4916-90F2-CA8CF4C52126}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95DE6F13-FEE1-4916-90F2-CA8CF4C52126}.Release|Any CPU.Build.0 = Release|Any CPU
-		{16A1C499-F65A-4003-87FF-F6336475C42B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16A1C499-F65A-4003-87FF-F6336475C42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16A1C499-F65A-4003-87FF-F6336475C42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16A1C499-F65A-4003-87FF-F6336475C42B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{82B43209-93B7-42DF-9894-A28C0078045C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{82B43209-93B7-42DF-9894-A28C0078045C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82B43209-93B7-42DF-9894-A28C0078045C}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -7,15 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EXCEPTION-Object\EXCEPTION-Object.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="WIDGET-Model-Core">
       <HintPath>..\..\WIDGET\WIDGET-Model-Core\bin\Debug\netcoreapp3.1\WIDGET-Model-Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 
   <Import Project="..\UTILITY-Model\UTILITY-Model.projitems" Label="Shared" />
+
+  <Import Project="..\EXCEPTION-Model\EXCEPTION-Model.projitems" Label="Shared" />
 
 </Project>

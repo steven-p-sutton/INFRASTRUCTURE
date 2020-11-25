@@ -8,7 +8,7 @@
 
 using System;
 using System.IO;
-using Conductus.Widget.Exceptions;  // Widget exceptions
+//using Conductus.Widget.Exceptions;  // Widget exceptions
 
 namespace Conductus.FILE
 {

@@ -6,8 +6,6 @@
     <RootNamespace>EXCEPTION_ConsoleApp</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\EXCEPTION-Object\EXCEPTION-Object.csproj" />
-  </ItemGroup>
+  <Import Project="..\EXCEPTION-Model\EXCEPTION-Model.projitems" Label="Shared" />
 
 </Project>
