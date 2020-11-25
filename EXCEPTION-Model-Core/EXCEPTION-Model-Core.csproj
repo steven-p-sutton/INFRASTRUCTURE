@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>EXCEPTION_Model_Core</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\EXCEPTION-Model\EXCEPTION-Model.projitems" Label="Shared" />
+
+</Project>

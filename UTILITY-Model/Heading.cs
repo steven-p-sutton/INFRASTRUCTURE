@@ -1,6 +1,5 @@
-﻿//#if (__HEADING__)
-//#else
-//#define __HEADING__
+﻿#if (__HEADING__)/#else
+#define __HEADING__
 
     using System;
     static public class Heading
@@ -34,5 +33,4 @@
             get { return new String('-', 80); }
         }
     }
-
-//#endif
+#endif

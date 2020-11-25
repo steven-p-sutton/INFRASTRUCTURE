@@ -5,6 +5,7 @@ namespace Conductus.FILE.ConsoleApp
 {
     class Program
     {
+
         // Global objects that will be used throughout the various types of files and objects
         // A source object
         static WidgetObject m_widget1 = new WidgetObject()
