@@ -9,7 +9,6 @@
 
 using System;
 using System.IO;
-using System.Text;
 using System.Text.Json; // JSON handling
 
 namespace Conductus.FILE
@@ -47,11 +46,11 @@ namespace Conductus.FILE
         }
         public override byte[] ReadBytes(string fName)
         {
-            return new byte[0];
+            throw new WidgetNotImplentedException("JSON files are not byte streams.");
         }
         public override string ReadString(string fName)
         {
-            return string.Empty;
+            throw new WidgetNotImplentedException("JSON files are not byte streams.");
         }
     }
 }

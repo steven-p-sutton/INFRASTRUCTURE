@@ -146,13 +146,27 @@ namespace Conductus.FILE.ConsoleApp
 
             try
             {
-                string jsonFileName = "Json.json";
+
+                string jsonFileName = "csv.csv";
                 DataFileJson fj = new DataFileJson();
 
+                // Create file to store widget
+                fj.Create(root + jsonFileName);
 
-                //fj.Create(root + jsonFileName);
-                //fj.Write(root + jsonFileName, m_widget1);
-                //m_widget2 = fj.Read(root + jsonFileName);
+                // Write widget to file
+                fj.Write(root + jsonFileName, m_widget1);
+
+                // Read the widget back from the file
+                m_widget2 = fj.Read(root + jsonFileName);
+
+                Console.WriteLine(m_widget2.Display(nameof(m_widget2)));
+
+                // Read back saved widget as bytes
+                byte[] buf = new byte[1024];
+                buf = fj.ReadBytes(root + jsonFileName);
+
+                // Read back saved widget as string
+                string s = fj.ReadString(root + jsonFileName);
             }
             catch (WidgetNotImplentedException e)
             {
