@@ -3,13 +3,13 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>fee75b2d-2762-4a37-9858-3e0152a28392</SharedGUID>
+    <SharedGUID>2bf435ba-2035-4d0c-84f7-c9d491b199e3</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>EXCEPTION_Model</Import_RootNamespace>
+    <Import_RootNamespace>DATABASE_Model</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)BaseException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ExceptionUtility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConnectionMSSQLString.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConnectionString.cs" />
   </ItemGroup>
 </Project>

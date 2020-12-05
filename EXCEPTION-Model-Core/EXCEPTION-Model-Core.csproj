@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,5 +6,7 @@
   </PropertyGroup>
 
   <Import Project="..\EXCEPTION-Model\EXCEPTION-Model.projitems" Label="Shared" />
+
+  <Import Project="..\UTILITY-Model\UTILITY-Model.projitems" Label="Shared" />
 
 </Project>

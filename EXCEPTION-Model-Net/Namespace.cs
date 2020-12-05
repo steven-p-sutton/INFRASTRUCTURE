@@ -1,7 +1,7 @@
-﻿namespace Conductus.EXCEPTION.Model.Net
+﻿namespace Conductus.Exception.Model.Net
 {
     public class Namespace
     {
-        // References EXCEPTION-Model shared project
+        // References EXCEPTION-Model shared project 
     }
 }

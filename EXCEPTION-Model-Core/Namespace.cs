@@ -2,6 +2,6 @@
 {
     public class Namespace
     {
-        // References EXCEPTION-Model shared project
+        // References EXCEPTION-Model shared project 
     }
 }

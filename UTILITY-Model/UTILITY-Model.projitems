@@ -3,7 +3,7 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>9fcd1fd9-4f68-434e-9195-ac17387390e6</SharedGUID>
+    <SharedGUID>fca7b907-8f52-4a0d-8d51-3ad681a202e5</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>UTILITY_Model</Import_RootNamespace>
