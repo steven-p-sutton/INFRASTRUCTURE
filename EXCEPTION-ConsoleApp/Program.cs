@@ -1,5 +1,5 @@
 ﻿using System;
-//using Conductus.Widget.Exceptions; // Custom exceptions
+using Conductus.Widget.Exception;
 
 namespace EXCEPTION_ConsoleApp
 {

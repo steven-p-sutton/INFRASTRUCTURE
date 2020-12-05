@@ -1,5 +1,6 @@
 ﻿using System;
-//using Conductus.Widget.Exceptions;  // Widget exception
+using Conductus.Widget.Exception;  // Widget exception
+using Conductus.EXCEPTION.Model.Core;
 
 namespace Conductus.FILE.ConsoleApp
 {
