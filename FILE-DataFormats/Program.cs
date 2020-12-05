@@ -108,16 +108,36 @@ namespace Conductus.FILE.ConsoleApp
 
             try
             {
-                string csvFileName = "Csv.csv";
+                string csvFileName = "csv.csv";
                 DataFileCsv fc = new DataFileCsv();
 
-                //fc.Create(root + csvFileName);
-                //fc.Write(root + csvFileName, m_widget1);
-                //m_widget2 = fc.Read(root + csvFileName);
+                // Create file to store widget
+                fc.Create(root + csvFileName);
+
+                // Write widget to file
+                fc.Write(root + csvFileName, m_widget1);
+
+                // Read the widget back from the file
+                m_widget2 = fc.Read(root + csvFileName);
+
+                Console.WriteLine(m_widget2.Display(nameof(m_widget2)));
+
+                // Read back saved widget as bytes
+                byte[] buf = new byte[1024];
+                buf = fc.ReadBytes(root + csvFileName);
+
+                // Read back saved widget as string
+                string s = fc.ReadString(root + csvFileName);
             }
-            catch (NotImplementedException e)
+            catch (WidgetNotImplentedException e)
             {
-                // do nothing & continue
+                // Format using custom excdeptions format method
+                Console.WriteLine(e.Display());
+            }
+            catch (System.Exception e)
+            {
+                // Standard system execption, just format by hand
+                Console.WriteLine(e.Message);
             }
 
             Console.WriteLine(Heading.Div);
@@ -134,9 +154,15 @@ namespace Conductus.FILE.ConsoleApp
                 //fj.Write(root + jsonFileName, m_widget1);
                 //m_widget2 = fj.Read(root + jsonFileName);
             }
-            catch (NotImplementedException e)
+            catch (WidgetNotImplentedException e)
             {
-                // do nothing & continue
+                // Format using custom excdeptions format method
+                Console.WriteLine(e.Display());
+            }
+            catch (System.Exception e)
+            {
+                // Standard system execption, just format by hand
+                Console.WriteLine(e.Message);
             }
 
             Console.WriteLine(Heading.Div);
@@ -152,9 +178,15 @@ namespace Conductus.FILE.ConsoleApp
                 //fx.Write(root + xmlFileName, m_widget1);
                 //m_widget2 = fx.Read(root + xmlFileName);
             }
-            catch (NotImplementedException e)
+            catch (WidgetNotImplentedException e)
             {
-                // do nothing & continue
+                // Format using custom excdeptions format method
+                Console.WriteLine(e.Display());
+            }
+            catch (System.Exception e)
+            {
+                // Standard system execption, just format by hand
+                Console.WriteLine(e.Message);
             }
 
             Console.WriteLine(Heading.Div);
