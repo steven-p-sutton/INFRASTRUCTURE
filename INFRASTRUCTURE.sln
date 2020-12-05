@@ -42,7 +42,6 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{1e2462e6-ec6d-4df4-a81d-ce2b510eb48d}*SharedItemsImports = 13
-		EXCEPTION-Model\EXCEPTION-Model.projitems*{4739e328-bcd4-4759-a22a-18709d25cc37}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{4739e328-bcd4-4759-a22a-18709d25cc37}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
