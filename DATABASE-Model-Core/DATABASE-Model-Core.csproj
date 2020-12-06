@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>DATABASE_Model_Core</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\DATABASE-Model\DATABASE-Model.projitems" Label="Shared" />
+
+</Project>

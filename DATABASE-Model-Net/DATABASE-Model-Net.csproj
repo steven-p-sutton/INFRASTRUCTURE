@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>DATABASE_Model_Net</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\DATABASE-Model\DATABASE-Model.projitems" Label="Shared" />
+
+</Project>
