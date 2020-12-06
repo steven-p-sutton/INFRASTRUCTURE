@@ -41,13 +41,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DONT-PANIC", "..\DONT-PANIC
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DATABASE-Model", "DATABASE-Model\DATABASE-Model.shproj", "{2BF435BA-2035-4D0C-84F7-C9D491B199E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATABASE-Model-Core", "DATABASE-Model-Core\DATABASE-Model-Core.csproj", "{7DA68E4C-4700-460E-BE8D-917E51BB52D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATABASE-Model-Core", "DATABASE-Model-Core\DATABASE-Model-Core.csproj", "{7DA68E4C-4700-460E-BE8D-917E51BB52D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATABASE-Model-Net", "DATABASE-Model-Net\DATABASE-Model-Net.csproj", "{1FE35927-590E-456C-BDDD-E386F9124D87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATABASE-Model-Net", "DATABASE-Model-Net\DATABASE-Model-Net.csproj", "{1FE35927-590E-456C-BDDD-E386F9124D87}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{1e2462e6-ec6d-4df4-a81d-ce2b510eb48d}*SharedItemsImports = 13
+		DATABASE-Model\DATABASE-Model.projitems*{1fe35927-590e-456c-bddd-e386f9124d87}*SharedItemsImports = 5
+		DATABASE-Model\DATABASE-Model.projitems*{2bf435ba-2035-4d0c-84f7-c9d491b199e3}*SharedItemsImports = 13
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{650ab229-03fe-440b-ade9-d5d5e987c0f3}*SharedItemsImports = 5
