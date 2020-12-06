@@ -8,8 +8,6 @@
 // https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-how-to
 
 using System;
-using System.IO;
-using System.Text;
 using System.Data;
 using Microsoft.VisualBasic.FileIO; // VB !!!! 
 
@@ -19,9 +17,11 @@ namespace Conductus.FILE
     {
         public override void Create(string fName)
         {
+            throw new WidgetNotImplentedException("TBD");
         }
         public override void Write(string fName, WidgetObject widget)
         {
+            throw new WidgetNotImplentedException("TBD");
         }
         public override WidgetObject Read(string fName)
         {
@@ -34,16 +34,16 @@ namespace Conductus.FILE
         }
         public override byte[] ReadBytes(string fName)
         {
-            return new byte[0];
+            throw new WidgetNotImplentedException("CSV files are not byte streams.");
         }
         public override string ReadString(string fName)
         {
-            return string.Empty;
+            throw new WidgetNotImplentedException("CSV files are not byte streams.");
         }
         private DataTable ReadCSVFile(string csv_file_path)
         {
             DataTable csvData = new DataTable();
-
+             
             try
             {
                 using (TextFieldParser csvReader = new TextFieldParser(csv_file_path))
