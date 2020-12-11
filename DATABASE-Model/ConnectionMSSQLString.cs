@@ -111,7 +111,7 @@ public class ConnectionMSSQLStringBuilder : ConnectionStringBuilder
             result = result + String.Format("Server={0};", s);
 
         if ((d!= string.Empty) && (d != null) && (d != ""))
-            result = result + String.Format("Database ={0};", d);
+            result = result + String.Format("Database={0};", d);
 
         // Determine Authentication mode from presence of username & password
         if ( (this.UserName != string.Empty) && (this.UserName != null) && (this.UserName != "")
