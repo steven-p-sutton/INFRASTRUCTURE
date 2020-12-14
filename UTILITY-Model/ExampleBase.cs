@@ -9,27 +9,33 @@ public abstract class ExampleBase
     public ExampleBase()
     {
         this.Output = Console.Out;
-        this.Title = "Example Base";
+        this.Title = "106-ExampleBase";
     }
     public ExampleBase(string title)
     {
         this.Title = title;
     }
+    private string MessageGo(string message)
+    {
+        string s = "\n     : " + "Go ......";
+        this.Output.WriteLine(s);
+        return (s);
+    }   
     private string MessageBegin(string message)
     {
-        string s = "\nBEGIN: " + this.Title;
+        string s = "\nBEGIN: " + this.Title + ": " + message;
         this.Output.WriteLine(s);
         return (s);
     }
     private string MessageEnd(string message)
     {
-        string s = "\nEND  : " + this.Title;
+        string s = "\nEND  : " + this.Title + ": " + message; ;
         this.Output.WriteLine(s);
         return (s);
     }
     public string MessageLine(string message)
     {
-        string s = "\n     : " + message;
+        string s = "\n     : " + this.Title + ": " + message;
         this.Output.WriteLine(s);
         return (s);
     }
@@ -44,6 +50,7 @@ public abstract class ExampleBase
     public void Go(string message)
     {
         this.MessageBegin(message);
+        //this.MessageGo(message);
         this.Run();
         this.MessageEnd(message);
     }
