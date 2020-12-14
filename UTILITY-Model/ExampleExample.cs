@@ -1,8 +1,8 @@
-﻿public class Example1 : ExampleBase
+﻿public class ExampleExample : ExampleBase
 {
-    public Example1()
+    public ExampleExample()
     {
-        this.Title = "Example1";
+        this.Title = "ExampleExample";
     }
     protected override void Run()
     {

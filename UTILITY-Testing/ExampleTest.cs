@@ -1,6 +1,6 @@
 ﻿namespace UTILITY_Testing
 {
-    public class ExampleTest: Example1 
+    public class ExampleTest: ExampleExample 
     {
         public ExampleTest()
         {
