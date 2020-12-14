@@ -9,6 +9,9 @@
     <Import_RootNamespace>UTILITY_Model</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ExampleExample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ExampleBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Heading.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HeadingExample.cs" />
   </ItemGroup>
 </Project>
