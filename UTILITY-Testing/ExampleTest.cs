@@ -4,9 +4,8 @@
     {
         public ExampleTest()
         {
-            //this.Title = "ExampleTest";
             // Just run it 
-            this.Go("101");
+            this.Go("ExampleTest");
         }
     }
 }

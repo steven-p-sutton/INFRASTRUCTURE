@@ -4,7 +4,12 @@ using System.Text;
 
 namespace UTILITY_Testing
 {
-    class HeadingTest
+    public class HeadingTest: HeadingExample
     {
+        public HeadingTest()
+        {
+            // Just run it 
+            this.Go("HeadingTest");
+        }
     }
 }

@@ -9,11 +9,7 @@ public abstract class ExampleBase
     public ExampleBase()
     {
         this.Output = Console.Out;
-        this.Title = "106-ExampleBase";
-    }
-    public ExampleBase(string title)
-    {
-        this.Title = title;
+        this.Title = "ExampleBase";
     }
     private string MessageGo(string message)
     {

@@ -6,8 +6,9 @@ namespace UTILITY_Testing
     {
         static void Main(string[] args)
         {
-            // Constructor will run the Example1 run method
+            // Constructors will use the <class>.Run() methods
             ExampleTest exampleTest = new ExampleTest();
+            HeadingTest headingTest = new HeadingTest();
         }
     }
 }

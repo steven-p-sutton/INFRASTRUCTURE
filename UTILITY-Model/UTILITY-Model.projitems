@@ -12,5 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Example1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ExampleBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Heading.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Heading1.cs" />
   </ItemGroup>
 </Project>

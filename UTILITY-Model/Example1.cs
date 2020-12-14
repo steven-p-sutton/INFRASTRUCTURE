@@ -2,19 +2,18 @@
 {
     public Example1()
     {
-        this.Title = "102";
+        this.Title = "Example1";
     }
-    
     protected override void Run()
     {
-        MessageLine("103");
+        MessageLine("Preamble before code");
 
-        MessageLine("104");
+        MessageLine("Code");
         for (int i = 0; i < 10; i++)
         {
             Message((i + " "));
         }
 
-        MessageLine("105");
+        MessageLine("Post after code");
     }
 }
