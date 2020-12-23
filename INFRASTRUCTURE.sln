@@ -45,7 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATABASE-Model-Core", "DATA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATABASE-Model-Net", "DATABASE-Model-Net\DATABASE-Model-Net.csproj", "{1FE35927-590E-456C-BDDD-E386F9124D87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTILITY-Testing", "UTILITY-Testing\UTILITY-Testing.csproj", "{A63129B3-E2A8-4765-BE4A-8D3B08F1BD34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UTILITY-Testing", "UTILITY-Testing\UTILITY-Testing.csproj", "{A63129B3-E2A8-4765-BE4A-8D3B08F1BD34}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -60,7 +60,6 @@ Global
 		UTILITY-Model\UTILITY-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{82b43209-93b7-42df-9894-a28c0078045c}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{9fcd1fd9-4f68-434e-9195-ac17387390e6}*SharedItemsImports = 13
-		UTILITY-Model\UTILITY-Model.projitems*{a63129b3-e2a8-4765-be4a-8d3b08f1bd34}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
