@@ -47,19 +47,28 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATABASE-Model-Net", "DATAB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UTILITY-Testing", "UTILITY-Testing\UTILITY-Testing.csproj", "{A63129B3-E2A8-4765-BE4A-8D3B08F1BD34}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MOCK-Framework", "MOCK-Framework\MOCK-Framework.shproj", "{C7206BC6-D0F1-42F3-95B6-9715D502BAC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOCK-Framework-NET", "MOCK-Framework-NET\MOCK-Framework-NET.csproj", "{724375E4-960C-43F9-8D97-6B96BA555C6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOCK-Framework-CORE", "MOCK-Framework-CORE\MOCK-Framework-CORE.csproj", "{3C1CC17E-F5DE-4A0C-89AC-EC02EC779DC3}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{1e2462e6-ec6d-4df4-a81d-ce2b510eb48d}*SharedItemsImports = 13
 		DATABASE-Model\DATABASE-Model.projitems*{1fe35927-590e-456c-bddd-e386f9124d87}*SharedItemsImports = 5
 		DATABASE-Model\DATABASE-Model.projitems*{2bf435ba-2035-4d0c-84f7-c9d491b199e3}*SharedItemsImports = 13
+		MOCK-Framework\MOCK-Framework.projitems*{3c1cc17e-f5de-4a0c-89ac-ec02ec779dc3}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{650ab229-03fe-440b-ade9-d5d5e987c0f3}*SharedItemsImports = 5
+		MOCK-Framework\MOCK-Framework.projitems*{724375e4-960c-43f9-8d97-6b96ba555c6c}*SharedItemsImports = 5
 		DATABASE-Model\DATABASE-Model.projitems*{7da68e4c-4700-460e-be8d-917e51bb52d0}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{82b43209-93b7-42df-9894-a28c0078045c}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{9fcd1fd9-4f68-434e-9195-ac17387390e6}*SharedItemsImports = 13
+		MOCK-Framework\MOCK-Framework.projitems*{c7206bc6-d0f1-42f3-95b6-9715d502bac1}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -142,6 +151,14 @@ Global
 		{A63129B3-E2A8-4765-BE4A-8D3B08F1BD34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A63129B3-E2A8-4765-BE4A-8D3B08F1BD34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A63129B3-E2A8-4765-BE4A-8D3B08F1BD34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724375E4-960C-43F9-8D97-6B96BA555C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724375E4-960C-43F9-8D97-6B96BA555C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724375E4-960C-43F9-8D97-6B96BA555C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724375E4-960C-43F9-8D97-6B96BA555C6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1CC17E-F5DE-4A0C-89AC-EC02EC779DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1CC17E-F5DE-4A0C-89AC-EC02EC779DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1CC17E-F5DE-4A0C-89AC-EC02EC779DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1CC17E-F5DE-4A0C-89AC-EC02EC779DC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
