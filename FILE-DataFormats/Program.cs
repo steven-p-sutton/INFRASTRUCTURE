@@ -1,5 +1,5 @@
 ﻿using System;
-using Conductus.Widget.Exception;  // Widget exception
+using Conductus.WIDGET.Exception;  // Widget exception
 using Conductus.EXCEPTION.Model.Core;
 
 namespace Conductus.FILE.ConsoleApp
@@ -9,7 +9,7 @@ namespace Conductus.FILE.ConsoleApp
 
         // Global objects that will be used throughout the various types of files and objects
         // A source object
-        static WidgetObject m_widget1 = new WidgetObject()
+        static Widget m_widget1 = new Widget()
         {
             Date = DateTimeOffset.Now,
             Name = "Widget1",
@@ -18,7 +18,7 @@ namespace Conductus.FILE.ConsoleApp
         };
 
         // An empty destination object
-        static WidgetObject m_widget2 = new WidgetObject();
+        static Widget m_widget2 = new Widget();
         static void Main(string[] args)
         {
             // Directory.GetCurrentDirectory()

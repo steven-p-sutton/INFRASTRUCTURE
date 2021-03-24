@@ -23,7 +23,7 @@ namespace Conductus.FILE
             {
             }
         }
-        public override void Write(string fName, WidgetObject widget)
+        public override void Write(string fName, Widget widget)
         {
             using (StreamWriter sw = File.AppendText(fName))
             {
@@ -33,9 +33,9 @@ namespace Conductus.FILE
                 sw.WriteLine(widget.Secret.ToString());
             }
         }
-        public override WidgetObject Read(string fName)
+        public override Widget Read(string fName)
         {
-            WidgetObject widget = new WidgetObject();
+            Widget widget = new Widget();
             using (StreamReader sr = File.OpenText(fName))
             {   
                 widget.Date = Convert.ToDateTime(sr.ReadLine());

@@ -26,18 +26,18 @@ namespace Conductus.FILE
             {
             }
         }
-        public override void Write(string fName, WidgetObject widget)
+        public override void Write(string fName, Widget widget)
         {
             string jsonWidgetString1 = JsonSerializer.Serialize(widget);
             File.WriteAllText(fName, jsonWidgetString1);
         }
-        public override WidgetObject Read(string fName)
+        public override Widget Read(string fName)
         {
-            WidgetObject widget;
+            Widget widget;
             string jsonWidgetString2 = File.ReadAllText(fName);
 
             Console.WriteLine(jsonWidgetString2);
-            widget = JsonSerializer.Deserialize<WidgetObject>(jsonWidgetString2);
+            widget = JsonSerializer.Deserialize<Widget>(jsonWidgetString2);
 
             string s = JsonSerializer.Serialize(widget);
             Console.WriteLine("{0}", s);

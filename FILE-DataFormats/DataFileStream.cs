@@ -36,7 +36,7 @@ namespace Conductus.FILE
             }
             // use fs.Close(); if not using 'using'
         }
-        public override void Write(string fName, WidgetObject widget)
+        public override void Write(string fName, Widget widget)
         {
             using (FileStream fs = File.OpenWrite(fName))
             {
@@ -48,9 +48,9 @@ namespace Conductus.FILE
                 AddText(fs, widget.Secret.ToString());
             }
         }
-        public override WidgetObject Read(string fName)
+        public override Widget Read(string fName)
         {
-            WidgetObject widget = new WidgetObject();
+            Widget widget = new Widget();
             using (FileStream fs = File.OpenRead(fName))
             {
                 using (StreamReader sr = new StreamReader(fs))

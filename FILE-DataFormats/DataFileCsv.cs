@@ -19,18 +19,18 @@ namespace Conductus.FILE
         {
             throw new WidgetNotImplentedException("TBD");
         }
-        public override void Write(string fName, WidgetObject widget)
+        public override void Write(string fName, Widget widget)
         {
             throw new WidgetNotImplentedException("TBD");
         }
-        public override WidgetObject Read(string fName)
+        public override Widget Read(string fName)
         {
-            WidgetObject widget = new WidgetObject();
+            Widget widget = new Widget();
 
             DataTable csvData = ReadCSVFile(fName);
             DisplayDataTable(csvData);
 
-            return new WidgetObject();
+            return new Widget();
         }
         public override byte[] ReadBytes(string fName)
         {

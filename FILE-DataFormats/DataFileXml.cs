@@ -24,7 +24,7 @@ namespace Conductus.FILE
             {
             }
         }
-        public override void Write(string fName, WidgetObject widget)
+        public override void Write(string fName, Widget widget)
         {
             XmlSerializer xmlSerializer = new System.Xml.Serialization.XmlSerializer(widget.GetType());
             xmlSerializer.Serialize(Console.Out, widget);
@@ -34,14 +34,14 @@ namespace Conductus.FILE
                 xmlSerializer.Serialize(tw, widget);
             }
         }
-        public override WidgetObject Read(string fName)
+        public override Widget Read(string fName)
         {
-            WidgetObject widget = new WidgetObject();
+            Widget widget = new Widget();
 
             XmlSerializer xmlSerializer = new XmlSerializer(widget.GetType());
             using (Stream sr = new FileStream(fName, FileMode.Open))
             {
-                widget = (WidgetObject)xmlSerializer.Deserialize(sr);
+                widget = (Widget)xmlSerializer.Deserialize(sr);
             }
             xmlSerializer.Serialize(Console.Out, widget);
 
