@@ -1,4 +1,4 @@
-﻿namespace nsICreditCard
+﻿namespace Conductus.PATTERN.Interface.CREDITCARD
 {
     /// <summary>  
     /// The 'Card' Interface Class  

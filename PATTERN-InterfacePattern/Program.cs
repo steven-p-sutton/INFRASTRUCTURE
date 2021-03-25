@@ -1,10 +1,10 @@
 ﻿using System;
-using nsICreditCard;
-using nsMoneyBackCreditCard;
-using nsPlatiniumCreditCard;
-using nsTitainiumCreditCard;
+using Conductus.PATTERN.Interface.CREDITCARD;
+using Conductus.PATTERN.Interface.MONEYBACKCREDITCARD;
+using Conductus.PATTERN.Interface.PLATINIUMCREDITCARD;
+using Conductus.PATTERN.Interface.TITAINIUMCREDITCARD;
 
-// An example of interface pattern without using factory objects
+// An example of interface pattern without using factory objects as per PATTERN-Factory example
 
 // Also shows how objects derrived from the interface class can add their own methods & properties so
 // long as the interface contract is implementated. The object varienats can be detected and processed 

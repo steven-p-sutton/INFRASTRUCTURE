@@ -1,6 +1,6 @@
-﻿using nsICreditCard;
+﻿using Conductus.PATTERN.Interface.CREDITCARD;
 
-namespace nsTitainiumCreditCard
+namespace Conductus.PATTERN.Interface.TITAINIUMCREDITCARD
 {
     /// <summary>  
     /// A 'ConcreteProduct' class  

@@ -1,6 +1,6 @@
-﻿using nsICreditCard;
+﻿using Conductus.PATTERN.Interface.CREDITCARD;
 
-namespace nsMoneyBackCreditCard
+namespace Conductus.PATTERN.Interface.MONEYBACKCREDITCARD
 {
     /// <summary>  
     /// A 'ConcreteProduct' class  
