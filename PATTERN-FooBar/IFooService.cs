@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FooService
+namespace Conductus.PATTERN.FooBar.FOOSERVICE
 {
     interface IFooService
     {

@@ -2,7 +2,7 @@
 
 using System;
 
-namespace FooService
+namespace Conductus.PATTERN.FooBar.FOOSERVICE
 {
     class clsFooService : IFooService
     {

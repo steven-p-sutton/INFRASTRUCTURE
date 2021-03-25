@@ -1,8 +1,8 @@
-﻿using BarService;
-using FooService;
+﻿using Conductus.PATTERN.FooBar.FOOSERVICE;
+using Conductus.PATTERN.FooBar.BARSERVICE;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ConsoleApp_03
+namespace Conductus.PATTERN.FooBar
 {
     class Program
     {

@@ -1,6 +1,6 @@
-﻿using FooService;
+﻿using Conductus.PATTERN.FooBar.FOOSERVICE;
 
-namespace BarService
+namespace Conductus.PATTERN.FooBar.BARSERVICE
 {
     class clsBarService : IBarService
     {
