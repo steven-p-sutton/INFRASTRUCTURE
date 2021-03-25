@@ -1,6 +1,6 @@
-﻿using ns.ICreditCard;
+﻿using Conductus.PATTERN.Factory.CREDITCARD;
 
-namespace PlatiniumCreditCard
+namespace Conductus.PATTERN.Factory.PLATINIUMCREDITCARD
 {
     class PlatinumCreditCardFactory : ICreditCardFactory
     {

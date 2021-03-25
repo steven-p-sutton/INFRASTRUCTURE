@@ -19,7 +19,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace Conductus.FILE
+namespace Conductus.FILE.Dataformats
 {
     public class DataFileStream : DataFile
     {

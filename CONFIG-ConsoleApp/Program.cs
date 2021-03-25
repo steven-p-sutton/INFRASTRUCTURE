@@ -33,7 +33,7 @@ using Microsoft.Extensions.Configuration;
 //  }
 //}
 
-namespace Conductus.Config.ConsoleApp
+namespace Conductus.CONFIG.ConsoleApp
 {
     class Program
     {

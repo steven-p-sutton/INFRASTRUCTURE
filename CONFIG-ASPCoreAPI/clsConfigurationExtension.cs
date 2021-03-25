@@ -3,7 +3,7 @@ using System;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Conductus.Config.API
+namespace Conductus.CONFIG.API
 {
     public static class ConfigurationExtension
     {

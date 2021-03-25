@@ -1,4 +1,4 @@
-﻿namespace Conductus.Config.API
+﻿namespace Conductus.CONFIG.API
 {
     public sealed class MySettingsConfiguration
     {

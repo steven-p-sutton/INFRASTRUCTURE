@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace Conductus.Config.API
+namespace Conductus.CONFIG.API
 {
     [Route("Way1")]
     [ApiController]

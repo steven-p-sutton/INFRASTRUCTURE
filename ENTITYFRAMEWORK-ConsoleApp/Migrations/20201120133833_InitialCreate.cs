@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Conductus.EntityFramework.ConsoleApp.Migrations
+namespace Conductus.ENTITYFRAMEWORK.ConsoleApp.Migrations
 {
     public partial class InitialCreate : Migration
     {

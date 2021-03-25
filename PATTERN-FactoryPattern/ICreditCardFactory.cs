@@ -1,9 +1,10 @@
-﻿namespace ns.ICreditCard
+﻿namespace Conductus.PATTERN.Factory.CREDITCARD
 {
     /// <summary>  
+    /// 
     /// The 'Creator' Abstract Class  
     /// </summary>  
-    interface ICreditCardFactory
+interface ICreditCardFactory
     {
         ICreditCard GetCreditCard();
     }

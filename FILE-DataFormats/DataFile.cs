@@ -1,4 +1,4 @@
-﻿namespace Conductus.FILE
+﻿namespace Conductus.FILE.Dataformats
 {
     public abstract class DataFile
     {

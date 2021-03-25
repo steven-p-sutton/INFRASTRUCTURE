@@ -9,7 +9,7 @@ using System;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace Conductus.FILE
+namespace Conductus.FILE.Dataformats
 {
     public class DataFileXml : DataFile
     {

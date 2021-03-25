@@ -11,7 +11,7 @@ using System;
 using System.Data;
 using Microsoft.VisualBasic.FileIO; // VB !!!! 
 
-namespace Conductus.FILE
+namespace Conductus.FILE.Dataformats
 {
     public class DataFileCsv : DataFile
     {

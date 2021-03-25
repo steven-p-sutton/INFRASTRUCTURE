@@ -1,4 +1,4 @@
-﻿namespace Conductus.Database.Model.Net
+﻿namespace Conductus.DATABASE.Model.Net
 {
     public class Namespace
     {

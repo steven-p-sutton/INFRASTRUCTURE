@@ -1,4 +1,4 @@
-﻿namespace Conductus.Mock.Framework.Core
+﻿namespace Conductus.MOCK.Framework.Core
 {
     public class Namespace
     {

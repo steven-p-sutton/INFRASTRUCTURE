@@ -11,7 +11,7 @@ using System;
 using System.IO;
 using System.Text.Json; // JSON handling
 
-namespace Conductus.FILE
+namespace Conductus.FILE.Dataformats
 {
     public class DataFileJson : DataFile
     {

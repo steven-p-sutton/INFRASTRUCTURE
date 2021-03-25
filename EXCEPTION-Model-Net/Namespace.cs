@@ -1,4 +1,4 @@
-﻿namespace Conductus.Exception.Model.Net
+﻿namespace Conductus.EXCEPTION.Model.Net
 {
     public class Namespace
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Conductus.Config.API
+namespace Conductus.CONFIG.API
 {
     [ApiController]
     [Route("[controller]")]

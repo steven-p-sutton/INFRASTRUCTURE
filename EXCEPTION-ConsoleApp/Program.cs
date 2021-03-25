@@ -1,7 +1,7 @@
 ﻿using System;
 using Conductus.WIDGET.Exception;
 
-namespace EXCEPTION_ConsoleApp
+namespace Conductus.EXCEPTION.ConsoleApp
 {
     class Program
     {

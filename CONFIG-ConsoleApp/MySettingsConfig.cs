@@ -1,4 +1,4 @@
-﻿namespace Conductus.Config.ConsoleApp
+﻿namespace Conductus.CONFIG.ConsoleApp
 {
  public class MySettingsConfig
     {

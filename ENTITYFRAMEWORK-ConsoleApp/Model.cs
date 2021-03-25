@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Conductus.EntityFramework.ConsoleApp
+namespace Conductus.ENTITYFRAMEWORK.ConsoleApp
 {
     public class Blog
     {

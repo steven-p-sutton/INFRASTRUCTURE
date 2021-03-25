@@ -1,10 +1,10 @@
 ﻿using System;
-using ns.ICreditCard;
-using MoneybackCreditCard;
-using PlatiniumCreditCard;
-using TitainiumCreditCard;
 
-namespace Main
+using Conductus.PATTERN.Factory.MONEYBACKCREDITCARD;
+using Conductus.PATTERN.Factory.PLATINIUMCREDITCARD;
+using Conductus.PATTERN.Factory.TITAINIUMCREDITCARD;
+
+namespace Conductus.PATTERN.Factory.CREDITCARD
 {
     class Program
     {

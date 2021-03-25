@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 // https://thecodebuzz.com/logging-in-net-core-console-application/
 // Install-Package Serilog.Extensions.Logging.File
 
-namespace Conductus.Logging.ConsoleApp
+namespace Conductus.LOGGING.ConsoleApp
 {
     class Program
     {

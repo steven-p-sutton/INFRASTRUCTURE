@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Conductus.Logging.ASPCoreAPI
+namespace Conductus.LOGGING.ASPCoreAPI
 {
     // Logging
     // https://www.tutorialsteacher.com/core/fundamentals-of-logging-in-dotnet-core

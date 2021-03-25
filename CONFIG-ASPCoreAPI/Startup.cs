@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Conductus.Config.API
+namespace Conductus.CONFIG.API
 {
     public class Startup
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Conductus.Config.API
+namespace Conductus.CONFIG.API
 {
     public class WeatherForecast
     {

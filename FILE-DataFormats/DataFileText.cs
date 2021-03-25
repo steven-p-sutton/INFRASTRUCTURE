@@ -9,7 +9,7 @@
 using System;
 using System.IO;
 
-namespace Conductus.FILE
+namespace Conductus.FILE.Dataformats
 {
     public class DataFileText : DataFile
     {

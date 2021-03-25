@@ -2,11 +2,10 @@
 using Conductus.WIDGET.Exception;  // Widget exception
 using Conductus.EXCEPTION.Model.Core;
 
-namespace Conductus.FILE.ConsoleApp
+namespace Conductus.FILE.Dataformats
 {
     class Program
     {
-
         // Global objects that will be used throughout the various types of files and objects
         // A source object
         static Widget m_widget1 = new Widget()

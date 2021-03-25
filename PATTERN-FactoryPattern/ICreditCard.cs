@@ -1,4 +1,4 @@
-﻿namespace ns.ICreditCard
+﻿namespace Conductus.PATTERN.Factory.CREDITCARD
 {
     /// <summary>  
     /// The 'Product' Abstract Class  

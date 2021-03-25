@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Conductus.Logging.ASPCoreAPI
+namespace Conductus.LOGGING.ASPCoreAPI
 {
     public class Startup
     {

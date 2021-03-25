@@ -1,4 +1,4 @@
-﻿namespace Conductus.Database.Model.Core
+﻿namespace Conductus.DATABASE.Model.Core
 {
     public class Namespace
     {

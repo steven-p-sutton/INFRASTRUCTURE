@@ -33,7 +33,7 @@ using System.Linq;
 //   Connection strings and models
 //      https://docs.microsoft.com/en-us/ef/ef6/fundamentals/configuring/connection-strings?redirectedfrom=MSDN
 
-namespace Conductus.EntityFramework.ConsoleApp
+namespace Conductus.ENTITYFRAMEWORK.ConsoleApp
 {
     class Program
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Conductus.Logging.ASPCoreAPI
+namespace Conductus.LOGGING.ASPCoreAPI
 {
     public class WeatherForecast
     {

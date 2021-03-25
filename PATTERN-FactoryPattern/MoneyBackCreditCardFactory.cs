@@ -1,6 +1,6 @@
-﻿using ns.ICreditCard;
+﻿using Conductus.PATTERN.Factory.CREDITCARD; 
 
-namespace MoneybackCreditCard
+namespace Conductus.PATTERN.Factory.MONEYBACKCREDITCARD
 {
     /// <summary>  
     /// A 'ConcreteCreator' class  
