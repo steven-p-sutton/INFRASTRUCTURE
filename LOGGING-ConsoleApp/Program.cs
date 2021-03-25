@@ -21,7 +21,7 @@ namespace Conductus.LOGGING.ConsoleApp
             // .AddFilter
             // .AddProvider
             services.AddLogging(configure 
-                => configure.AddConsole()).AddTransient<clsMyApplication>();
+                => configure.AddConsole()).AddTransient<MyApplication>();
                                             // .AddLogging
                                             // .BuildServiceProvider
                                             // .AddSingleton
@@ -31,7 +31,7 @@ namespace Conductus.LOGGING.ConsoleApp
 
             using (ServiceProvider serviceProvider = services.BuildServiceProvider())
             {
-                clsMyApplication app = serviceProvider.GetService<clsMyApplication>();
+                MyApplication app = serviceProvider.GetService<MyApplication>();
                 // Start up logic here
                 app.Run();
             }

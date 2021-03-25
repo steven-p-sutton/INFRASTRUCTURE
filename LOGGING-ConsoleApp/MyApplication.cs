@@ -2,10 +2,10 @@
 using Microsoft.Extensions.Logging;
 
 namespace Conductus.LOGGING.ConsoleApp
-{   public class clsMyApplication
+{   public class MyApplication
     {
         private readonly ILogger _logger;
-        public clsMyApplication(ILogger<clsMyApplication> logger)
+        public MyApplication(ILogger<MyApplication> logger)
         {
             _logger = logger;
         }
