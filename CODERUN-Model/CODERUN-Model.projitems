@@ -9,5 +9,6 @@
     <Import_RootNamespace>CODERUN_Model</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeRun.cs" />
   </ItemGroup>
 </Project>

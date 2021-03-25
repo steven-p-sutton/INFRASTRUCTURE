@@ -82,7 +82,9 @@ Global
 		UTILITY-Model\UTILITY-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{82b43209-93b7-42df-9894-a28c0078045c}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{9fcd1fd9-4f68-434e-9195-ac17387390e6}*SharedItemsImports = 13
+		CODERUN-Model\CODERUN-Model.projitems*{b157c7d9-bb27-4b5e-bbc3-7f9686f71f8b}*SharedItemsImports = 5
 		CODERUN-Runner\CODERUN-Runner.projitems*{b157c7d9-bb27-4b5e-bbc3-7f9686f71f8b}*SharedItemsImports = 5
+		CODERUN-Model\CODERUN-Model.projitems*{b52b8b0c-91af-4e8e-abcb-6967ecbccc81}*SharedItemsImports = 5
 		CODERUN-Runner\CODERUN-Runner.projitems*{b52b8b0c-91af-4e8e-abcb-6967ecbccc81}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{c63cae0e-2946-49c4-b287-127d14ea0e60}*SharedItemsImports = 5
 		MOCK-Framework\MOCK-Framework.projitems*{c7206bc6-d0f1-42f3-95b6-9715d502bac1}*SharedItemsImports = 13
