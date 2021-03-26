@@ -10,4 +10,6 @@
 
   <Import Project="..\CODERUN-Model\CODERUN-Model.projitems" Label="Shared" />
 
+  <Import Project="..\CODERUN-Example\CODERUN-Example.projitems" Label="Shared" />
+
 </Project>
