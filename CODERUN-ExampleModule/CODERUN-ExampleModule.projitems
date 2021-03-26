@@ -3,14 +3,13 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>e90878ab-d9e5-4e8c-a422-0b9fdc6aedfc</SharedGUID>
+    <SharedGUID>e69da5b8-8c9e-45f0-9da2-e3793785a00b</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>CODERUN_Example</Import_RootNamespace>
+    <Import_RootNamespace>CODERUN_ExampleModule</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Example.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ExampleCodeRun.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Program.cs" />
   </ItemGroup>
 </Project>

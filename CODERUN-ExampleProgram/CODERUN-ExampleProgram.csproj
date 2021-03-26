@@ -1,9 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>CODERUN_Example_Core</RootNamespace>
+    <RootNamespace>CODERUN_ExampleProgram</RootNamespace>
   </PropertyGroup>
+
+  <Import Project="..\CODERUN-ExampleModule\CODERUN-ExampleModule.projitems" Label="Shared" />
 
   <ItemGroup>
     <ProjectReference Include="..\CODERUN-Model-Core\CODERUN-Library-Core.csproj" />

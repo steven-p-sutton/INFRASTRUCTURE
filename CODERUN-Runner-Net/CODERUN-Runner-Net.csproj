@@ -1,12 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>CODERUN_Runner_Net</RootNamespace>
   </PropertyGroup>
-
-  <Import Project="..\CODERUN-Runner\CODERUN-Runner.projitems" Label="Shared" />
 
   <Import Project="..\CODERUN-Model\CODERUN-Model.projitems" Label="Shared" />
 

@@ -6,8 +6,6 @@
     <RootNamespace>CODERUN_Runner_Core</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="..\CODERUN-Runner\CODERUN-Runner.projitems" Label="Shared" />
-
   <ItemGroup>
     <Reference Include="CODERUN-Model-Core">
       <HintPath>..\CODERUN-Model-Core\bin\Debug\netcoreapp3.1\CODERUN-Model-Core.dll</HintPath>

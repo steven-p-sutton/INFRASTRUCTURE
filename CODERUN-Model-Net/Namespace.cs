@@ -1,7 +1,7 @@
-﻿namespace Conductus.CODERUN.Model.Net
+﻿namespace Conductus.CODERUN.Library.Net
 {
     public class Namespace
     {
-        // References EXCEPTION-Model shared project 
+        // References Conductus.CODERUN.Library.Net shared project 
     }
 }
