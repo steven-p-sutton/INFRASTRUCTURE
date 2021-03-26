@@ -184,7 +184,7 @@ namespace Conductus.FILE.Dataformats
 
             try
             {
-                string xmlFileName = "XML.xml";
+                //string xmlFileName = "XML.xml";
                 DataFileXml fx = new DataFileXml();
 
                 //fx.Create(root + xmlFileName);
