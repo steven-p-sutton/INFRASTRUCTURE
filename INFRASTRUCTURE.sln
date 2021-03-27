@@ -55,7 +55,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-Library-Net", "CODE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-Library-Core", "CODERUN-Model-Core\CODERUN-Library-Core.csproj", "{20CA0318-0AAC-426C-8BCA-6E6365A3466F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CODERUN-ExampleProgram", "CODERUN-ExampleProgram\CODERUN-ExampleProgram.csproj", "{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-ExampleProgram", "CODERUN-ExampleProgram\CODERUN-ExampleProgram.csproj", "{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-ExampleModule", "CODERUN-ExampleModule\CODERUN-ExampleModule.shproj", "{E69DA5B8-8C9E-45F0-9DA2-E3793785A00B}"
 EndProject
@@ -79,6 +79,7 @@ Global
 		MOCK-Framework\MOCK-Framework.projitems*{c7206bc6-d0f1-42f3-95b6-9715d502bac1}*SharedItemsImports = 13
 		CODERUN-Model\CODERUN-Model.projitems*{e226b4c2-006e-4122-87d5-944585f85d04}*SharedItemsImports = 13
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{e69da5b8-8c9e-45f0-9da2-e3793785a00b}*SharedItemsImports = 13
+		UTILITY-Model\UTILITY-Model.projitems*{e9cd8a56-9dd8-496b-b0ae-b32bad457697}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
