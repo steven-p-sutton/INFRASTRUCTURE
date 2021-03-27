@@ -1,17 +1,19 @@
 ﻿using System;
-using Conductus.WIDGET.Exception.Core;
 
-namespace Conductus.EXCEPTION.ConsoleApp
+namespace Conductus.EXCEPTION.ExampleApp
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello EXCEPTION!");
-
-            throw new WidgetAlreadyExistsException(
-                String.Format("Widget {0} Already exists", "123")
-            );
+            try
+            {
+                throw new ExceptionExample();
+            }
+            catch(ExceptionExample e)
+            {
+                Console.WriteLine(e.Display(e, "ExceptionExample"));
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PATTERN-FooBar", "PATTERN-F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PATTERN-Interface", "PATTERN-InterfacePattern\PATTERN-Interface.csproj", "{1D81F924-8A36-4863-B214-754F20E4310A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXCEPTION-ConsoleApp", "EXCEPTION-ConsoleApp\EXCEPTION-ConsoleApp.csproj", "{E9CD8A56-9DD8-496B-B0AE-B32BAD457697}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXCEPTION-ExampleApp", "EXCEPTION-ConsoleApp\EXCEPTION-ExampleApp.csproj", "{E9CD8A56-9DD8-496B-B0AE-B32BAD457697}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENTITYFRAMEWORK-ConsoleApp", "ENTITYFRAMEWORK-ConsoleApp\ENTITYFRAMEWORK-ConsoleApp.csproj", "{BF69802D-78B6-49CC-B48D-71EE6759BF33}"
 EndProject
@@ -59,8 +59,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-ExampleProgram", "C
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-ExampleModule", "CODERUN-ExampleModule\CODERUN-ExampleModule.shproj", "{E69DA5B8-8C9E-45F0-9DA2-E3793785A00B}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EXCEPTION-Example", "EXCEPTION-Example\EXCEPTION-Example.shproj", "{0251DE34-883D-4FD0-804A-0E4254AFC400}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		EXCEPTION-Example\EXCEPTION-Example.projitems*{0251de34-883d-4fd0-804a-0e4254afc400}*SharedItemsImports = 13
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{1e2462e6-ec6d-4df4-a81d-ce2b510eb48d}*SharedItemsImports = 13
 		DATABASE-Model\DATABASE-Model.projitems*{1fe35927-590e-456c-bddd-e386f9124d87}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{20ca0318-0aac-426c-8bca-6e6365a3466f}*SharedItemsImports = 5
@@ -79,6 +82,7 @@ Global
 		MOCK-Framework\MOCK-Framework.projitems*{c7206bc6-d0f1-42f3-95b6-9715d502bac1}*SharedItemsImports = 13
 		CODERUN-Model\CODERUN-Model.projitems*{e226b4c2-006e-4122-87d5-944585f85d04}*SharedItemsImports = 13
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{e69da5b8-8c9e-45f0-9da2-e3793785a00b}*SharedItemsImports = 13
+		EXCEPTION-Example\EXCEPTION-Example.projitems*{e9cd8a56-9dd8-496b-b0ae-b32bad457697}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{e9cd8a56-9dd8-496b-b0ae-b32bad457697}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
