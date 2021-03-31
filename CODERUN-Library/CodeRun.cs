@@ -6,7 +6,7 @@ public interface ICodeRunModule
     void Run();
 }
 
-public class CodeRunFramework
+public static class CodeRun
 {
     public static void Run(ICodeRunModule code)
     {

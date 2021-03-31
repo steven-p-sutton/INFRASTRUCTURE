@@ -1,5 +1,5 @@
 ﻿using System;
-public class RunModule : ICodeRunModule
+public class CodeRunModule : ICodeRunModule
 {
     public string Title
     {
