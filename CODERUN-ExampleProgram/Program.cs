@@ -11,8 +11,8 @@ namespace Conductus.CODERUN.EXAMPLE
             // Built as a .NET Core class library dll and refernced by its
             // namespace. Call CodeRunModule using CodeRunFramework.run(CodeRunModule)
 
-            var ex = new ExampleCodeRun();
-            CodeRunFramework.Run(ex);
+            var rm = new RunModule();
+            CodeRunFramework.Run(rm);
         }
     }
 }

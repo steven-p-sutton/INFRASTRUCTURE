@@ -9,7 +9,7 @@
     <Import_RootNamespace>CODERUN_ExampleModule</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Example.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ExampleCodeRun.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Module.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RunModule.cs" />
   </ItemGroup>
 </Project>

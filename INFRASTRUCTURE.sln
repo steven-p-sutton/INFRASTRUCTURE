@@ -49,26 +49,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOCK-Framework-NET", "MOCK-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOCK-Framework-CORE", "MOCK-Framework-CORE\MOCK-Framework-CORE.csproj", "{3C1CC17E-F5DE-4A0C-89AC-EC02EC779DC3}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-Library", "CODERUN-Model\CODERUN-Library.shproj", "{E226B4C2-006E-4122-87D5-944585F85D04}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-Library-Net", "CODERUN-Model-Net\CODERUN-Library-Net.csproj", "{C63CAE0E-2946-49C4-B287-127D14EA0E60}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-Library-Core", "CODERUN-Model-Core\CODERUN-Library-Core.csproj", "{20CA0318-0AAC-426C-8BCA-6E6365A3466F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-ExampleProgram", "CODERUN-ExampleProgram\CODERUN-ExampleProgram.csproj", "{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-ExampleModule", "CODERUN-ExampleModule\CODERUN-ExampleModule.shproj", "{E69DA5B8-8C9E-45F0-9DA2-E3793785A00B}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EXCEPTION-Example", "EXCEPTION-Example\EXCEPTION-Example.shproj", "{0251DE34-883D-4FD0-804A-0E4254AFC400}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-Library", "CODERUN-Library\CODERUN-Library.shproj", "{3AA9BC5C-92D1-45D7-B1D6-D4B435231B5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CODERUN-Library-Core", "CODERUN-Library-Core\CODERUN-Library-Core.csproj", "{97590EF1-B79D-4EEB-9DE1-CEEB90795D92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CODERUN-Library-Net", "CODERUN-Library-Net\CODERUN-Library-Net.csproj", "{588D466D-A58D-49A0-94CA-5347D9948A86}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{0251de34-883d-4fd0-804a-0e4254afc400}*SharedItemsImports = 13
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{1e2462e6-ec6d-4df4-a81d-ce2b510eb48d}*SharedItemsImports = 13
 		DATABASE-Model\DATABASE-Model.projitems*{1fe35927-590e-456c-bddd-e386f9124d87}*SharedItemsImports = 5
-		CODERUN-Model\CODERUN-Model.projitems*{20ca0318-0aac-426c-8bca-6e6365a3466f}*SharedItemsImports = 5
 		DATABASE-Model\DATABASE-Model.projitems*{2bf435ba-2035-4d0c-84f7-c9d491b199e3}*SharedItemsImports = 13
+		CODERUN-Library\CODERUN-Library.projitems*{3aa9bc5c-92d1-45d7-b1d6-d4b435231b5f}*SharedItemsImports = 13
 		MOCK-Framework\MOCK-Framework.projitems*{3c1cc17e-f5de-4a0c-89ac-ec02ec779dc3}*SharedItemsImports = 5
+		CODERUN-Library\CODERUN-Library.projitems*{588d466d-a58d-49a0-94ca-5347d9948a86}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{5af1de71-5b9f-44ad-8bbf-eb72d0eda91a}*SharedItemsImports = 5
@@ -78,12 +79,11 @@ Global
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{82b43209-93b7-42df-9894-a28c0078045c}*SharedItemsImports = 5
+		CODERUN-Library\CODERUN-Library.projitems*{97590ef1-b79d-4eeb-9de1-ceeb90795d92}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{9fcd1fd9-4f68-434e-9195-ac17387390e6}*SharedItemsImports = 13
 		MOCK-Framework\MOCK-Framework.projitems*{c7206bc6-d0f1-42f3-95b6-9715d502bac1}*SharedItemsImports = 13
-		CODERUN-Model\CODERUN-Model.projitems*{e226b4c2-006e-4122-87d5-944585f85d04}*SharedItemsImports = 13
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{e69da5b8-8c9e-45f0-9da2-e3793785a00b}*SharedItemsImports = 13
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{e9cd8a56-9dd8-496b-b0ae-b32bad457697}*SharedItemsImports = 5
-		UTILITY-Model\UTILITY-Model.projitems*{e9cd8a56-9dd8-496b-b0ae-b32bad457697}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -166,18 +166,18 @@ Global
 		{3C1CC17E-F5DE-4A0C-89AC-EC02EC779DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C1CC17E-F5DE-4A0C-89AC-EC02EC779DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C1CC17E-F5DE-4A0C-89AC-EC02EC779DC3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C63CAE0E-2946-49C4-B287-127D14EA0E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C63CAE0E-2946-49C4-B287-127D14EA0E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C63CAE0E-2946-49C4-B287-127D14EA0E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C63CAE0E-2946-49C4-B287-127D14EA0E60}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20CA0318-0AAC-426C-8BCA-6E6365A3466F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20CA0318-0AAC-426C-8BCA-6E6365A3466F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20CA0318-0AAC-426C-8BCA-6E6365A3466F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20CA0318-0AAC-426C-8BCA-6E6365A3466F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97590EF1-B79D-4EEB-9DE1-CEEB90795D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97590EF1-B79D-4EEB-9DE1-CEEB90795D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97590EF1-B79D-4EEB-9DE1-CEEB90795D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97590EF1-B79D-4EEB-9DE1-CEEB90795D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{588D466D-A58D-49A0-94CA-5347D9948A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{588D466D-A58D-49A0-94CA-5347D9948A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{588D466D-A58D-49A0-94CA-5347D9948A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{588D466D-A58D-49A0-94CA-5347D9948A86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,6 +2,6 @@
 {
     public class Namespace
     {
-        // References Conductus.CODERUN.Library.Net shared project 
+        // References Conductus.CODERUN.Library.Core shared project 
     }
 }

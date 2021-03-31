@@ -1,4 +1,4 @@
-﻿public class Example
+﻿public class Module
 {
     public string Hello(string hello)
     {

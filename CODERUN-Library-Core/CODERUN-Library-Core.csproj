@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>CODERUN_Model_Core</RootNamespace>
+    <RootNamespace>CODERUN_Library_Core</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="..\CODERUN-Model\CODERUN-Model.projitems" Label="Shared" />
+  <Import Project="..\CODERUN-Library\CODERUN-Library.projitems" Label="Shared" />
 
 </Project>
