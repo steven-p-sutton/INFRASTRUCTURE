@@ -57,9 +57,21 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EXCEPTION-Example", "EXCEPT
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-Library", "CODERUN-Library\CODERUN-Library.shproj", "{3AA9BC5C-92D1-45D7-B1D6-D4B435231B5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CODERUN-Library-Core", "CODERUN-Library-Core\CODERUN-Library-Core.csproj", "{97590EF1-B79D-4EEB-9DE1-CEEB90795D92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-Library-Core", "CODERUN-Library-Core\CODERUN-Library-Core.csproj", "{97590EF1-B79D-4EEB-9DE1-CEEB90795D92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CODERUN-Library-Net", "CODERUN-Library-Net\CODERUN-Library-Net.csproj", "{588D466D-A58D-49A0-94CA-5347D9948A86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-Library-Net", "CODERUN-Library-Net\CODERUN-Library-Net.csproj", "{588D466D-A58D-49A0-94CA-5347D9948A86}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MOCK-Model", "MOCK-Model\MOCK-Model.shproj", "{FFA50A07-A008-4670-A98E-956F1EE4304D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOCK-Model-Net", "MOCK-Model-Net\MOCK-Model-Net.csproj", "{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOCK-Model-Core", "MOCK-Model-Core\MOCK-Model-Core.csproj", "{9DD99CF3-93CC-45A9-BA0C-B2983CFA912E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-Model", "CODERUN-Model\CODERUN-Model.shproj", "{65B36AD5-FA3A-4DE9-A550-31400FFD6936}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CODERUN-Model-Core", "CODERUN-Model-Core\CODERUN-Model-Core.csproj", "{58B6DF1E-43C8-41BD-B9F1-148ABA76536B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CODERUN-Model-Net", "CODERUN-Model-Net\CODERUN-Model-Net.csproj", "{CAE181D3-FB03-4218-AFEE-59E3170716DD}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -69,21 +81,27 @@ Global
 		DATABASE-Model\DATABASE-Model.projitems*{2bf435ba-2035-4d0c-84f7-c9d491b199e3}*SharedItemsImports = 13
 		CODERUN-Library\CODERUN-Library.projitems*{3aa9bc5c-92d1-45d7-b1d6-d4b435231b5f}*SharedItemsImports = 13
 		MOCK-Framework\MOCK-Framework.projitems*{3c1cc17e-f5de-4a0c-89ac-ec02ec779dc3}*SharedItemsImports = 5
+		MOCK-Model\MOCK-Model.projitems*{3c33dbc2-fc29-4b81-8006-38a0fb8112ed}*SharedItemsImports = 5
 		CODERUN-Library\CODERUN-Library.projitems*{588d466d-a58d-49a0-94ca-5347d9948a86}*SharedItemsImports = 5
+		CODERUN-Model\CODERUN-Model.projitems*{58b6df1e-43c8-41bd-b9f1-148aba76536b}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{5af1de71-5b9f-44ad-8bbf-eb72d0eda91a}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{650ab229-03fe-440b-ade9-d5d5e987c0f3}*SharedItemsImports = 5
+		CODERUN-Model\CODERUN-Model.projitems*{65b36ad5-fa3a-4de9-a550-31400ffd6936}*SharedItemsImports = 13
 		MOCK-Framework\MOCK-Framework.projitems*{724375e4-960c-43f9-8d97-6b96ba555c6c}*SharedItemsImports = 5
 		DATABASE-Model\DATABASE-Model.projitems*{7da68e4c-4700-460e-be8d-917e51bb52d0}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{82b43209-93b7-42df-9894-a28c0078045c}*SharedItemsImports = 5
 		CODERUN-Library\CODERUN-Library.projitems*{97590ef1-b79d-4eeb-9de1-ceeb90795d92}*SharedItemsImports = 5
+		MOCK-Model\MOCK-Model.projitems*{9dd99cf3-93cc-45a9-ba0c-b2983cfa912e}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{9fcd1fd9-4f68-434e-9195-ac17387390e6}*SharedItemsImports = 13
 		MOCK-Framework\MOCK-Framework.projitems*{c7206bc6-d0f1-42f3-95b6-9715d502bac1}*SharedItemsImports = 13
+		CODERUN-Model\CODERUN-Model.projitems*{cae181d3-fb03-4218-afee-59e3170716dd}*SharedItemsImports = 5
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{e69da5b8-8c9e-45f0-9da2-e3793785a00b}*SharedItemsImports = 13
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{e9cd8a56-9dd8-496b-b0ae-b32bad457697}*SharedItemsImports = 5
+		MOCK-Model\MOCK-Model.projitems*{ffa50a07-a008-4670-a98e-956f1ee4304d}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -178,6 +196,22 @@ Global
 		{588D466D-A58D-49A0-94CA-5347D9948A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{588D466D-A58D-49A0-94CA-5347D9948A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{588D466D-A58D-49A0-94CA-5347D9948A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DD99CF3-93CC-45A9-BA0C-B2983CFA912E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD99CF3-93CC-45A9-BA0C-B2983CFA912E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD99CF3-93CC-45A9-BA0C-B2983CFA912E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD99CF3-93CC-45A9-BA0C-B2983CFA912E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58B6DF1E-43C8-41BD-B9F1-148ABA76536B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B6DF1E-43C8-41BD-B9F1-148ABA76536B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B6DF1E-43C8-41BD-B9F1-148ABA76536B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58B6DF1E-43C8-41BD-B9F1-148ABA76536B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAE181D3-FB03-4218-AFEE-59E3170716DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE181D3-FB03-4218-AFEE-59E3170716DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE181D3-FB03-4218-AFEE-59E3170716DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE181D3-FB03-4218-AFEE-59E3170716DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
