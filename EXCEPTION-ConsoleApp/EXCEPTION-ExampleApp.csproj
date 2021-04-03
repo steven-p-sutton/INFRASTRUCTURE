@@ -6,12 +6,12 @@
     <RootNamespace>EXCEPTION_ConsoleApp</RootNamespace>
   </PropertyGroup>
 
+  <Import Project="..\EXCEPTION-Example\EXCEPTION-Example.projitems" Label="Shared" />
+
   <ItemGroup>
     <Reference Include="EXCEPTION-Model-Core">
       <HintPath>..\EXCEPTION-Model-Core\bin\Debug\netcoreapp3.1\EXCEPTION-Model-Core.dll</HintPath>
     </Reference>
   </ItemGroup>
-
-  <Import Project="..\EXCEPTION-Example\EXCEPTION-Example.projitems" Label="Shared" />
 
 </Project>

@@ -5,6 +5,4 @@
     <RootNamespace>CODERUN_Library_Net</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="..\CODERUN-Library\CODERUN-Library.projitems" Label="Shared" />
-
 </Project>
