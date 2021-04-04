@@ -69,6 +69,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EXTENSION-Model", "EXTENSIO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXTENSION-Model-Core", "EXTENSION-Model-Core\EXTENSION-Model-Core.csproj", "{BBBCEA43-9798-40EC-BBD4-1EAEA793389E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXTENSION-Model-Net", "EXTENSION-Model-Net\EXTENSION-Model-Net.csproj", "{C6F39220-787C-4E34-BF3B-BB89E98620DD}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{0251de34-883d-4fd0-804a-0e4254afc400}*SharedItemsImports = 13
@@ -82,15 +84,14 @@ Global
 		UTILITY-Model\UTILITY-Model.projitems*{5244bad4-3cd6-4277-9784-98a7274da16f}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{58b6df1e-43c8-41bd-b9f1-148aba76536b}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
-		UTILITY-Model\UTILITY-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{5af1de71-5b9f-44ad-8bbf-eb72d0eda91a}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{65b36ad5-fa3a-4de9-a550-31400ffd6936}*SharedItemsImports = 13
 		DATABASE-Model\DATABASE-Model.projitems*{7da68e4c-4700-460e-be8d-917e51bb52d0}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
-		UTILITY-Model\UTILITY-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		MOCK-Model\MOCK-Model.projitems*{9dd99cf3-93cc-45a9-ba0c-b2983cfa912e}*SharedItemsImports = 5
 		UTILITY-Model\UTILITY-Model.projitems*{9fcd1fd9-4f68-434e-9195-ac17387390e6}*SharedItemsImports = 13
 		EXTENSION-Model\EXTENSION-Model.projitems*{bbbcea43-9798-40ec-bbd4-1eaea793389e}*SharedItemsImports = 5
+		EXTENSION-Model\EXTENSION-Model.projitems*{c6f39220-787c-4e34-bf3b-bb89e98620dd}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{cae181d3-fb03-4218-afee-59e3170716dd}*SharedItemsImports = 5
 		MESSAGE-Model\MESSAGE-Model.projitems*{d1c9a586-e47f-4cc9-9d9d-773cd28112f2}*SharedItemsImports = 5
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{e69da5b8-8c9e-45f0-9da2-e3793785a00b}*SharedItemsImports = 13
@@ -199,6 +200,10 @@ Global
 		{BBBCEA43-9798-40EC-BBD4-1EAEA793389E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBBCEA43-9798-40EC-BBD4-1EAEA793389E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBBCEA43-9798-40EC-BBD4-1EAEA793389E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F39220-787C-4E34-BF3B-BB89E98620DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F39220-787C-4E34-BF3B-BB89E98620DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F39220-787C-4E34-BF3B-BB89E98620DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F39220-787C-4E34-BF3B-BB89E98620DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
