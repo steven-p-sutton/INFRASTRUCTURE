@@ -1,5 +1,5 @@
 ﻿using System;
-static public class Heading
+public static class Heading
 {
     static public string H1
     {

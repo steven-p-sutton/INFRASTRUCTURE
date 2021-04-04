@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>EXTENSION_Model_Core</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\EXTENSION-Model\EXTENSION-Model.projitems" Label="Shared" />
+
+</Project>

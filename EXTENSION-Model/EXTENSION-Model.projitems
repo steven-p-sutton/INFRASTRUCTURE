@@ -3,15 +3,14 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>4c05d79c-2f47-49e0-80aa-b1a796e9f24c</SharedGUID>
+    <SharedGUID>eed7ed14-540b-4dda-b6c0-4e907ba0de78</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>MESSAGE_Model</Import_RootNamespace>
+    <Import_RootNamespace>EXTENSION_Model</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)IHeading.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Heading.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IMessage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextWtiterExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntExtesions.cs" />
   </ItemGroup>
 </Project>
