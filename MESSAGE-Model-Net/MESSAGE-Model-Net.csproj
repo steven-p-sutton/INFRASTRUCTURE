@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>MESSAGE_Model_Net</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\MESSAGE-Model\MESSAGE-Model.projitems" Label="Shared" />
+
+</Project>
