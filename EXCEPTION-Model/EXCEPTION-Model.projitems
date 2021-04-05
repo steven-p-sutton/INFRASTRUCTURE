@@ -10,6 +10,5 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)BaseException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ExceptionUtility.cs" />
   </ItemGroup>
 </Project>
