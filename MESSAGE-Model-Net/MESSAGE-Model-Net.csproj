@@ -5,6 +5,4 @@
     <RootNamespace>MESSAGE_Model_Net</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="..\MESSAGE-Model\MESSAGE-Model.projitems" Label="Shared" />
-
 </Project>
