@@ -1,11 +1,14 @@
 ﻿using System;
 using Conductus.WIDGET.Exception;  // Widget exception
 using Conductus.EXCEPTION.Model.Core;
+using Conductus.EXTENSION.Model.Core;
 
 namespace Conductus.FILE.Dataformats
 {
     class Program
     {
+        private static readonly string s = string.Empty;
+
         // Global objects that will be used throughout the various types of files and objects
         // A source object
         static Widget m_widget1 = new Widget()
@@ -26,9 +29,9 @@ namespace Conductus.FILE.Dataformats
             // Display the reference widget to play with
             Console.WriteLine(m_widget1.Display(nameof(m_widget1)));
 
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
             Console.WriteLine("1. STREAM Files");
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
             
             try
             {
@@ -63,9 +66,9 @@ namespace Conductus.FILE.Dataformats
                 // Standard system execption, just format by hand
                 Console.WriteLine(e.Message);
             }
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
             Console.WriteLine("2. TEXT Files");
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
 
             try
             {
@@ -101,9 +104,9 @@ namespace Conductus.FILE.Dataformats
                 Console.WriteLine(e.Message);
             }
 
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
             Console.WriteLine("3. CSV Files");
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
 
             try
             {
@@ -139,9 +142,9 @@ namespace Conductus.FILE.Dataformats
                 Console.WriteLine(e.Message);
             }
 
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
             Console.WriteLine("4. JSON Files");
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
 
             try
             {
@@ -178,9 +181,9 @@ namespace Conductus.FILE.Dataformats
                 Console.WriteLine(e.Message);
             }
 
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
             Console.WriteLine("4. XML Files");
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
 
             try
             {
@@ -202,9 +205,9 @@ namespace Conductus.FILE.Dataformats
                 Console.WriteLine(e.Message);
             }
 
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
             Console.WriteLine("99. ALL DONE");
-            Console.WriteLine(Heading.Div);
+            Console.WriteLine(s.Div());
         }
     }
 }

@@ -10,6 +10,9 @@
     <Reference Include="EXCEPTION-Model-Core">
       <HintPath>..\EXCEPTION-Model-Core\bin\Debug\netcoreapp3.1\EXCEPTION-Model-Core.dll</HintPath>
     </Reference>
+    <Reference Include="EXTENSION-Model-Core">
+      <HintPath>..\EXTENSION-Model-Core\bin\Debug\netcoreapp3.1\EXTENSION-Model-Core.dll</HintPath>
+    </Reference>
     <Reference Include="WIDGET-Exception-Model-Core">
       <HintPath>..\..\WIDGET\WIDGET-Exception-Model-Core\bin\Debug\netcoreapp3.1\WIDGET-Exception-Model-Core.dll</HintPath>
     </Reference>

@@ -12,7 +12,7 @@ namespace Conductus.EXCEPTION.ExampleApp
             }
             catch(ExceptionExample e)
             {
-                Console.WriteLine(e.Display(e, "ExceptionExample"));
+                Console.WriteLine(e.Display());
             }
         }
     }
