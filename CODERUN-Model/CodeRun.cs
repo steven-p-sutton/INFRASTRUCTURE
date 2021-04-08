@@ -1,9 +1,14 @@
 ﻿using System;
 
-public interface ICodeRunModule
+public abstract class ICodeRunModule
 {
-    string Title { get; }
-    void Run();
+    public void Msg (string txt)
+    {
+        Console.WriteLine("-----------------------------------------------------------------------------");
+        Console.WriteLine($"{txt}");
+    }
+    public abstract string Title { get; }
+    public abstract void Run();
 }
 
 public static class CodeRun
