@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Conductus.EXCEPTION.ExampleApp
+namespace Conductus.EXCEPTION.Example
 {
     public class Program
     {

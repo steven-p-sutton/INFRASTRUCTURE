@@ -9,8 +9,8 @@
   <Import Project="..\CODERUN-ExampleModule\CODERUN-ExampleModule.projitems" Label="Shared" />
 
   <ItemGroup>
-    <Reference Include="CODERUN-Library-Core">
-      <HintPath>..\CODERUN-Library-Core\bin\Debug\netcoreapp3.1\CODERUN-Library-Core.dll</HintPath>
+    <Reference Include="CODERUN-Model-Core">
+      <HintPath>..\CODERUN-Model-Core\bin\Debug\netcoreapp3.1\CODERUN-Model-Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 

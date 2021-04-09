@@ -21,8 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATABASE-Model-Core", "DATA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATABASE-Model-Net", "DATABASE-Model-Net\DATABASE-Model-Net.csproj", "{1FE35927-590E-456C-BDDD-E386F9124D87}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-ExampleProgram", "CODERUN-ExampleProgram\CODERUN-ExampleProgram.csproj", "{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-ExampleModule", "CODERUN-ExampleModule\CODERUN-ExampleModule.shproj", "{E69DA5B8-8C9E-45F0-9DA2-E3793785A00B}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EXCEPTION-Example", "EXCEPTION-Example\EXCEPTION-Example.shproj", "{0251DE34-883D-4FD0-804A-0E4254AFC400}"
@@ -45,6 +43,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXTENSION-Model-Core", "EXT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXTENSION-Model-Net", "EXTENSION-Model-Net\EXTENSION-Model-Net.csproj", "{C6F39220-787C-4E34-BF3B-BB89E98620DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EXTENSION-ExampleApp", "EXTENSION-ExampleApp\EXTENSION-ExampleApp.csproj", "{5257E65D-DF4C-4C04-8311-92F27985A08B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-ExampleApp", "CODERUN-ExampleApp\CODERUN-ExampleApp.csproj", "{6BA097C1-DE96-44F4-B329-F253F182305B}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{0251de34-883d-4fd0-804a-0e4254afc400}*SharedItemsImports = 13
@@ -54,8 +56,8 @@ Global
 		MOCK-Model\MOCK-Model.projitems*{3c33dbc2-fc29-4b81-8006-38a0fb8112ed}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{58b6df1e-43c8-41bd-b9f1-148aba76536b}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
-		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{5af1de71-5b9f-44ad-8bbf-eb72d0eda91a}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{65b36ad5-fa3a-4de9-a550-31400ffd6936}*SharedItemsImports = 13
+		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{6ba097c1-de96-44f4-b329-f253f182305b}*SharedItemsImports = 5
 		DATABASE-Model\DATABASE-Model.projitems*{7da68e4c-4700-460e-be8d-917e51bb52d0}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		MOCK-Model\MOCK-Model.projitems*{9dd99cf3-93cc-45a9-ba0c-b2983cfa912e}*SharedItemsImports = 5
@@ -100,10 +102,6 @@ Global
 		{1FE35927-590E-456C-BDDD-E386F9124D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FE35927-590E-456C-BDDD-E386F9124D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FE35927-590E-456C-BDDD-E386F9124D87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5AF1DE71-5B9F-44AD-8BBF-EB72D0EDA91A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -128,6 +126,14 @@ Global
 		{C6F39220-787C-4E34-BF3B-BB89E98620DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6F39220-787C-4E34-BF3B-BB89E98620DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6F39220-787C-4E34-BF3B-BB89E98620DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5257E65D-DF4C-4C04-8311-92F27985A08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5257E65D-DF4C-4C04-8311-92F27985A08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5257E65D-DF4C-4C04-8311-92F27985A08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5257E65D-DF4C-4C04-8311-92F27985A08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA097C1-DE96-44F4-B329-F253F182305B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA097C1-DE96-44F4-B329-F253F182305B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA097C1-DE96-44F4-B329-F253F182305B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA097C1-DE96-44F4-B329-F253F182305B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>EXTENSION_ExampleApp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="EXTENSION-Model-Core">
+      <HintPath>..\EXTENSION-Model-Core\bin\Debug\netcoreapp3.1\EXTENSION-Model-Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

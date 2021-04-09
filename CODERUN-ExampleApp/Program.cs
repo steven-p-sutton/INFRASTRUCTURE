@@ -1,4 +1,4 @@
-﻿using Conductus.CODERUN.Library.Core;
+﻿using Conductus.CODERUN.Model.Core;
 using Conductus.CODERUN.Example;
 
 namespace Conductus.CODERUN.Example
