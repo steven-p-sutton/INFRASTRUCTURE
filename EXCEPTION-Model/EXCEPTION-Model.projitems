@@ -9,6 +9,7 @@
     <Import_RootNamespace>EXCEPTION_Model</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)BaseException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exception.cs" />
   </ItemGroup>
 </Project>

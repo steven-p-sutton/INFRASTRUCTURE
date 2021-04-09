@@ -1,15 +1,15 @@
-﻿public class BaseException : System.Exception
+﻿public abstract class AException : System.Exception
 {
     private string _Name = string.Empty;
-    public BaseException()
+    public AException()
     {
-        this.Name = "BaseException";
+        this.Name = "AException";
     }
-    public BaseException(string message)
+    public AException(string message)
         : base(message)
     {
     }
-    public BaseException(string message, System.Exception inner)
+    public AException(string message, System.Exception inner)
         : base(message, inner)
     {
     }
