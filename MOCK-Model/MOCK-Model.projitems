@@ -9,6 +9,7 @@
     <Import_RootNamespace>MOCK_Model</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AMock.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IMock.cs" />
   </ItemGroup>
 </Project>

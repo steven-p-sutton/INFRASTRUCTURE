@@ -1,10 +1,10 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-public abstract class IMock
+public abstract class AMock
 {
     public enum RunType { SUCCESS = 0, EXCEPTION = 1 };
-    public enum VerifyTimes { NEVER = 0, ONCE = 1, EXACTLY = 3 };
+    public enum VerifyTimes { NEVER = 0, ONCE = 1, EXACTLY = 2};
     [JsonProperty("run")] 
     public RunType Run { set; get; }
     [JsonProperty("input")]
