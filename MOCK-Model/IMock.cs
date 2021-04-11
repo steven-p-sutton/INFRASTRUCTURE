@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 public abstract class IMock
 {
-    public enum RunType { SUCCESS = 0, EXCEPTION = 1 };
+    public enum RunType { SUCCESS = 0, EXCEPTION = 1, EXCEPTION_01 = -1, EXCEPTION_02 = -2, EXCEPTION_03 = -3, EXCEPTION_04 = -4 };
     public enum VerifyTimes { NEVER = 0, ONCE = 1, EXACTLY = 3 };
     [JsonProperty("run")] 
     public RunType Run { set; get; }
@@ -21,13 +21,13 @@ public abstract class IMock
     [JsonProperty("returnsAsync")]
     public abstract bool ReturnsAsync { set; }
     [JsonProperty("verify")]
-    public abstract int Verify { set; }
+    public abstract bool Verify { set; }
     [JsonProperty("throws")]
-    public abstract RunType Throws { set; }
-    [JsonProperty("arrange")]
-    public abstract RunType Arrange { set; }
+    public abstract bool Throws { set; }
+    [JsonProperty("throws")]
+    public abstract bool Arrange { set; }
     [JsonProperty("test")]
-    public abstract RunType Test { set; }
+    public abstract bool Test { set; }
     [JsonProperty("assert")]
-    public abstract RunType Assert { set; }
+    public abstract bool Assert { set; }
 }

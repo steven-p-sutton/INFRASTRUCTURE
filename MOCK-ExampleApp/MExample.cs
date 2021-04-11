@@ -20,8 +20,10 @@ namespace Conductus.MOCK.Example
             set
             {
                 if (this.Run == RunType.SUCCESS)
+
                     _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()))
                      .Returns((int x) => DateTime.Now);
+
                 else
                     _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()))
                      .Returns((int x) => DateTime.MinValue);
@@ -32,7 +34,9 @@ namespace Conductus.MOCK.Example
             set
             {
                 if (this.Run == RunType.SUCCESS)
+
                     _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()));
+
                 else
                     _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()));
             }
@@ -48,34 +52,45 @@ namespace Conductus.MOCK.Example
                     _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()));
             }
         }
-        public override int Verify
+        public override bool Verify
         {
             set
             {
-                if (value == 0)
-                    _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.Never());
-                else if (value == 1)
-                    _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.Once());
+                if (value)
+                {
+                    if (this.Run == RunType.EXCEPTION)
+                        _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.Never());
+
+                    else if (this.Run == RunType.SUCCESS)
+                        _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.Once());
+
+                    else
+                        _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.AtLeastOnce); // TBD
+                }
                 else
-                    _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.Exactly(value));
+                    _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.Never()); // TBD
             }
         }
-        public override RunType Throws
+        public override bool Throws
         {
             set
             {
-                if (value == RunType.EXCEPTION)
-                    _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()))
-                    .Throws(this.ExceptionExpected);
-                else
-                    _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()));
+                if (value)
+                {
+                    if (this.Run == RunType.EXCEPTION)
+
+                        _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()))
+                        .Throws(this.ExceptionExpected);
+                    else
+                        _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()));
+                }
             }
         }
-        public override RunType Arrange
+        public override bool Arrange
         {
             set
             {
-                if (value == RunType.SUCCESS)
+                if (this.Run == RunType.SUCCESS)
                 {
                     this.Verifyable = true;
                     this.Returns = true;
@@ -84,21 +99,26 @@ namespace Conductus.MOCK.Example
                     this.Throws = value;
             }
         }
-        public override RunType Test
+        public override bool Test
         {
             set
             {
-                Console.WriteLine(this.Mock.Object.GetDateOfJoining(1));
+                if (value)
+                {
+                    Console.WriteLine(this.Mock.Object.GetDateOfJoining(1));
+                }
+                else; // TBD
             }
         }
-        public override RunType Assert
+        public override bool Assert
         {
             set
             {
-                if (value == RunType.SUCCESS)
-                    this.Verify = 1;
-                else
-                    this.Verify = 1;
+                if (value)
+                {
+                    this.Verify = true;
+                }
+                else; // TBD
             }
         }
     }
