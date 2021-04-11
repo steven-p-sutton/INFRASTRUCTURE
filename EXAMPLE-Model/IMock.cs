@@ -26,19 +26,43 @@ public abstract class IMock
     /// </summary>
     [JsonProperty("exceptionRaised")]
     public Exception ExceptionRaised { set; get; }
+    /// <summary>
+    /// Sets the Mock Verifyable() attributes
+    /// </summary>
     [JsonProperty("verifyable")]
     public abstract bool Verifyable { set; }
+    /// <summary>
+    /// Sets the Mock Returns() attributes
+    /// </summary>
     public abstract bool Returns { set; }
+    /// <summary>
+    /// Sets the Mock ReturnsAsync() attributes
+    /// </summary>
     [JsonProperty("returnsAsync")]
     public abstract bool ReturnsAsync { set; }
+    /// <summary>
+    /// Sets the Mock Verify() attributes
+    /// </summary>
     [JsonProperty("verify")]
     public abstract bool Verify { set; }
+    /// <summary>
+    /// Sets the Mock Throws() attributes
+    /// </summary>
     [JsonProperty("throws")]
     public abstract bool Throws { set; }
-    [JsonProperty("throws")]
+    /// <summary>
+    /// Defines the high level semantics for test arragnement befores test is run
+    /// </summary>
+    [JsonProperty("arrange")]
     public abstract bool Arrange { set; }
+    /// <summary>
+    /// Defines the high level semantics for test run then check results
+    /// </summary>
     [JsonProperty("test")]
     public abstract bool Test { set; }
+    /// <summary>
+    /// Defines the high level semantics for checking the test run results
+    /// </summary>
     [JsonProperty("assert")]
     public abstract bool Assert { set; }
 }
