@@ -2,10 +2,13 @@
 
 namespace Conductus.MOCK.Example
 {
-    public class Example
+    public class Example : IExample
     {
         private string _name;
         private DateTime _dateOfJoining;
+        public Example()
+        {
+        }
 
         public Example(string name, DateTime dateOfJoining)
         {

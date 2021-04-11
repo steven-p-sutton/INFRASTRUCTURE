@@ -6,12 +6,12 @@ namespace Conductus.MOCK.Example
 {
     public class MExample: IMock
     {
-        public Mock<Example> _mMock;
+        public Mock<IExample> _mMock;
         public MExample()
         {
-            _mMock = new Mock<Example>();
+            _mMock = new Mock<IExample>();
         }
-        public Mock<Example> Mock
+        public Mock<IExample> Mock
         {
             get => _mMock;
         }
@@ -107,7 +107,6 @@ namespace Conductus.MOCK.Example
                 {
                     Console.WriteLine(this.Mock.Object.GetDateOfJoining(1));
                 }
-                else; // TBD
             }
         }
         public override bool Assert
@@ -118,7 +117,6 @@ namespace Conductus.MOCK.Example
                 {
                     this.Verify = true;
                 }
-                else; // TBD
             }
         }
     }

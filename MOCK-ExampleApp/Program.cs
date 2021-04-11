@@ -15,7 +15,7 @@ namespace MOCK.EXAMPLE.Example
                     Run = IMock.RunType.SUCCESS,
                     Arrange = true,
                     Test = true,
-                    Assert = IMock.RunType.SUCCESS
+                    Assert = true
                 };
 
                 var mockERROR = new MExample
@@ -25,10 +25,9 @@ namespace MOCK.EXAMPLE.Example
                     Throws = true,
                     Arrange = true,
                     Test = true,
-                    Assert = IMock.RunType.EXCEPTION
+                    Assert = true
                 };
             }
-
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
