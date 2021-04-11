@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Example.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IExample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IMock.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XExample.cs" />
   </ItemGroup>
