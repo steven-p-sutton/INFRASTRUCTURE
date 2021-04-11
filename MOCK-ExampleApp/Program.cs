@@ -1,6 +1,5 @@
 ﻿using System;
-using Conductus.MOCK.Model.Core;
-using Conductus.MOCK.Example;
+using Conductus.EXAMPLE.Model.Core;
 
 namespace MOCK.EXAMPLE.Example
 {
