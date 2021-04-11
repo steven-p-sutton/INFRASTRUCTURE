@@ -1,6 +1,6 @@
 ﻿using System;
-using Moq;
-using Conductus.MOCK.Model.Core;
+//using Moq;
+//using Conductus.MOCK.Model.Core;
 
     public class MExample: IMock
     {

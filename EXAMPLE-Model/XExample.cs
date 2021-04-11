@@ -1,4 +1,4 @@
-﻿   public class ExampleNotImplentedException : BaseException
+﻿    public class ExampleNotImplentedException : BaseException
     {
         public ExampleNotImplentedException()
         {

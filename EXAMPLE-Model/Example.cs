@@ -1,4 +1,5 @@
 ﻿using System;
+
     public class Example : IExample
     {
         private string _name;
