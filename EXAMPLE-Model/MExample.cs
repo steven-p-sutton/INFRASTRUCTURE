@@ -4,6 +4,14 @@ using Moq;
 // IMock.cs has to be source file included in the EXAMPLE-Model shared code project
 public class MExample : IMock
 {
+    /// <summary>
+    /// RunType - A means to partition the stages of the object semantics. 
+    /// Since used only in the derrived object it can be declared withing the object with object specific names
+    /// Used within the overriden properties to set such things as Verify times, return values & exceptions raised
+    /// for non-success scenarios
+    /// </summary>
+    public enum RunType { SUCCESS = 0, EXCEPTION = 1, FAIL_GetDateOfJoining = -1};
+
     public Mock<IExample> _mMock;
     public MExample()
     {
@@ -17,7 +25,7 @@ public class MExample : IMock
     {
         set
         {
-            if (this.Run == RunType.SUCCESS)
+            if (this.Run.ToString() == RunType.SUCCESS.ToString())
 
                 _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()))
                     .Returns((int x) => DateTime.Now);
@@ -31,7 +39,7 @@ public class MExample : IMock
     {
         set
         {
-            if (this.Run == RunType.SUCCESS)
+            if (this.Run.ToString() == RunType.SUCCESS.ToString())
 
                 _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()));
 
@@ -56,10 +64,13 @@ public class MExample : IMock
         {
             if (value)
             {
-                if (this.Run == RunType.EXCEPTION)
+                if (this.Run.ToString() == RunType.EXCEPTION.ToString())
                     _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.Never());
 
-                else if (this.Run == RunType.SUCCESS)
+                else if (this.Run.ToString() == RunType.SUCCESS.ToString())
+                    _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.Once());
+
+                else if (this.Run.ToString() == RunType.FAIL_GetDateOfJoining.ToString())
                     _mMock.Verify(x => x.GetDateOfJoining(It.IsAny<int>()), Times.Once());
 
                 else
@@ -75,7 +86,7 @@ public class MExample : IMock
         {
             if (value)
             {
-                if (this.Run == RunType.EXCEPTION)
+                if (this.Run.ToString() == RunType.EXCEPTION.ToString())
 
                     _mMock.Setup(x => x.GetDateOfJoining(It.IsAny<int>()))
                     .Throws(this.ExceptionExpected);
@@ -88,7 +99,7 @@ public class MExample : IMock
     {
         set
         {
-            if (this.Run == RunType.SUCCESS)
+            if (this.Run.ToString() == RunType.SUCCESS.ToString())
             {
                 this.Verifyable = true;
                 this.Returns = true;

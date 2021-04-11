@@ -7,7 +7,6 @@ public class Example : IExample
     public Example()
     {
     }
-
     public Example(string name, DateTime dateOfJoining)
     {
         _name = name;
