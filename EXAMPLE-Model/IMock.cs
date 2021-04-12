@@ -9,8 +9,6 @@ public abstract class IMock
     /// Used within the overriden properties to set such things as Verify times, return values & exceptions raised
     /// for non-success scenarios
     /// </summary>
-   
-    //public enum RunType { SUCCESS = 0, EXCEPTION = 1, ONE = -1, TWO = -2, THREE = -3, FOUR = -4, FIVE = -5, SIX = -6, SEVEN = -7, EIGHT = -8, NINE = -9};
     
     /// <summary>
     /// Set to allow the semantics to be chnaged according to the path required within the mock object simiulating the 
