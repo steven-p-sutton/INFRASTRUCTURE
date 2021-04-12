@@ -11,7 +11,7 @@ namespace MOCK.EXAMPLE.Example
             {
                 var mockOK = new MExample
                 {
-                    Run = IMock.RunType.SUCCESS,
+                    Run = (int)MExample.RunType.SUCCESS,
                     Arrange = true,
                     Test = true,
                     Assert = true
@@ -19,7 +19,7 @@ namespace MOCK.EXAMPLE.Example
 
                 var mockERROR = new MExample
                 {
-                    Run = IMock.RunType.EXCEPTION,
+                    Run = (int)MExample.RunType.EXCEPTION,
                     ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
                     Throws = true,
                     Arrange = true,
