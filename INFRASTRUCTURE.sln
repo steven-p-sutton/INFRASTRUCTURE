@@ -27,8 +27,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EXCEPTION-Example", "EXCEPT
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MOCK-Model", "MOCK-Model\MOCK-Model.shproj", "{FFA50A07-A008-4670-A98E-956F1EE4304D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOCK-Model-Net", "MOCK-Model-Net\MOCK-Model-Net.csproj", "{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOCK-Model-Core", "MOCK-Model-Core\MOCK-Model-Core.csproj", "{9DD99CF3-93CC-45A9-BA0C-B2983CFA912E}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-Model", "CODERUN-Model\CODERUN-Model.shproj", "{65B36AD5-FA3A-4DE9-A550-31400FFD6936}"
@@ -66,6 +64,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\TRY\MODEL-Example\HExample.cs = ..\TRY\MODEL-Example\HExample.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL-ExampleApp", "MODEL-ExampleApp\MODEL-ExampleApp.csproj", "{473E5DDE-2B40-47E5-A27E-AE6DD0B76AF6}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{0251de34-883d-4fd0-804a-0e4254afc400}*SharedItemsImports = 13
@@ -73,7 +73,6 @@ Global
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{1e2462e6-ec6d-4df4-a81d-ce2b510eb48d}*SharedItemsImports = 13
 		DATABASE-Model\DATABASE-Model.projitems*{1fe35927-590e-456c-bddd-e386f9124d87}*SharedItemsImports = 5
 		DATABASE-Model\DATABASE-Model.projitems*{2bf435ba-2035-4d0c-84f7-c9d491b199e3}*SharedItemsImports = 13
-		MOCK-Model\MOCK-Model.projitems*{3c33dbc2-fc29-4b81-8006-38a0fb8112ed}*SharedItemsImports = 5
 		EXAMPLE-Model\EXAMPLE-Model.projitems*{48d351fb-4812-41ad-85e3-ec518f79331d}*SharedItemsImports = 13
 		MODEL-Example\MODEL-Example.projitems*{4cc836fa-6af1-4b7d-b203-ca130d261cab}*SharedItemsImports = 13
 		MODEL-Example\MODEL-Example.projitems*{4da432b5-c03e-4d37-94d2-d8dcbd665ea8}*SharedItemsImports = 5
@@ -127,10 +126,6 @@ Global
 		{1FE35927-590E-456C-BDDD-E386F9124D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FE35927-590E-456C-BDDD-E386F9124D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FE35927-590E-456C-BDDD-E386F9124D87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C33DBC2-FC29-4B81-8006-38A0FB8112ED}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9DD99CF3-93CC-45A9-BA0C-B2983CFA912E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9DD99CF3-93CC-45A9-BA0C-B2983CFA912E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DD99CF3-93CC-45A9-BA0C-B2983CFA912E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -179,6 +174,10 @@ Global
 		{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{473E5DDE-2B40-47E5-A27E-AE6DD0B76AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473E5DDE-2B40-47E5-A27E-AE6DD0B76AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473E5DDE-2B40-47E5-A27E-AE6DD0B76AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473E5DDE-2B40-47E5-A27E-AE6DD0B76AF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

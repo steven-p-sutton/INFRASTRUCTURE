@@ -13,6 +13,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Example.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IExample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IMock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IRunType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RunTYpe.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XExample.cs" />
