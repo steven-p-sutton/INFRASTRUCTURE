@@ -9,7 +9,9 @@
     <Import_RootNamespace>MODEL_Example</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)EExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Example.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IExample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XExample.cs" />
   </ItemGroup>

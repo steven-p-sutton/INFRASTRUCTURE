@@ -61,6 +61,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL-Example-Net", "MODEL-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL-Example-Core", "MODEL-Example-Core\MODEL-Example-Core.csproj", "{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D83FEFB-28C2-434F-8CDD-F2AC1327A18F}"
+	ProjectSection(SolutionItems) = preProject
+		..\TRY\MODEL-Example\HExample.cs = ..\TRY\MODEL-Example\HExample.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{0251de34-883d-4fd0-804a-0e4254afc400}*SharedItemsImports = 13
