@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>MODEL_Example_Net</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\MODEL-Example\MODEL-Example.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EXCEPTION-Model-Net">
+      <HintPath>..\EXCEPTION-Model-Net\bin\Debug\netstandard2.0\EXCEPTION-Model-Net.dll</HintPath>
+    </Reference>
+    <Reference Include="MOCK-Model-Net">
+      <HintPath>..\MOCK-Model-Net\bin\Debug\netcoreapp3.1\MOCK-Model-Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
