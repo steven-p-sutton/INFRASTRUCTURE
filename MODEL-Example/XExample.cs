@@ -12,7 +12,7 @@
         : base(message, inner)
     {
     }
-    public string Display()
+    public override string Display()
     {
         return this.Display();
     }
@@ -31,7 +31,7 @@ public class ExampleAlreadyExistsException : BaseException
         : base(message, inner)
     {
     }
-    public string Display()
+    public override string Display()
     {
         return this.Display();
     }
@@ -50,7 +50,7 @@ public class ExampleNotFoundException : BaseException
         : base(message, inner)
     {
     }
-    public string Display()
+    public override string Display()
     {
         return this.Display();
     }
