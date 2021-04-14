@@ -12,6 +12,10 @@ public class Example : IExample
     public string Str { get; set; }
     [JsonProperty("int")]
     public int Int { get; set; }
+    public string Ping (string s)
+    {
+        return $"PING:{s}";
+    }
     [JsonProperty("list")]
     public List<string> Repository { get; set; }
     public int Add(string item)

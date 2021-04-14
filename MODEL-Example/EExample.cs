@@ -28,6 +28,10 @@ public class EExample : IExample
             throw new ExampleNotImplentedException();
         }
     }
+    public string Ping(string s)
+    {
+        throw new ExampleNotImplentedException();
+    }
     [JsonProperty("list")]
     public List<string> Repository 
     {
