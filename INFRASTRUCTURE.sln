@@ -21,8 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATABASE-Model-Core", "DATA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATABASE-Model-Net", "DATABASE-Model-Net\DATABASE-Model-Net.csproj", "{1FE35927-590E-456C-BDDD-E386F9124D87}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CODERUN-ExampleModule", "CODERUN-ExampleModule\CODERUN-ExampleModule.shproj", "{E69DA5B8-8C9E-45F0-9DA2-E3793785A00B}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EXCEPTION-Example", "EXCEPTION-Example\EXCEPTION-Example.shproj", "{0251DE34-883D-4FD0-804A-0E4254AFC400}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MOCK-Model", "MOCK-Model\MOCK-Model.shproj", "{FFA50A07-A008-4670-A98E-956F1EE4304D}"
@@ -43,8 +41,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXTENSION-Model-Net", "EXTE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXTENSION-ExampleApp", "EXTENSION-ExampleApp\EXTENSION-ExampleApp.csproj", "{5257E65D-DF4C-4C04-8311-92F27985A08B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-ExampleApp", "CODERUN-ExampleApp\CODERUN-ExampleApp.csproj", "{6BA097C1-DE96-44F4-B329-F253F182305B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOCK-ExampleApp", "MOCK-ExampleApp\MOCK-ExampleApp.csproj", "{DB94FCDD-A60A-4B4B-AB83-79A0EC0903AC}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MODEL-Example", "MODEL-Example\MODEL-Example.shproj", "{4CC836FA-6AF1-4B7D-B203-CA130D261CAB}"
@@ -60,6 +56,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL-ExampleApp", "MODEL-E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOCK-Model-Net", "MOCK-Model-Net\MOCK-Model-Net.csproj", "{D9402526-1AA9-4630-9D2B-3AADBFA15887}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-Example", "CODERUN-Example\CODERUN-Example.csproj", "{5FF17C3F-C563-4F8B-B03C-646F7AA5B081}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APP-Example", "APP-Example\APP-Example.csproj", "{D31CCA82-EBFA-476E-94D8-C3A7D47BF42F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TEST-Example", "TEST-Example\TEST-Example.csproj", "{2A0CEFAE-0C53-4CDA-98E6-CB7F1FA6835A}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{0251de34-883d-4fd0-804a-0e4254afc400}*SharedItemsImports = 13
@@ -71,7 +73,6 @@ Global
 		CODERUN-Model\CODERUN-Model.projitems*{58b6df1e-43c8-41bd-b9f1-148aba76536b}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{65b36ad5-fa3a-4de9-a550-31400ffd6936}*SharedItemsImports = 13
-		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{6ba097c1-de96-44f4-b329-f253f182305b}*SharedItemsImports = 5
 		DATABASE-Model\DATABASE-Model.projitems*{7da68e4c-4700-460e-be8d-917e51bb52d0}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
 		MOCK-Model\MOCK-Model.projitems*{9dd99cf3-93cc-45a9-ba0c-b2983cfa912e}*SharedItemsImports = 5
@@ -79,7 +80,6 @@ Global
 		EXTENSION-Model\EXTENSION-Model.projitems*{c6f39220-787c-4e34-bf3b-bb89e98620dd}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{cae181d3-fb03-4218-afee-59e3170716dd}*SharedItemsImports = 5
 		MOCK-Model\MOCK-Model.projitems*{d9402526-1aa9-4630-9d2b-3aadbfa15887}*SharedItemsImports = 5
-		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{e69da5b8-8c9e-45f0-9da2-e3793785a00b}*SharedItemsImports = 13
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{e9cd8a56-9dd8-496b-b0ae-b32bad457697}*SharedItemsImports = 5
 		EXTENSION-Model\EXTENSION-Model.projitems*{eed7ed14-540b-4dda-b6c0-4e907ba0de78}*SharedItemsImports = 13
 		MOCK-Model\MOCK-Model.projitems*{ffa50a07-a008-4670-a98e-956f1ee4304d}*SharedItemsImports = 13
@@ -141,10 +141,6 @@ Global
 		{5257E65D-DF4C-4C04-8311-92F27985A08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5257E65D-DF4C-4C04-8311-92F27985A08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5257E65D-DF4C-4C04-8311-92F27985A08B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BA097C1-DE96-44F4-B329-F253F182305B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BA097C1-DE96-44F4-B329-F253F182305B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BA097C1-DE96-44F4-B329-F253F182305B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BA097C1-DE96-44F4-B329-F253F182305B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB94FCDD-A60A-4B4B-AB83-79A0EC0903AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB94FCDD-A60A-4B4B-AB83-79A0EC0903AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB94FCDD-A60A-4B4B-AB83-79A0EC0903AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -161,6 +157,18 @@ Global
 		{D9402526-1AA9-4630-9D2B-3AADBFA15887}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9402526-1AA9-4630-9D2B-3AADBFA15887}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9402526-1AA9-4630-9D2B-3AADBFA15887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF17C3F-C563-4F8B-B03C-646F7AA5B081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF17C3F-C563-4F8B-B03C-646F7AA5B081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF17C3F-C563-4F8B-B03C-646F7AA5B081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF17C3F-C563-4F8B-B03C-646F7AA5B081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D31CCA82-EBFA-476E-94D8-C3A7D47BF42F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31CCA82-EBFA-476E-94D8-C3A7D47BF42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31CCA82-EBFA-476E-94D8-C3A7D47BF42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D31CCA82-EBFA-476E-94D8-C3A7D47BF42F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0CEFAE-0C53-4CDA-98E6-CB7F1FA6835A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0CEFAE-0C53-4CDA-98E6-CB7F1FA6835A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0CEFAE-0C53-4CDA-98E6-CB7F1FA6835A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0CEFAE-0C53-4CDA-98E6-CB7F1FA6835A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>TEST_Example</RootNamespace>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APP-Example\APP-Example.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MOCK-Model-Core">
+      <HintPath>..\..\INFRASTRUCTURE\MOCK-Model-Core\bin\Debug\netcoreapp3.1\MOCK-Model-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MODEL-Example-Core">
+      <HintPath>..\..\INFRASTRUCTURE\MODEL-Example-Core\bin\Debug\netcoreapp3.1\MODEL-Example-Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

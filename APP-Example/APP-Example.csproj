@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>APP_Example</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EXCEPTION-Model-Core">
+      <HintPath>..\..\INFRASTRUCTURE\EXCEPTION-Model-Core\bin\Debug\netcoreapp3.1\EXCEPTION-Model-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MOCK-Model-Core">
+      <HintPath>..\..\INFRASTRUCTURE\MOCK-Model-Core\bin\Debug\netcoreapp3.1\MOCK-Model-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MODEL-Example-Core">
+      <HintPath>..\..\INFRASTRUCTURE\MODEL-Example-Core\bin\Debug\netcoreapp3.1\MODEL-Example-Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

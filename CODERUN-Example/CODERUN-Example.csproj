@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>CODERUN_Example</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="CODERUN-Model-Core">
+      <HintPath>..\..\INFRASTRUCTURE\CODERUN-Model-Core\bin\Debug\netcoreapp3.1\CODERUN-Model-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MOCK-Model-Core">
+      <HintPath>..\..\INFRASTRUCTURE\MOCK-Model-Core\bin\Debug\netcoreapp3.1\MOCK-Model-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MODEL-Example-Core">
+      <HintPath>..\..\INFRASTRUCTURE\MODEL-Example-Core\bin\Debug\netcoreapp3.1\MODEL-Example-Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
