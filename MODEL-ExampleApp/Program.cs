@@ -1,5 +1,4 @@
 ﻿using System;
-//using Conductus.MODEL.Model.Core;
 
 namespace Conductus.MODEL.Example
 {
@@ -27,7 +26,6 @@ namespace Conductus.MODEL.Example
                     Assert = true
                 };
             }
-
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
