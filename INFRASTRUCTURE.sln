@@ -47,12 +47,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CODERUN-ExampleApp", "CODER
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOCK-ExampleApp", "MOCK-ExampleApp\MOCK-ExampleApp.csproj", "{DB94FCDD-A60A-4B4B-AB83-79A0EC0903AC}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EXAMPLE-Model", "EXAMPLE-Model\EXAMPLE-Model.shproj", "{48D351FB-4812-41AD-85E3-EC518F79331D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXAMPLE-Model-Core", "EXAMPLE-Model-Core\EXAMPLE-Model-Core.csproj", "{878D5D68-AADA-4A9E-956F-C2ADF9D5691B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXAMPLE-Model-Net", "EXAMPLE-Model-Net\EXAMPLE-Model-Net.csproj", "{6FFC13F8-BF5A-4864-8718-AB6D396C409D}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MODEL-Example", "MODEL-Example\MODEL-Example.shproj", "{4CC836FA-6AF1-4B7D-B203-CA130D261CAB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL-Example-Core", "MODEL-Example-Core\MODEL-Example-Core.csproj", "{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}"
@@ -73,16 +67,13 @@ Global
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{1e2462e6-ec6d-4df4-a81d-ce2b510eb48d}*SharedItemsImports = 13
 		DATABASE-Model\DATABASE-Model.projitems*{1fe35927-590e-456c-bddd-e386f9124d87}*SharedItemsImports = 5
 		DATABASE-Model\DATABASE-Model.projitems*{2bf435ba-2035-4d0c-84f7-c9d491b199e3}*SharedItemsImports = 13
-		EXAMPLE-Model\EXAMPLE-Model.projitems*{48d351fb-4812-41ad-85e3-ec518f79331d}*SharedItemsImports = 13
 		MODEL-Example\MODEL-Example.projitems*{4cc836fa-6af1-4b7d-b203-ca130d261cab}*SharedItemsImports = 13
 		CODERUN-Model\CODERUN-Model.projitems*{58b6df1e-43c8-41bd-b9f1-148aba76536b}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{65b36ad5-fa3a-4de9-a550-31400ffd6936}*SharedItemsImports = 13
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{6ba097c1-de96-44f4-b329-f253f182305b}*SharedItemsImports = 5
-		EXAMPLE-Model\EXAMPLE-Model.projitems*{6ffc13f8-bf5a-4864-8718-ab6d396c409d}*SharedItemsImports = 5
 		DATABASE-Model\DATABASE-Model.projitems*{7da68e4c-4700-460e-be8d-917e51bb52d0}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{7ec1fc32-29a8-4ed5-81bf-c7e57e6a9fe3}*SharedItemsImports = 5
-		EXAMPLE-Model\EXAMPLE-Model.projitems*{878d5d68-aada-4a9e-956f-c2adf9d5691b}*SharedItemsImports = 5
 		MOCK-Model\MOCK-Model.projitems*{9dd99cf3-93cc-45a9-ba0c-b2983cfa912e}*SharedItemsImports = 5
 		EXTENSION-Model\EXTENSION-Model.projitems*{bbbcea43-9798-40ec-bbd4-1eaea793389e}*SharedItemsImports = 5
 		EXTENSION-Model\EXTENSION-Model.projitems*{c6f39220-787c-4e34-bf3b-bb89e98620dd}*SharedItemsImports = 5
@@ -158,14 +149,6 @@ Global
 		{DB94FCDD-A60A-4B4B-AB83-79A0EC0903AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB94FCDD-A60A-4B4B-AB83-79A0EC0903AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB94FCDD-A60A-4B4B-AB83-79A0EC0903AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{878D5D68-AADA-4A9E-956F-C2ADF9D5691B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{878D5D68-AADA-4A9E-956F-C2ADF9D5691B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{878D5D68-AADA-4A9E-956F-C2ADF9D5691B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{878D5D68-AADA-4A9E-956F-C2ADF9D5691B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6FFC13F8-BF5A-4864-8718-AB6D396C409D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FFC13F8-BF5A-4864-8718-AB6D396C409D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FFC13F8-BF5A-4864-8718-AB6D396C409D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FFC13F8-BF5A-4864-8718-AB6D396C409D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
