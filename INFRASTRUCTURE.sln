@@ -64,6 +64,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL-ExampleApp", "MODEL-ExampleApp\MODEL-ExampleApp.csproj", "{473E5DDE-2B40-47E5-A27E-AE6DD0B76AF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOCK-Model-Net", "MOCK-Model-Net\MOCK-Model-Net.csproj", "{D9402526-1AA9-4630-9D2B-3AADBFA15887}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{0251de34-883d-4fd0-804a-0e4254afc400}*SharedItemsImports = 13
@@ -85,6 +87,7 @@ Global
 		EXTENSION-Model\EXTENSION-Model.projitems*{bbbcea43-9798-40ec-bbd4-1eaea793389e}*SharedItemsImports = 5
 		EXTENSION-Model\EXTENSION-Model.projitems*{c6f39220-787c-4e34-bf3b-bb89e98620dd}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{cae181d3-fb03-4218-afee-59e3170716dd}*SharedItemsImports = 5
+		MOCK-Model\MOCK-Model.projitems*{d9402526-1aa9-4630-9d2b-3aadbfa15887}*SharedItemsImports = 5
 		CODERUN-ExampleModule\CODERUN-ExampleModule.projitems*{e69da5b8-8c9e-45f0-9da2-e3793785a00b}*SharedItemsImports = 13
 		EXCEPTION-Example\EXCEPTION-Example.projitems*{e9cd8a56-9dd8-496b-b0ae-b32bad457697}*SharedItemsImports = 5
 		EXTENSION-Model\EXTENSION-Model.projitems*{eed7ed14-540b-4dda-b6c0-4e907ba0de78}*SharedItemsImports = 13
@@ -171,6 +174,10 @@ Global
 		{473E5DDE-2B40-47E5-A27E-AE6DD0B76AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{473E5DDE-2B40-47E5-A27E-AE6DD0B76AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{473E5DDE-2B40-47E5-A27E-AE6DD0B76AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9402526-1AA9-4630-9D2B-3AADBFA15887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9402526-1AA9-4630-9D2B-3AADBFA15887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9402526-1AA9-4630-9D2B-3AADBFA15887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9402526-1AA9-4630-9D2B-3AADBFA15887}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

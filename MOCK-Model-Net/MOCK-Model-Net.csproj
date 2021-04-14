@@ -11,10 +11,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="EXCEPTION-Model-Net">
-      <HintPath>..\EXCEPTION-Model-Net\bin\Debug\netstandard2.0\EXCEPTION-Model-Net.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
