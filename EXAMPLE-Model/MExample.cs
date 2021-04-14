@@ -4,16 +4,6 @@ using Moq;
 // IMock.cs has to be source file included in the EXAMPLE-Model shared code project
 public class MExample : IMock
 {
-    /// <summary>
-    /// RunType - A means to partition the stages of the object semantics. 
-    /// IMock.IRunType contains SUCCESS = 0 & EXCPTION = 1 properties so we can add some 
-    /// specific ones applicable to out Mock object
-    /// </summary>
-    public class RunType : IRunType
-    {
-        public static int FAIL_GetDateOfJoining { get { return -1; } }
-    }
-
     public Mock<IExample> _mMock;
     public MExample()
     {

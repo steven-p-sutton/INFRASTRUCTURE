@@ -1,7 +1,7 @@
 ﻿using System;
-using Conductus.EXAMPLE.Model.Core;
+//using Conductus.MOCK.Model.Core;
 
-namespace MOCK.EXAMPLE.Example
+namespace Conductus.MOCK.Example
 {
     class Program
     {
@@ -11,7 +11,7 @@ namespace MOCK.EXAMPLE.Example
             {
                 var mockOK = new MExample
                 {
-                    Run = (int)MExample.RunType.SUCCESS,
+                    Run = RunType.SUCCESS,
                     Arrange = true,
                     Test = true,
                     Assert = true
@@ -19,7 +19,7 @@ namespace MOCK.EXAMPLE.Example
 
                 var mockERROR = new MExample
                 {
-                    Run = (int)MExample.RunType.EXCEPTION,
+                    Run = RunType.EXCEPTION,
                     ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
                     Throws = true,
                     Arrange = true,

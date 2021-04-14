@@ -55,8 +55,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EXAMPLE-Model-Net", "EXAMPL
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MODEL-Example", "MODEL-Example\MODEL-Example.shproj", "{4CC836FA-6AF1-4B7D-B203-CA130D261CAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL-Example-Net", "MODEL-Example-Net\MODEL-Example-Net.csproj", "{4DA432B5-C03E-4D37-94D2-D8DCBD665EA8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MODEL-Example-Core", "MODEL-Example-Core\MODEL-Example-Core.csproj", "{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D83FEFB-28C2-434F-8CDD-F2AC1327A18F}"
@@ -75,7 +73,6 @@ Global
 		DATABASE-Model\DATABASE-Model.projitems*{2bf435ba-2035-4d0c-84f7-c9d491b199e3}*SharedItemsImports = 13
 		EXAMPLE-Model\EXAMPLE-Model.projitems*{48d351fb-4812-41ad-85e3-ec518f79331d}*SharedItemsImports = 13
 		MODEL-Example\MODEL-Example.projitems*{4cc836fa-6af1-4b7d-b203-ca130d261cab}*SharedItemsImports = 13
-		MODEL-Example\MODEL-Example.projitems*{4da432b5-c03e-4d37-94d2-d8dcbd665ea8}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{58b6df1e-43c8-41bd-b9f1-148aba76536b}*SharedItemsImports = 5
 		EXCEPTION-Model\EXCEPTION-Model.projitems*{58f6ae77-3551-43c8-aa8c-d772c92023b3}*SharedItemsImports = 5
 		CODERUN-Model\CODERUN-Model.projitems*{65b36ad5-fa3a-4de9-a550-31400ffd6936}*SharedItemsImports = 13
@@ -166,10 +163,6 @@ Global
 		{6FFC13F8-BF5A-4864-8718-AB6D396C409D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FFC13F8-BF5A-4864-8718-AB6D396C409D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FFC13F8-BF5A-4864-8718-AB6D396C409D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4DA432B5-C03E-4D37-94D2-D8DCBD665EA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DA432B5-C03E-4D37-94D2-D8DCBD665EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DA432B5-C03E-4D37-94D2-D8DCBD665EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DA432B5-C03E-4D37-94D2-D8DCBD665EA8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{197E7CDD-AD16-459D-BF15-94F5A5E4A74C}.Release|Any CPU.ActiveCfg = Release|Any CPU

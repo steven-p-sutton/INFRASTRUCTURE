@@ -19,9 +19,6 @@
     <Reference Include="EXTENSION-Model-Core">
       <HintPath>..\EXTENSION-Model-Core\bin\Debug\netcoreapp3.1\EXTENSION-Model-Core.dll</HintPath>
     </Reference>
-    <Reference Include="MOCK-Model-Core">
-      <HintPath>..\MOCK-Model-Core\bin\Debug\netcoreapp3.1\MOCK-Model-Core.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

@@ -6,4 +6,13 @@
     <RootNamespace>MODEL_ExampleApp</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="EXCEPTION-Model-Core">
+      <HintPath>..\EXCEPTION-Model-Core\bin\Debug\netcoreapp3.1\EXCEPTION-Model-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MODEL-Example-Core">
+      <HintPath>..\MODEL-Example-Core\bin\Debug\netcoreapp3.1\MODEL-Example-Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)IMock.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IRunType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MExample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RunType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XExample.cs" />
   </ItemGroup>
 </Project>
