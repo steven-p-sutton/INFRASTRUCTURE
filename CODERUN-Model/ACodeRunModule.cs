@@ -9,5 +9,9 @@ public abstract class ACodeRunModule : ICodeRunModule
         Console.WriteLine("-----------------------------------------------------------------------------");
         Console.WriteLine($"{txt}");
     }
+    public void Field (string txt)
+    {
+        Console.Write($" {txt} ");
+    }
 }
 
