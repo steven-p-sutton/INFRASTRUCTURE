@@ -18,7 +18,7 @@
       <HintPath>..\..\INFRASTRUCTURE\MOCK-Model-Core\bin\Debug\netcoreapp3.1\MOCK-Model-Core.dll</HintPath>
     </Reference>
     <Reference Include="MODEL-Example-Core">
-      <HintPath>..\..\INFRASTRUCTURE\MODEL-Example-Core\bin\Debug\netcoreapp3.1\MODEL-Example-Core.dll</HintPath>
+      <HintPath>..\MODEL-Example-Core\bin\Debug\netcoreapp3.1\MODEL-Example-Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 
