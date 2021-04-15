@@ -8,7 +8,9 @@ namespace Conductus.EXAMPLE.App
     {
         static void Main(string[] args)
         {
-            // Example
+            Console.WriteLine("===============================================================================");
+            Console.WriteLine("Example");
+            Console.WriteLine("===============================================================================");
 
             try
             {
@@ -16,6 +18,8 @@ namespace Conductus.EXAMPLE.App
 
                 example.Str = "APP-Example";
                 example.Int = 99;
+                example.Ping("Example.Ping()");
+
                 example.Add(example.Str);
                 example.Add(example.Int.ToString());
 
@@ -27,7 +31,9 @@ namespace Conductus.EXAMPLE.App
                 Console.WriteLine(e.Message);
             }
 
-            // HExample
+            Console.WriteLine("===============================================================================");
+            Console.WriteLine("HExample");
+            Console.WriteLine("===============================================================================");
 
             try
             {
@@ -35,7 +41,8 @@ namespace Conductus.EXAMPLE.App
 
                 var s = host.Str();
                 var i = host.Int();
-
+                var p = host.Ping();
+                
                 host.Add();
                 host.Find();
                 host.Remove();
@@ -47,14 +54,17 @@ namespace Conductus.EXAMPLE.App
                 Console.WriteLine(e.Message);
             }
 
-            // EExample
+            Console.WriteLine("===============================================================================");
+            Console.WriteLine("EExample");
+            Console.WriteLine("===============================================================================");
 
             try
             {
-                var empty = new EExample();
+                var notImpementedYet = new EExample();
 
-                empty.Add("Item");
-                empty.Remove(empty.Find("Item"));
+                notImpementedYet.Add("Item");
+                notImpementedYet.Remove(notImpementedYet.Find("Item"));
+                notImpementedYet.Ping("EExample.Ping()");
             }
             catch (ExampleNotImplentedException e)
             {
@@ -65,7 +75,9 @@ namespace Conductus.EXAMPLE.App
                 Console.WriteLine(e.Message);
             }
 
-            // MEXample
+            Console.WriteLine("===============================================================================");
+            Console.WriteLine("MExample");
+            Console.WriteLine("===============================================================================");
 
             try
             {

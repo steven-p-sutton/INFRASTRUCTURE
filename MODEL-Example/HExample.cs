@@ -34,6 +34,8 @@ public class HExample
                 string str = this.Example.Str;
                 int Int = this.Example.Int;
 
+                string s = Example.Ping("HExample.Try.Ping()");
+
                 int idx = 0;
                 string item = string.Empty;
 
@@ -56,7 +58,7 @@ public class HExample
         }
     }
     /// <summary>
-    /// Each class method / property to hae a call to exercise it 
+    /// Each class method / property to has a call to exercise it 
     /// </summary>
         
     public string Str()
@@ -66,6 +68,10 @@ public class HExample
     public int Int()
     {
         return Example.Int;
+    }
+    public string Ping()
+    {
+        return Example.Ping("HExample.Ping.Ping()");
     }
     public int Add()
     {

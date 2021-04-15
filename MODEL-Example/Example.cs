@@ -32,7 +32,7 @@ public class Example : IExample
     public int Find(string item)
     {
         var idx = this.Repository.IndexOf(item);
-        if (idx == -1) throw new ExampleNotFoundException();
+        if (idx == -1) throw new ExampleNotFoundException(item);
         return idx;
     }
 }

@@ -8,4 +8,5 @@ public class RunType : IRunType
     public static int FAIL_Add { get { return -1; } }
     public static int FAIL_Find { get { return -2; } }
     public static int FAIL_Remove { get { return -3; } }
+    public static int FAIL_Ping { get { return -4; } }
 }

@@ -113,23 +113,30 @@ public class MExample : IMock
                     _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.Once());
                 }
+                else if (this.Run == RunType.FAIL_Ping)
+                {
+                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Once());
+                    _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Never());
+                    _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Never());
+                    _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.Never());
+                }
                 else if (this.Run == RunType.FAIL_Add)
                 {
-                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Never());
+                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Never());
                     _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.Never());
                 }
                 else if (this.Run == RunType.FAIL_Find)
                 {
-                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Never());
+                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.Never());
                 }
                 else if (this.Run == RunType.FAIL_Remove)
                 {
-                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Never());
+                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.Once());
@@ -178,13 +185,20 @@ public class MExample : IMock
     {
         set
         {
-            if (this.Run == RunType.SUCCESS)
+            this.Verifyable = false;
+            this.Returns = false;
+            this.Throws = false;
+
+            if (value)
             {
                 this.Verifyable = true;
-                this.Returns = true;
+
+                if (this.Run == RunType.SUCCESS)
+
+                    this.Returns = true;
+                else
+                    this.Throws = true;
             }
-            else
-                this.Throws = value;
         }
     }
     public override bool Test
@@ -193,6 +207,7 @@ public class MExample : IMock
         {
             if (value)
             {
+                this.Mock.Object.Ping("MExample.Test.Ping()");
                 this.Mock.Object.Add("Item");
                 this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
             }

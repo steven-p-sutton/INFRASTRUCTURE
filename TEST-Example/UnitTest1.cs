@@ -1,5 +1,7 @@
+using System;
 using Xunit;
 using Conductus.EXAMPLE.Model.Core;
+using Conductus.EXCEPTION.Model.Core;
 
 namespace Conductus.EXAMPLE.Test
 {
@@ -23,24 +25,75 @@ namespace Conductus.EXAMPLE.Test
             Assert.Equal(idxItem, module.Find("Item"));
 
             var str = module.Remove(idxItem);
-            Assert.False(idxItem == module.Find("Item"));
+
+            try
+            {
+                var idx = module.Find(str);
+            }
+            catch (ExampleNotFoundException e)
+            {
+            }
         }
         [Fact]
         public void HExample()
         {
             var host = new HExample();
+
+            var s = host.Str();
+            var i = host.Int();
+            var p = host.Ping();
+
+            host.Add();
+            host.Find();
+            host.Remove();
+
+            host.Try = true;
         }
 
         [Fact]
         public void EExample()
         {
-            var empty = new EExample();
+            try
+            {
+                var notImpementedYet = new EExample();
+
+                notImpementedYet.Add("Item");
+                notImpementedYet.Remove(notImpementedYet.Find("Item"));
+                notImpementedYet.Ping("EExample.Ping()");
+            }
+            catch (ExampleNotImplentedException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         [Fact]
-        public void MExample()
+        public void MExample_SUCCESS()
         {
-            var mock = new MExample();
+            var mockOK = new MExample
+            {
+                Run = RunType.SUCCESS,
+                Arrange = true,
+                Test = true,
+                Assert = true
+            };
+        }
+        [Fact]
+        public void MExample_FAIL()
+        {
+            var mockERROR = new MExample
+            {
+                Run = RunType.FAIL_Ping,
+                ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
+                Throws = true,
+                Arrange = true,
+                Test = true,
+                Assert = true
+            };
         }
     }
 }
