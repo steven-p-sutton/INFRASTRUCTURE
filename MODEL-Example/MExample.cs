@@ -16,33 +16,43 @@ public class MExample : IMock
     {
         set
         {
-            if (this.Run == RunType.SUCCESS)
+            if (value)
             {
-                _mMock.Setup(x => x.Ping(It.IsAny<string>()))
-                .Returns("PING:");
+                if (this.Run == RunType.EXCEPTION)
+                {
+                    _mMock.Setup(x => x.Ping(It.IsAny<string>()))
+                    .Returns(string.Empty);
 
-                _mMock.Setup(x => x.Add(It.IsAny<string>()))
-                 .Returns(0);
+                    _mMock.Setup(x => x.Add(It.IsAny<string>()))
+                     .Returns(int.MinValue);
 
-                _mMock.Setup(x => x.Find(It.IsAny<string>()))
-                .Returns(0);
+                    _mMock.Setup(x => x.Find(It.IsAny<string>()))
+                    .Returns(int.MinValue);
 
-                _mMock.Setup(x => x.Remove(It.IsAny<int>()))
-                .Returns("Mock");
+                    _mMock.Setup(x => x.Remove(It.IsAny<int>()))
+                    .Returns(string.Empty);
+                }
+                else
+                {
+                    _mMock.Setup(x => x.Ping(It.IsAny<string>()))
+                    .Returns("PING:");
+
+                    _mMock.Setup(x => x.Add(It.IsAny<string>()))
+                     .Returns(0);
+
+                    _mMock.Setup(x => x.Find(It.IsAny<string>()))
+                    .Returns(0);
+
+                    _mMock.Setup(x => x.Remove(It.IsAny<int>()))
+                    .Returns("Mock");
+                }
             }
             else
             {
-                _mMock.Setup(x => x.Ping(It.IsAny<string>()))
-                .Returns(string.Empty);
-
-                _mMock.Setup(x => x.Add(It.IsAny<string>()))
-                 .Returns(int.MinValue);
-
-                _mMock.Setup(x => x.Find(It.IsAny<string>()))
-                .Returns(int.MinValue);
-
-                _mMock.Setup(x => x.Remove(It.IsAny<int>()))
-                .Returns(string.Empty);
+                _mMock.Setup(x => x.Ping(It.IsAny<string>()));
+                _mMock.Setup(x => x.Add(It.IsAny<string>()));
+                _mMock.Setup(x => x.Find(It.IsAny<string>()));
+                _mMock.Setup(x => x.Remove(It.IsAny<int>()));
             }
         }
     }
@@ -50,7 +60,7 @@ public class MExample : IMock
     {
         set
         {
-            if (this.Run == RunType.SUCCESS)
+            if (value)
             {
                 _mMock.Setup(x => x.Ping(It.IsAny<string>()));
                 _mMock.Setup(x => x.Add(It.IsAny<string>()));
@@ -149,6 +159,13 @@ public class MExample : IMock
                     _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.AtLeastOnce());
                 }
             }
+            else
+            {
+                _mMock.Setup(x => x.Ping(It.IsAny<string>()));
+                _mMock.Setup(x => x.Add(It.IsAny<string>()));
+                _mMock.Setup(x => x.Find(It.IsAny<string>()));
+                _mMock.Setup(x => x.Remove(It.IsAny<int>()));
+            }
         }
     }
     public override bool Throws
@@ -171,7 +188,27 @@ public class MExample : IMock
                     _mMock.Setup(x => x.Remove(It.IsAny<int>()))
                     .Throws(this.ExceptionExpected);
                 }
-                else
+                else if (this.Run == RunType.FAIL_Ping)
+                {
+                    _mMock.Setup(x => x.Ping(It.IsAny<string>()))
+                    .Throws(this.ExceptionExpected);
+                }
+                else if (this.Run == RunType.FAIL_Add)
+                {
+                    _mMock.Setup(x => x.Add(It.IsAny<string>()))
+                    .Throws(this.ExceptionExpected);
+                }
+                else if (this.Run == RunType.FAIL_Find)
+                {
+                    _mMock.Setup(x => x.Find(It.IsAny<string>()))
+                    .Throws(this.ExceptionExpected);
+                }
+                else if (this.Run == RunType.FAIL_Remove)
+                {
+                    _mMock.Setup(x => x.Remove(It.IsAny<int>()))
+                    .Throws(this.ExceptionExpected);
+                }
+                else if (this.Run == RunType.SUCCESS)
                 {
                     _mMock.Setup(x => x.Ping(It.IsAny<string>()));
                     _mMock.Setup(x => x.Add(It.IsAny<string>()));
@@ -179,26 +216,22 @@ public class MExample : IMock
                     _mMock.Setup(x => x.Remove(It.IsAny<int>()));
                 }
             }
+            else
+            {
+                _mMock.Setup(x => x.Ping(It.IsAny<string>()));
+                _mMock.Setup(x => x.Add(It.IsAny<string>()));
+                _mMock.Setup(x => x.Find(It.IsAny<string>()));
+                _mMock.Setup(x => x.Remove(It.IsAny<int>()));
+            }
         }
     }
     public override bool Arrange
     {
         set
         {
-            this.Verifyable = false;
-            this.Returns = false;
-            this.Throws = false;
-
-            if (value)
-            {
-                this.Verifyable = true;
-
-                if (this.Run == RunType.SUCCESS)
-
-                    this.Returns = true;
-                else
-                    this.Throws = true;
-            }
+            this.Verifyable = value;
+            this.Returns = value;
+            this.Throws = value;
         }
     }
     public override bool Test
@@ -207,9 +240,27 @@ public class MExample : IMock
         {
             if (value)
             {
-                this.Mock.Object.Ping("MExample.Test.Ping()");
-                this.Mock.Object.Add("Item");
-                this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
+                if (this.Run == RunType.SUCCESS)
+                {
+                    this.Mock.Object.Ping("MExample.Test.Ping()");
+                    this.Mock.Object.Add("Item");
+                    this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
+                }
+                else if (this.Run == RunType.EXCEPTION)
+                {
+                }
+                else if (this.Run == RunType.FAIL_Ping)
+                {
+                }
+                else if (this.Run == RunType.FAIL_Add)
+                {
+                }
+                else if (this.Run == RunType.FAIL_Find)
+                {
+                }
+                else if (this.Run == RunType.FAIL_Remove)
+                {
+                }
             }
         }
     }
@@ -217,10 +268,7 @@ public class MExample : IMock
     {
         set
         {
-            if (value)
-            {
-                this.Verify = true;
-            }
+            this.Verify = value;
         }
     }
 }

@@ -85,15 +85,22 @@ namespace Conductus.EXAMPLE.Test
         [Fact]
         public void MExample_FAIL()
         {
-            var mockERROR = new MExample
+            try
             {
-                Run = RunType.FAIL_Ping,
-                ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
-                Throws = true,
-                Arrange = true,
-                Test = true,
-                Assert = true
-            };
+                var mockERROR = new MExample
+                {
+                    Run = RunType.FAIL_Ping,
+                    ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
+                    Throws = true,
+                    Arrange = true,
+                    Test = true,
+                    //Assert = true
+                };
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
