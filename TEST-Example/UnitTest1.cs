@@ -94,7 +94,7 @@ namespace Conductus.EXAMPLE.Test
                     Throws = true,
                     Arrange = true,
                     Test = true,
-                    //Assert = true
+                    Assert = true
                 };
             }
             catch (Exception e)
