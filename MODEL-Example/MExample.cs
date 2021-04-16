@@ -109,6 +109,11 @@ public class MExample : IMock
         {
             if (value)
             {
+                _mMock.Setup(x => x.Ping(It.IsAny<string>()));
+                _mMock.Setup(x => x.Add(It.IsAny<string>()));
+                _mMock.Setup(x => x.Find(It.IsAny<string>()));
+                _mMock.Setup(x => x.Remove(It.IsAny<int>()));
+
                 if (this.Run == RunType.EXCEPTION)
                 {
                     _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Never());
@@ -174,7 +179,19 @@ public class MExample : IMock
         {
             if (value)
             {
-                if (this.Run == RunType.EXCEPTION)
+                _mMock.Setup(x => x.Ping(It.IsAny<string>()));
+                _mMock.Setup(x => x.Add(It.IsAny<string>()));
+                _mMock.Setup(x => x.Find(It.IsAny<string>()));
+                _mMock.Setup(x => x.Remove(It.IsAny<int>()));
+
+                if (this.Run == RunType.SUCCESS)
+                {
+                    _mMock.Setup(x => x.Ping(It.IsAny<string>()));
+                    _mMock.Setup(x => x.Add(It.IsAny<string>()));
+                    _mMock.Setup(x => x.Find(It.IsAny<string>()));
+                    _mMock.Setup(x => x.Remove(It.IsAny<int>()));
+                }
+                else if (this.Run == RunType.EXCEPTION)
                 {
                     _mMock.Setup(x => x.Ping(It.IsAny<string>()))
                     .Throws(this.ExceptionExpected);
@@ -207,13 +224,6 @@ public class MExample : IMock
                 {
                     _mMock.Setup(x => x.Remove(It.IsAny<int>()))
                     .Throws(this.ExceptionExpected);
-                }
-                else if (this.Run == RunType.SUCCESS)
-                {
-                    _mMock.Setup(x => x.Ping(It.IsAny<string>()));
-                    _mMock.Setup(x => x.Add(It.IsAny<string>()));
-                    _mMock.Setup(x => x.Find(It.IsAny<string>()));
-                    _mMock.Setup(x => x.Remove(It.IsAny<int>()));
                 }
             }
             else
@@ -248,18 +258,30 @@ public class MExample : IMock
                 }
                 else if (this.Run == RunType.EXCEPTION)
                 {
+                    this.Mock.Object.Ping("MExample.Test.Ping()");
+                    this.Mock.Object.Add("Item");
+                    this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
                 }
                 else if (this.Run == RunType.FAIL_Ping)
                 {
+                    this.Mock.Object.Ping("MExample.Test.Ping()");
                 }
                 else if (this.Run == RunType.FAIL_Add)
                 {
+                    this.Mock.Object.Ping("MExample.Test.Ping()");
+                    this.Mock.Object.Add("Item");
                 }
                 else if (this.Run == RunType.FAIL_Find)
                 {
+                    this.Mock.Object.Ping("MExample.Test.Ping()");
+                    this.Mock.Object.Add("Item");
+                    this.Mock.Object.Find("Item");
                 }
                 else if (this.Run == RunType.FAIL_Remove)
                 {
+                    this.Mock.Object.Ping("MExample.Test.Ping()");
+                    this.Mock.Object.Add("Item");
+                    this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
                 }
             }
         }
