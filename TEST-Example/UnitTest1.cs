@@ -39,14 +39,12 @@ namespace Conductus.EXAMPLE.Test
         {
             var host = new HExample();
 
-            var s = host.Str();
-            var i = host.Int();
-            var p = host.Ping();
-
+            host.Str();
+            host.Int();
+            host.Ping();
             host.Add();
             host.Find();
             host.Remove();
-
             host.Try = true;
         }
 
@@ -74,7 +72,7 @@ namespace Conductus.EXAMPLE.Test
         [Fact]
         public void MExample_SUCCESS()
         {
-            var mockOK = new MExample
+            var mock = new MExample
             {
                 Run = RunType.SUCCESS,
                 Arrange = true,
@@ -83,13 +81,73 @@ namespace Conductus.EXAMPLE.Test
             };
         }
         [Fact]
-        public void MExample_FAIL()
+        public void MExample_FAIL_Ping()
         {
             try
             {
-                var mockERROR = new MExample
+                var mock = new MExample
                 {
                     Run = RunType.FAIL_Ping,
+                    ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
+                    Throws = true,
+                    Arrange = true,
+                    Test = true,
+                    Assert = true
+                };
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        [Fact]
+        public void MExample_FAIL_Add()
+        {
+            try
+            {
+                var mock = new MExample
+                {
+                    Run = RunType.FAIL_Add,
+                    ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
+                    Throws = true,
+                    Arrange = true,
+                    Test = true,
+                    Assert = true
+                };
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        [Fact]
+        public void MExample_FAIL_Find()
+        {
+            try
+            {
+                var mock = new MExample
+                {
+                    Run = RunType.FAIL_Find,
+                    ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
+                    Throws = true,
+                    Arrange = true,
+                    Test = true,
+                    Assert = true
+                };
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        [Fact]
+        public void MExample_FAIL_Remove()
+        {
+            try
+            {
+                var mock = new MExample
+                {
+                    Run = RunType.FAIL_Remove,
                     ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
                     Throws = true,
                     Arrange = true,
