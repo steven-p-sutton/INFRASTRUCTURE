@@ -39,9 +39,9 @@ namespace Conductus.EXAMPLE.App
             {
                 var host = new HExample();
 
-                var s = host.Str();
-                var i = host.Int();
-                var p = host.Ping();
+                host.Str();
+                host.Int();
+                host.Ping();
                 
                 host.Add();
                 host.Find();

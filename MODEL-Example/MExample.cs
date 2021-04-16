@@ -253,40 +253,6 @@ public class MExample : IMock
                 this.Mock.Object.Ping("MExample.Test.Ping()");
                 this.Mock.Object.Add("Item");
                 this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
-
-                //if (this.Run == RunType.SUCCESS)
-                //{
-                //    this.Mock.Object.Ping("MExample.Test.Ping()");
-                //    this.Mock.Object.Add("Item");
-                //    this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
-                //}
-                //else if (this.Run == RunType.EXCEPTION)
-                //{
-                //    this.Mock.Object.Ping("MExample.Test.Ping()");
-                //    this.Mock.Object.Add("Item");
-                //    this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
-                //}
-                //else if (this.Run == RunType.FAIL_Ping)
-                //{
-                //    this.Mock.Object.Ping("MExample.Test.Ping()");
-                //}
-                //else if (this.Run == RunType.FAIL_Add)
-                //{
-                //    this.Mock.Object.Ping("MExample.Test.Ping()");
-                //    this.Mock.Object.Add("Item");
-                //}
-                //else if (this.Run == RunType.FAIL_Find)
-                //{
-                //    this.Mock.Object.Ping("MExample.Test.Ping()");
-                //    this.Mock.Object.Add("Item");
-                //    this.Mock.Object.Find("Item");
-                //}
-                //else if (this.Run == RunType.FAIL_Remove)
-                //{
-                //    this.Mock.Object.Ping("MExample.Test.Ping()");
-                //    this.Mock.Object.Add("Item");
-                //    this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
-                //}
             }
         }
     }

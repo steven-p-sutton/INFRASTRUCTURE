@@ -42,9 +42,11 @@ namespace Conductus.EXAMPLE.Test
             host.Str();
             host.Int();
             host.Ping();
+
             host.Add();
             host.Find();
             host.Remove();
+
             host.Try = true;
         }
 
