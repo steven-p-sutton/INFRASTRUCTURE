@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using Moq;
 using Conductus.EXAMPLE.Model.Core;
 using Conductus.EXCEPTION.Model.Core;
 
@@ -85,22 +86,19 @@ namespace Conductus.EXAMPLE.Test
         [Fact]
         public void MExample_FAIL_Ping()
         {
-            try
+            var mock = new MExample
             {
-                var mock = new MExample
-                {
-                    Run = RunType.FAIL_Ping,
-                    ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
-                    Throws = true,
-                    Arrange = true,
-                    Test = true,
-                    Assert = true
-                };
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+                Run = RunType.FAIL_Ping,
+                ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
+                //Throws = false,
+                Arrange = false,
+                Test = false,
+                Assert = false
+            };
+
+            mock.Mock.Setup(x => x.Ping(It.IsAny<string>())).Throws(new ExampleAlreadyExistsException("Mock ERROR"));
+            var exception = Assert.Throws<ExampleAlreadyExistsException>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping()"));
+            Assert.Contains("Mock ERROR", exception.Message);
         }
         [Fact]
         public void MExample_FAIL_Add()
