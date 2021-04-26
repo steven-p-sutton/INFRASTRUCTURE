@@ -1,4 +1,5 @@
 ﻿using Moq;
+using Xunit;
 //using Conductus.MOCK.Model.Core;
 
 public class MExample : IMock
@@ -208,22 +209,22 @@ public class MExample : IMock
                 else if (this.Run == RunType.FAIL_Ping)
                 {
                     _mMock.Setup(x => x.Ping(It.IsAny<string>()))
-                    .Throws(this.ExceptionExpected);
+                    .Throws(new ExampleNotImplentedException());
                 }
                 else if (this.Run == RunType.FAIL_Add)
                 {
                     _mMock.Setup(x => x.Add(It.IsAny<string>()))
-                    .Throws(this.ExceptionExpected);
+                   .Throws(new ExampleNotImplentedException());
                 }
                 else if (this.Run == RunType.FAIL_Find)
                 {
                     _mMock.Setup(x => x.Find(It.IsAny<string>()))
-                    .Throws(this.ExceptionExpected);
+                   .Throws(new ExampleNotImplentedException());
                 }
                 else if (this.Run == RunType.FAIL_Remove)
                 {
                     _mMock.Setup(x => x.Remove(It.IsAny<int>()))
-                    .Throws(this.ExceptionExpected);
+                   .Throws(new ExampleNotImplentedException());
                 }
             }
             else
@@ -250,9 +251,32 @@ public class MExample : IMock
         {
             if (value)
             {
-                this.Mock.Object.Ping("MExample.Test.Ping()");
-                this.Mock.Object.Add("Item");
-                this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
+
+                if (this.Run == RunType.EXCEPTION)
+                {
+                }
+                else if (this.Run == RunType.SUCCESS)
+                {
+                    this.Mock.Object.Ping("MExample.Test.Ping()");
+                    this.Mock.Object.Add("Item");
+                    this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
+                }
+                else if (this.Run == RunType.FAIL_Ping)
+                {
+                    this.ExceptionRaised = Xunit.Assert.Throws<ExampleNotImplentedException>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping()"));
+                }
+                else if (this.Run == RunType.FAIL_Add)
+                {
+                }
+                else if (this.Run == RunType.FAIL_Find)
+                {
+                }
+                else if (this.Run == RunType.FAIL_Remove)
+                {
+                }
+                else
+                {
+                }
             }
         }
     }

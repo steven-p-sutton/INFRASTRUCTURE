@@ -96,9 +96,13 @@ namespace Conductus.EXAMPLE.Test
                 Assert = false
             };
 
-            mock.Mock.Setup(x => x.Ping(It.IsAny<string>())).Throws(new ExampleAlreadyExistsException("Mock ERROR"));
-            var exception = Assert.Throws<ExampleAlreadyExistsException>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping()"));
-            Assert.Contains("Mock ERROR", exception.Message);
+            // Arrange
+            mock.Mock.Setup(x => x.Ping(It.IsAny<string>())).Throws(mock.ExceptionExpected);
+            // Test
+            //mock.ExceptionRaised = Assert.Throws<ExampleAlreadyExistsException>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping()"));
+            mock.ExceptionRaised = Assert.Throws<Exception>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping()"));
+            // Assert
+            Assert.Contains(mock.ExceptionExpected.Message, mock.ExceptionRaised.Message);
         }
         [Fact]
         public void MExample_FAIL_Add()
