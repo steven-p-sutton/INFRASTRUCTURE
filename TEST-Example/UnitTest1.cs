@@ -33,6 +33,7 @@ namespace Conductus.EXAMPLE.Test
             }
             catch (ExampleNotFoundException e)
             {
+                string s = e.Message;
             }
         }
         [Fact]
