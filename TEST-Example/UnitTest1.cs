@@ -95,74 +95,42 @@ namespace Conductus.EXAMPLE.Test
                 Test = true,
                 Assert = true
             };
-
-            // Arrange
-            //mock.Mock.Setup(x => x.Ping(It.IsAny<string>())).Throws(mock.ExceptionExpected);
-            // Test
-            //mock.ExceptionRaised = Assert.Throws<ExampleAlreadyExistsException>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping()"));
-            //mock.ExceptionRaised = Assert.Throws<ExampleNotImplentedException>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping"));
-            // Assert
-            //Assert.Contains(mock.ExceptionExpected.Message, mock.ExceptionRaised.Message);
         }
         [Fact]
         public void MExample_FAIL_Add()
         {
-            try
+            var mock = new MExample
             {
-                var mock = new MExample
-                {
-                    Run = RunType.FAIL_Add,
-                    ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
-                    Throws = true,
-                    Arrange = true,
-                    Test = true,
-                    Assert = true
-                };
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+                Run = RunType.FAIL_Add,
+                ExceptionExpected = new ExampleAlreadyExistsException("MExample_FAIL_Add"),
+                Arrange = true,
+                Test = true,
+                Assert = true
+            };
         }
         [Fact]
         public void MExample_FAIL_Find()
         {
-            try
+            var mock = new MExample
             {
-                var mock = new MExample
-                {
-                    Run = RunType.FAIL_Find,
-                    ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
-                    Throws = true,
-                    Arrange = true,
-                    Test = true,
-                    Assert = true
-                };
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+                Run = RunType.FAIL_Find,
+                ExceptionExpected = new ExampleAlreadyExistsException("MExample_FAIL_Find"),
+                Arrange = true,
+                Test = true,
+                Assert = true
+            };
         }
         [Fact]
         public void MExample_FAIL_Remove()
         {
-            try
+            var mock = new MExample
             {
-                var mock = new MExample
-                {
-                    Run = RunType.FAIL_Remove,
-                    ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
-                    Throws = true,
-                    Arrange = true,
-                    Test = true,
-                    Assert = true
-                };
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+                Run = RunType.FAIL_Remove,
+                ExceptionExpected = new ExampleAlreadyExistsException("MExample_FAIL_Remove"),
+                Arrange = true,
+                Test = true,
+                Assert = true
+            };
         }
     }
 }

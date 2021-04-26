@@ -36,7 +36,7 @@ public class MExample : IMock
                 else
                 {
                     _mMock.Setup(x => x.Ping(It.IsAny<string>()))
-                    .Returns("PING:");
+                    .Returns("Ping Hello World");
 
                     _mMock.Setup(x => x.Add(It.IsAny<string>()))
                      .Returns(0);
@@ -45,7 +45,7 @@ public class MExample : IMock
                     .Returns(0);
 
                     _mMock.Setup(x => x.Remove(It.IsAny<int>()))
-                    .Returns("Mock");
+                    .Returns("Item");
                 }
             }
             else
@@ -144,31 +144,24 @@ public class MExample : IMock
                 }
                 else if (this.Run == RunType.FAIL_Add)
                 {
-                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Once());
+                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Never());
                     _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Never());
                     _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.Never());
                 }
                 else if (this.Run == RunType.FAIL_Find)
                 {
-                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Once());
-                    _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Once());
+                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Never());
+                    _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Never());
                     _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.Never());
                 }
                 else if (this.Run == RunType.FAIL_Remove)
                 {
-                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Once());
-                    _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Once());
-                    _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Once());
+                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Never());
+                    _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Never());
+                    _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Never());
                     _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.Once());
-                }
-                else
-                {
-                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.AtLeastOnce());
-                    _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.AtLeastOnce());
-                    _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.AtLeastOnce());
-                    _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.AtLeastOnce());
                 }
             }
             else
@@ -263,6 +256,7 @@ public class MExample : IMock
             {
                 if (this.Run == RunType.EXCEPTION)
                 {
+                    // TBD
                 }
                 else if (this.Run == RunType.SUCCESS)
                 {
@@ -303,9 +297,12 @@ public class MExample : IMock
             {
                 if (this.Run == RunType.EXCEPTION)
                 {
+                    // TBD
                 }
                 else if (this.Run == RunType.SUCCESS)
                 {
+                    // Add -> Find -> Remove = Not Found
+                    Xunit.Assert.Equal(0, this.Mock.Object.Find("Item"));
                 }
                 else if (this.Run == RunType.FAIL_Ping)
                 {
@@ -313,12 +310,15 @@ public class MExample : IMock
                 }
                 else if (this.Run == RunType.FAIL_Add)
                 {
+                    Xunit.Assert.Contains(this.ExceptionExpected.Message, this.ExceptionRaised.Message);
                 }
                 else if (this.Run == RunType.FAIL_Find)
                 {
+                    Xunit.Assert.Contains(this.ExceptionExpected.Message, this.ExceptionRaised.Message);
                 }
                 else if (this.Run == RunType.FAIL_Remove)
                 {
+                    Xunit.Assert.Contains(this.ExceptionExpected.Message, this.ExceptionRaised.Message);
                 }
             }
             else
