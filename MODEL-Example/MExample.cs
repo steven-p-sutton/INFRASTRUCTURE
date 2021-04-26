@@ -309,7 +309,7 @@ public class MExample : IMock
                 }
                 else if (this.Run == RunType.FAIL_Ping)
                 {
-                    //Xunit.Assert.Contains(this.ExceptionExpected.Message, this.ExceptionRaised.Message);
+                    Xunit.Assert.Contains(this.ExceptionExpected.Message, this.ExceptionRaised.Message);
                 }
                 else if (this.Run == RunType.FAIL_Add)
                 {
