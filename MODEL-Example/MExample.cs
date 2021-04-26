@@ -50,6 +50,8 @@ public class MExample : IMock
             }
             else
             {
+                // Don't Return
+
                 _mMock.Setup(x => x.Ping(It.IsAny<string>()));
                 _mMock.Setup(x => x.Add(It.IsAny<string>()));
                 _mMock.Setup(x => x.Find(It.IsAny<string>()));
@@ -70,6 +72,8 @@ public class MExample : IMock
             }
             else
             {
+                // Don't Return Async
+
                 _mMock.Setup(x => x.Ping(It.IsAny<string>()));
                 _mMock.Setup(x => x.Add(It.IsAny<string>()));
                 _mMock.Setup(x => x.Find(It.IsAny<string>()));
@@ -97,6 +101,8 @@ public class MExample : IMock
             }
             else
             {
+                // Don't Allow Verify
+
                 _mMock.Setup(x => x.Ping(It.IsAny<string>()));
                 _mMock.Setup(x => x.Add(It.IsAny<string>()));
                 _mMock.Setup(x => x.Find(It.IsAny<string>()));
@@ -167,6 +173,8 @@ public class MExample : IMock
             }
             else
             {
+                // Don't Verify 
+
                 _mMock.Setup(x => x.Ping(It.IsAny<string>()));
                 _mMock.Setup(x => x.Add(It.IsAny<string>()));
                 _mMock.Setup(x => x.Find(It.IsAny<string>()));
@@ -209,7 +217,7 @@ public class MExample : IMock
                 else if (this.Run == RunType.FAIL_Ping)
                 {
                     _mMock.Setup(x => x.Ping(It.IsAny<string>()))
-                    .Throws(new ExampleNotImplentedException());
+                    .Throws(new ExampleNotImplentedException("MExample_FAIL_Ping"));
                 }
                 else if (this.Run == RunType.FAIL_Add)
                 {
@@ -229,6 +237,8 @@ public class MExample : IMock
             }
             else
             {
+                // Don't Throw
+
                 _mMock.Setup(x => x.Ping(It.IsAny<string>()));
                 _mMock.Setup(x => x.Add(It.IsAny<string>()));
                 _mMock.Setup(x => x.Find(It.IsAny<string>()));
@@ -251,7 +261,6 @@ public class MExample : IMock
         {
             if (value)
             {
-
                 if (this.Run == RunType.EXCEPTION)
                 {
                 }
@@ -263,7 +272,44 @@ public class MExample : IMock
                 }
                 else if (this.Run == RunType.FAIL_Ping)
                 {
-                    this.ExceptionRaised = Xunit.Assert.Throws<ExampleNotImplentedException>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping()"));
+                    this.ExceptionRaised = Xunit.Assert.Throws<ExampleNotImplentedException>(() => this.Mock.Object.Ping("MExample_FAIL_Ping()"));
+                }
+                else if (this.Run == RunType.FAIL_Add)
+                {
+                    this.ExceptionRaised = Xunit.Assert.Throws<ExampleNotImplentedException>(() => this.Mock.Object.Add("MExample_FAIL_Add()"));
+                }
+                else if (this.Run == RunType.FAIL_Find)
+                {
+                    this.ExceptionRaised = Xunit.Assert.Throws<ExampleNotImplentedException>(() => this.Mock.Object.Find("MExample_FAIL_Find()"));
+                }
+                else if (this.Run == RunType.FAIL_Remove)
+                {
+                    this.ExceptionRaised = Xunit.Assert.Throws<ExampleNotImplentedException>(() => this.Mock.Object.Remove(0));
+                }
+            }
+            else
+            {
+                // Don't Test
+            }
+        }
+    }
+    public override bool Assert
+    {
+        set
+        {
+            this.Verify = value;
+
+            if (value)
+            {
+                if (this.Run == RunType.EXCEPTION)
+                {
+                }
+                else if (this.Run == RunType.SUCCESS)
+                {
+                }
+                else if (this.Run == RunType.FAIL_Ping)
+                {
+                    //Xunit.Assert.Contains(this.ExceptionExpected.Message, this.ExceptionRaised.Message);
                 }
                 else if (this.Run == RunType.FAIL_Add)
                 {
@@ -274,17 +320,11 @@ public class MExample : IMock
                 else if (this.Run == RunType.FAIL_Remove)
                 {
                 }
-                else
-                {
-                }
             }
-        }
-    }
-    public override bool Assert
-    {
-        set
-        {
-            this.Verify = value;
+            else
+            {
+                // Don't Assert
+            }
         }
     }
 }

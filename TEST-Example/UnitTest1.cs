@@ -90,20 +90,19 @@ namespace Conductus.EXAMPLE.Test
             var mock = new MExample
             {
                 Run = RunType.FAIL_Ping,
-                ExceptionExpected = new ExampleAlreadyExistsException("Mock ERROR"),
-                //Throws = false,
-                Arrange = false,
-                Test = false,
-                Assert = false
+                ExceptionExpected = new ExampleNotImplentedException("MExample_FAIL_Ping"),
+                Arrange = true,
+                Test = true,
+                Assert = true
             };
 
             // Arrange
-            mock.Mock.Setup(x => x.Ping(It.IsAny<string>())).Throws(mock.ExceptionExpected);
+            //mock.Mock.Setup(x => x.Ping(It.IsAny<string>())).Throws(mock.ExceptionExpected);
             // Test
             //mock.ExceptionRaised = Assert.Throws<ExampleAlreadyExistsException>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping()"));
-            mock.ExceptionRaised = Assert.Throws<Exception>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping()"));
+            //mock.ExceptionRaised = Assert.Throws<ExampleNotImplentedException>(() => mock.Mock.Object.Ping("MExample_FAIL_Ping"));
             // Assert
-            Assert.Contains(mock.ExceptionExpected.Message, mock.ExceptionRaised.Message);
+            //Assert.Contains(mock.ExceptionExpected.Message, mock.ExceptionRaised.Message);
         }
         [Fact]
         public void MExample_FAIL_Add()
