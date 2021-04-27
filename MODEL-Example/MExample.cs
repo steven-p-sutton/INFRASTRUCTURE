@@ -215,17 +215,17 @@ public class MExample : IMock
                 else if (this.Run == RunType.FAIL_Add)
                 {
                     _mMock.Setup(x => x.Add(It.IsAny<string>()))
-                   .Throws(new ExampleNotImplentedException());
+                   .Throws(new ExampleNotImplentedException("MExample_FAIL_Add"));
                 }
                 else if (this.Run == RunType.FAIL_Find)
                 {
                     _mMock.Setup(x => x.Find(It.IsAny<string>()))
-                   .Throws(new ExampleNotImplentedException());
+                   .Throws(new ExampleNotImplentedException("MExample_FAIL_Find"));
                 }
                 else if (this.Run == RunType.FAIL_Remove)
                 {
                     _mMock.Setup(x => x.Remove(It.IsAny<int>()))
-                   .Throws(new ExampleNotImplentedException());
+                   .Throws(new ExampleNotImplentedException("MExample_FAIL_Remove"));
                 }
             }
             else
