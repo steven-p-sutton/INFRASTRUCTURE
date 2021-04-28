@@ -85,6 +85,18 @@ namespace Conductus.EXAMPLE.Test
             };
         }
         [Fact]
+        public void MExample_EXCEPTION()
+        {
+            var mock = new MExample
+            {
+                Run = RunType.EXCEPTION,
+                ExceptionExpected = new ExampleNotImplentedException("MExample_EXCEPTION"),
+                Arrange = true,
+                Test = true,
+                Assert = true
+            };
+        }
+        [Fact]
         public void MExample_FAIL_Ping()
         {
             var mock = new MExample

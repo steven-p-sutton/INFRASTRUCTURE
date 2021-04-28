@@ -121,9 +121,9 @@ public class MExample : IMock
                 _mMock.Setup(x => x.Find(It.IsAny<string>()));
                 _mMock.Setup(x => x.Remove(It.IsAny<int>()));
 
-                if (this.Run == RunType.EXCEPTION)
+                if (this.Run == RunType.EXCEPTION) // Same as FAIL-Ping atm
                 {
-                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Never());
+                    _mMock.Verify(x => x.Ping(It.IsAny<string>()), Times.Once());
                     _mMock.Verify(x => x.Add(It.IsAny<string>()), Times.Never());
                     _mMock.Verify(x => x.Find(It.IsAny<string>()), Times.Never());
                     _mMock.Verify(x => x.Remove(It.IsAny<int>()), Times.Never());
@@ -256,10 +256,12 @@ public class MExample : IMock
             {
                 if (this.Run == RunType.EXCEPTION)
                 {
-                    // TBD
+                    // Same as FAIL-PING, but can be designed as required
+                    this.ExceptionRaised = Xunit.Assert.Throws<ExampleNotImplentedException>(() => this.Mock.Object.Ping("MExample_EXCEPTION()"));
                 }
                 else if (this.Run == RunType.SUCCESS)
                 {
+                    // Just use all the methods is a resonable sequence, but cn be designerd as required
                     this.Mock.Object.Ping("MExample.Test.Ping()");
                     this.Mock.Object.Add("Item");
                     this.Mock.Object.Remove(this.Mock.Object.Find("Item"));
@@ -297,10 +299,12 @@ public class MExample : IMock
             {
                 if (this.Run == RunType.EXCEPTION)
                 {
-                    // TBD
+                    // ATM taking it to be same as FAIL-PING, but can be designed as required
+                    Xunit.Assert.Contains(this.ExceptionExpected.Message, this.ExceptionRaised.Message);
                 }
                 else if (this.Run == RunType.SUCCESS)
                 {
+                    // Just use all the methods is a resonable sequence, but cn be designerd as required
                     // Add -> Find -> Remove = Not Found
                     Xunit.Assert.Equal(0, this.Mock.Object.Find("Item"));
                 }
