@@ -84,6 +84,7 @@ namespace Conductus.EXAMPLE.Test
                 Assert = true
             };
         }
+
         [Fact]
         public void MExample_EXCEPTION()
         {
@@ -96,6 +97,7 @@ namespace Conductus.EXAMPLE.Test
                 Assert = true
             };
         }
+
         [Fact]
         public void MExample_FAIL_Ping()
         {
@@ -108,6 +110,7 @@ namespace Conductus.EXAMPLE.Test
                 Assert = true
             };
         }
+
         [Fact]
         public void MExample_FAIL_Add()
         {
@@ -120,6 +123,7 @@ namespace Conductus.EXAMPLE.Test
                 Assert = true
             };
         }
+
         [Fact]
         public void MExample_FAIL_Find()
         {
@@ -132,6 +136,7 @@ namespace Conductus.EXAMPLE.Test
                 Assert = true
             };
         }
+
         [Fact]
         public void MExample_FAIL_Remove()
         {
